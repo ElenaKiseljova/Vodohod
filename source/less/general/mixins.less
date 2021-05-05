@@ -1,0 +1,154 @@
+/* Color maps */
+
+#colors() {
+  accent: #C8A97A;
+  accent_dark: #A78D65;
+  accent_light: #DCCCB5;
+  white_100: #FFFFFF;
+  white_50: rgba(255, 255, 255, 0.5);
+  white_20: rgba(255, 255, 255, 0.2);
+  black_text: #414245;
+  gray_text: #919191;
+  lines_normal: #E0DFDF;
+  lines_bold: #D1CFCE;
+}
+
+/* rem mixin */
+
+.rem(@font_size_px, @base: 16) {
+  font-size: (@font_size_px / @base) * 1rem;
+}
+
+/* Font mixin */
+
+.h1() {
+  /* Mobile/H1 */
+
+  font-family: 'Lovelace', 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: normal;
+  //font-size: 35px;
+  .rem(35);
+  line-height: 114%;
+
+  text-align: center;
+
+  /* Черный */
+
+  color: #colors[black_text];
+}
+
+// /* Header height */
+//
+// @header: 283px;
+//
+// /* Container width */
+//
+// @container: 1200px;
+//
+// .w100() {
+//   width: 100%;
+//
+//   padding: 0;
+//   margin: 0;
+// }
+//
+//
+// .wrapper() {
+//   width: @container;
+//   max-width: calc(100% - 30px);
+//
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+//
+// .button() {
+//   padding: 0;
+//   margin: 0;
+//
+//   background: none;
+//   border: none;
+//
+//   cursor: pointer;
+//
+//   text-align: center;
+//   vertical-align: middle;
+//
+//   outline: none;
+//
+//   &:hover {
+//     text-decoration: none;
+//   }
+//
+//   &:focus {
+//     outline: none;
+//   }
+// }
+//
+// .red_button() {
+//   .button();
+//
+//   font-family: @font1;
+//   font-style: normal;
+//   font-weight: bold;
+//   font-size: 16px;
+//   line-height: 18px;
+//
+//   text-align: center;
+//
+//   color: @color3;
+//
+//   background-color: @bg2;
+//
+//   border-radius: 38px;
+//
+//   transition: background-color 0.3s;
+//
+//   &:hover,
+//   &:focus {
+//     background-color: @bg3;
+//
+//     transition: background-color 0.3s;
+//   }
+// }
+//
+// .sub_line(@color_text, @color_text_after, @bg_start, @bg_end, @bottom, @opacity_start, @opacity_end) {
+//   position: relative;
+//
+//   color: @color_text;
+//
+//   &::after {
+//     content: '';
+//
+//     position: absolute;
+//
+//     bottom: @bottom;
+//     left: 0;
+//
+//     width: 100%;
+//     height: 1px;
+//
+//     background-color: @bg_start;
+//
+//     opacity: @opacity_start;
+//
+//     transition: opacity 0.3s;
+//   }
+//
+//   &:hover,
+//   &:focus {
+//     color: @color_text_after;
+//
+//     text-decoration: none;
+//
+//     transition: color 0.3s;
+//
+//     &::after {
+//       background-color: @bg_end;
+//
+//       opacity: @opacity_end;
+//
+//       transition: opacity 0.3s;
+//     }
+//   }
+// }
