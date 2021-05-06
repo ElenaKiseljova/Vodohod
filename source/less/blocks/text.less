@@ -1,0 +1,24 @@
+.text {
+  .w100();
+
+  .font_family_2();
+
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(13, 20);
+
+  color: #colors[black_text];
+
+  @media (min-width: 768px) {
+    .rem(15, 26);
+  }
+
+  @media (min-width: 1920px) {
+    .rem(18, 36);
+  }
+
+  &--subscribe {
+    color: #colors[white_100];
+  }
+}

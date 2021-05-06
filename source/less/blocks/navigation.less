@@ -1,0 +1,25 @@
+.navigation {
+  background: #colors[accent_dark]; // test for links
+}
+
+.navigation__link {
+  .font_family_2();
+
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(10, 12);
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #colors[white_100];
+
+  @media (min-width: 768px) {
+    .rem(12, 15);
+  }
+
+  @media (min-width: 1920px) {
+    .rem(14, 17);
+  }
+}

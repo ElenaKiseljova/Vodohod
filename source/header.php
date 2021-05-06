@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="libs/swiper.min.css">
   </head>
   <body>
-    <header class="page-header">
+    <div class="visually-hidden" aria-label="Спрайт svg">
+      <?php
+        include("img/sprite.svg");
+      ?>
+    </div>
 
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        Хедер
+      </div>
     </header>
