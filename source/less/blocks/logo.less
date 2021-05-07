@@ -1,0 +1,35 @@
+.logo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  &--header {
+    svg {
+      width: 38%;
+      height: auto;
+
+      fill: #colors[white_100];
+
+      @media (min-width: 768px) {
+        width: 46%;
+      }
+
+      @media (min-width: 1920px) {
+        width: 43.33%;
+      }
+    }
+
+    &.active {
+      opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

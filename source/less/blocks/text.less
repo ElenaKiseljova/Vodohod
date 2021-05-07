@@ -21,4 +21,33 @@
   &--subscribe {
     color: #colors[white_100];
   }
+
+  &--promo {
+    max-width: 85%;
+
+    .mb_rem(68);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    color: #colors[white_100];
+
+    @media (min-width: 768px) {
+      .mb_rem(238);
+    }
+
+    @media (min-width: 1280px) {
+      .mb_rem(92);
+
+      max-width: 51%;
+    }
+
+    @media (min-width: 1920px) {
+      .mb_rem(232);
+
+      max-width: 46.88%;
+    }
+  }
 }
