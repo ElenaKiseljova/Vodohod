@@ -3,6 +3,30 @@
   &--menu-mobile,
   &--menu-individual,
   &--menu-corporation {
+    h6 {
+      color: #colors[white_50];
+    }
+
+    a {
+      color: #colors[white_100];
+    }
+  }
+
+  &--header-bottom {
+    h6 {
+      color: #colors[gray_text];
+    }
+
+    a {
+      color: #colors[black_text];
+    }
+  }
+
+  &--header,
+  &--header-bottom,
+  &--menu-mobile,
+  &--menu-individual,
+  &--menu-corporation {
     display: flex;
 
     flex-direction: column;
@@ -22,13 +46,9 @@
 
     h6 {
       .rem(10, 12);
-
-      color: #colors[white_50];
     }
 
     a {
-      color: #colors[white_100];
-
       &:hover,
       &:focus {
         color: #colors[accent];
@@ -41,6 +61,7 @@
   }
 
   &--header,
+  &--header-bottom,
   &--menu-mobile {
     a {
       .rem(13, 16);
@@ -50,10 +71,11 @@
     }
   }
 
-  &--header {
+  &--header,
+  &--header-bottom {
     display: none;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 768px) {
       display: flex;
 
       align-items: flex-end;

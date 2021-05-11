@@ -108,6 +108,93 @@
     </div>
   </section>
 
+  <section class="page-header page-header--bottom">
+    <div class="page-header__wrapper page-header__wrapper--bottom">
+      <div class="page-header__left page-header__left--bottom">
+        <button class="button button--menu-bottom" type="button" name="menu">
+          <span class="button__icon">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                   fill-rule="evenodd"
+                   clip-rule="evenodd"
+                   d="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
+              >
+                <animate id="openMenuAnimate-bottom" attributeName="d"
+                         from="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
+
+                         to="M13.2957 1.99993L8.00169 7.29337L2.70734 1.99902L2.00145 1.99902L2.00145 2.70492L7.29576 7.99922L2.00098 13.2935V13.9994L2.70687 13.9994L8.00116 8.70561L13.2946 13.9991H14.0005V13.2932L8.70709 7.99975L14.0015 2.70583V1.99993L13.2957 1.99993Z"
+                         dur="500ms"
+                         begin="indefinite"
+                         repeatCount="1"
+                         fill="freeze"
+                         calcMode="paced"
+                         />
+
+                  <animate id="closeMenuAnimate-bottom" attributeName="d"
+                           from="M13.2957 1.99993L8.00169 7.29337L2.70734 1.99902L2.00145 1.99902L2.00145 2.70492L7.29576 7.99922L2.00098 13.2935V13.9994L2.70687 13.9994L8.00116 8.70561L13.2946 13.9991H14.0005V13.2932L8.70709 7.99975L14.0015 2.70583V1.99993L13.2957 1.99993Z"
+
+                           to="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
+                           dur="500ms"
+                           begin="indefinite"
+                           repeatCount="1"
+                           fill="freeze"
+                           calcMode="paced"
+                           />
+              </path>
+
+              <path class="angle angle--top" d="M7.29508 3.00098L6.00097 1.708L6.00097 1.00211L6.70686 1.00211L8.00098 2.29508L8.00098 3.00098L7.29508 3.00098Z" />
+              <path class="angle angle--right" d="M13.002 7.29508L14.2949 6.00097L15.0008 6.00097L15.0008 6.70686L13.7078 8.00098L13.002 8.00098L13.002 7.29508Z" />
+              <path class="angle angle--left" d="M3.00195 8.70589L1.70898 10L1.00308 10L1.00308 9.29411L2.29606 8L3.00195 8L3.00195 8.70589Z" />
+              <path class="angle angle--top" d="M8 2.29314L9.29298 0.999024L9.99887 0.999023L9.99887 1.70492L8.70589 2.99903L8 2.99903L8 2.29314Z" />
+              <path class="angle angle--right" d="M13.7069 8.00098L15.001 9.29395L15.001 9.99985L14.2951 9.99985L13.001 8.70687L13.001 8.00098L13.7069 8.00098Z" />
+              <path class="angle angle--left" d="M2.29411 8L0.999993 6.70702L0.999992 6.00113L1.70589 6.00113L3 7.29411L3 8L2.29411 8Z" />
+              <path class="angle angle--bottom" d="M6.00098 14.2931L7.29395 12.999L7.99985 12.999L7.99985 13.7049L6.70687 14.999L6.00098 14.999L6.00098 14.2931Z" />
+              <path class="angle angle--bottom" d="M9.29508 14.999L8.00097 13.706L8.00097 13.0002L8.70686 13.0002L10.001 14.2931L10.001 14.999L9.29508 14.999Z" />
+            </svg>
+          </span>
+
+          <span class="button__text button__text--black">
+            Меню
+          </span>
+        </button>
+
+        <div class="phone phone--header-bottom">
+          <h6>
+            Телефон для бронирования
+          </h6>
+
+          <a href="tel:+74954454650">
+            +7 (495) 445 46 50
+          </a>
+        </div>
+      </div>
+      <div class="page-header__center page-header__center--bottom">
+        <a class="logo logo--header-bottom" href="#">
+          <svg width="80" height="20" aria-label="Логотип">
+            <use xlink:href="#icon-logo-bottom"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="page-header__right page-header__right--bottom">
+        <button class="button button--download-desktop-bottom openpopup" data-popup="download" type="button" name="download">
+          Скачать брошюру
+        </button>
+
+        <button class="button button--wheel-bottom openpopup" data-popup="order" type="button" name="wheel">
+          <span class="button__text button__text--black">
+            Заказать круиз
+          </span>
+
+          <span class="button__icon button__icon--white">
+            <svg width="20" height="20">
+              <use xlink:href="#icon-wheel"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <section class="subscribe">
     <div class="subscribe__wrapper">
       <div class="subscribe__text">

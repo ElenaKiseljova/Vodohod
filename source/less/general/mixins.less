@@ -11,6 +11,8 @@
   gray_text: #919191;
   lines_normal: #E0DFDF;
   lines_bold: #D1CFCE;
+  error: #C88D7A;
+  error_light: #E4BEB2;
 }
 
 /* rem mixin */
@@ -46,6 +48,14 @@
 
 .pt_rem(@pt_px, @base: 16) {
   padding-top: (@pt_px / @base) * 1rem;
+}
+
+.pl_rem(@pl_px, @base: 16) {
+  padding-left: (@pl_px / @base) * 1rem;
+}
+
+.pr_rem(@pr_px, @base: 16) {
+  padding-right: (@pr_px / @base) * 1rem;
 }
 
 /* Font mixin */

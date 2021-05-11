@@ -36,9 +36,9 @@
       ?>
     </div>
 
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <div class="page-header__left">
+    <header class="page-header page-header--top">
+      <div class="page-header__wrapper page-header__wrapper--top">
+        <div class="page-header__left page-header__left--top">
           <button class="button button--menu" type="button" name="menu">
             <span class="button__icon">
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@
                      clip-rule="evenodd"
                      d="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
                 >
-                  <animate id="openMenuAnimate" attributeName="d"
+                  <animate id="openMenuAnimate-top" attributeName="d"
                            from="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
 
                            to="M13.2957 1.99993L8.00169 7.29337L2.70734 1.99902L2.00145 1.99902L2.00145 2.70492L7.29576 7.99922L2.00098 13.2935V13.9994L2.70687 13.9994L8.00116 8.70561L13.2946 13.9991H14.0005V13.2932L8.70709 7.99975L14.0015 2.70583V1.99993L13.2957 1.99993Z"
@@ -58,7 +58,7 @@
                            calcMode="paced"
                            />
 
-                    <animate id="closeMenuAnimate" attributeName="d"
+                    <animate id="closeMenuAnimate-top" attributeName="d"
                              from="M13.2957 1.99993L8.00169 7.29337L2.70734 1.99902L2.00145 1.99902L2.00145 2.70492L7.29576 7.99922L2.00098 13.2935V13.9994L2.70687 13.9994L8.00116 8.70561L13.2946 13.9991H14.0005V13.2932L8.70709 7.99975L14.0015 2.70583V1.99993L13.2957 1.99993Z"
 
                              to="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
@@ -81,7 +81,7 @@
               </svg>
             </span>
 
-            <span class="button__text">
+            <span class="button__text button__text--white">
               Меню
             </span>
           </button>
@@ -96,7 +96,7 @@
             </a>
           </div>
         </div>
-        <div class="page-header__center">
+        <div class="page-header__center page-header__center--top">
           <svg width="200" height="12" aria-label="Узор">
             <use xlink:href="#icon-pattern"></use>
           </svg>
@@ -107,12 +107,12 @@
             </svg>
           </a>
         </div>
-        <div class="page-header__right">
-          <button class="button button--download-desktop" type="button" name="download">
+        <div class="page-header__right page-header__right--top">
+          <button class="button button--download-desktop openpopup" data-popup="download" type="button" name="download">
             Скачать брошюру
           </button>
 
-          <button class="button button--wheel" type="button" name="wheel">
+          <button class="button button--wheel openpopup" data-popup="order" type="button" name="wheel">
             <span class="button__text button__text--white">
               Заказать круиз
             </span>
@@ -130,7 +130,7 @@
     <div class="menu">
       <div class="menu__wrapper menu__wrapper--top">
         <nav class="navigation navigation--menu-left" role="navigation">
-          <button class="button button--download-mobile" type="button" name="download">
+          <button class="button button--download-mobile openpopup" data-popup="download" type="button" name="download">
             Скачать брошюру
           </button>
 

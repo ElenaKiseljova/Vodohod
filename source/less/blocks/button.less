@@ -1,3 +1,4 @@
+// Общие
 .button {
   padding: 0;
   margin: 0;
@@ -23,7 +24,457 @@
   .font_family_2();
 
   font-style: normal;
+}
 
+// Плей
+.button {
+  &--play {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 18.75vw;
+    height: 18.75vw;
+
+    max-width: 60px;
+    max-height: 60px;
+
+    @media (min-width: 1920px) {
+      width: 4.17vw;
+      height: 4.17vw;
+
+      max-width: 80px;
+      max-height: 80px;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      z-index: 0;
+
+      width: 100%;
+      height: 100%;
+
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+
+      visibility: hidden;
+
+      border: 1px solid #colors[white_100];
+
+      transition: width 0.3s, height 0.3s, opacity 0.3s;
+    }
+
+    .button__icon {
+      position: relative;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: 100%;
+
+      &::before,
+      &:after {
+        content: '';
+
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        z-index: 0;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        transition: width 0.3s, height 0.3s;
+      }
+
+      &::before {
+        width: 90%;
+        height: 90%;
+
+        background-color: #colors[white_100];
+      }
+
+      &:after {
+        width: 100%;
+        height: 100%;
+
+        border: 1px solid #colors[white_100];
+      }
+
+      svg {
+        position: relative;
+
+        z-index: 1;
+
+        width: 11px;
+
+        margin-right: -3px;
+
+        @media (min-width: 1920px) {
+          width: 13px;
+
+          margin-right: -5px;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .button__icon {
+        &::before {
+          width: 87.5%;
+          height: 87.5%;
+
+          transition: width 0.3s, height 0.3s;
+        }
+
+        &:after {
+          width: 107.5%;
+          height: 107.5%;
+
+          transition: width 0.3s, height 0.3s;
+        }
+      }
+    }
+
+    &:active {
+      &::before {
+        visibility: visible;
+
+        width: 300%;
+        height: 300%;
+
+        opacity: 0;
+
+        transition: width 0.3s, height 0.3s, opacity 0.3s;
+      }
+
+      .button__icon {
+        &::before {
+          width: 90%;
+          height: 90%;
+
+          transition: width 0.3s, height 0.3s;
+        }
+
+        &:after {
+          width: 100%;
+          height: 100%;
+
+          transition: width 0.3s, height 0.3s;
+        }
+      }
+    }
+  }
+}
+
+// Скачать
+.button {
+  &--download-desktop,
+  &--download-mobile {
+    color: #colors[white_100];
+  }
+
+  &--download-desktop-bottom  {
+    color: #colors[black_text];
+  }
+
+  &--download-desktop,
+  &--download-mobile,
+  &--download-desktop-bottom {
+    .font_family_2();
+
+    font-style: normal;
+    font-weight: normal;
+
+    .rem(12, 15);
+
+    text-align: right;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: #colors[accent];
+    }
+
+    &:active {
+      color: #colors[white_50];
+    }
+  }
+
+  &--download-desktop,
+  &--download-desktop-bottom {
+    display: none;
+
+    @media (min-width: 1280px) {
+      display: block;
+    }
+
+    @media (min-width: 1920px) {
+      .rem(14, 17);
+    }
+  }
+
+  &--download-mobile {
+    width: 100%;
+
+    .mb_rem(15);
+
+    text-align: center;
+
+    @media (min-width: 768px) {
+      .mb_rem(40);
+    }
+
+    @media (min-width: 1280px) {
+      display: none;
+    }
+  }
+}
+
+// Слайдер
+.button {
+  &--arrow-left,
+  &--arrow-right {
+    width: 15.63vw;
+    height: 15.63vw;
+
+    max-width: 50px;
+    max-height: 50px;
+
+    @media (min-width: 768px) {
+      width: 6.51vw;
+      height: 6.51vw;
+    }
+
+    @media (min-width: 1280px) {
+      width: 3.9vw;
+      height: 3.9vw;
+    }
+
+    @media (min-width: 1920px) {
+      width: 4.69vw;
+      height: 4.69vw;
+
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    svg {
+      fill: #colors[white_100];
+    }
+
+    &:hover,
+    &:focus {
+      .big-ar-l {
+        transform: translateX(-2px);
+      }
+
+      .big-ar-r {
+        transform: translateX(2px);
+      }
+    }
+
+    &:active {
+      .big-ar-l {
+        transform: translateX(-4px);
+      }
+
+      .big-ar-r {
+        transform: translateX(4px);
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+
+      cursor: default;
+
+      background-color: transparent;
+      border-color: #colors[white_20];
+
+      &::before {
+        width: 90%;
+        height: 90%;
+
+        border-color: #colors[white_20];
+
+        transition: width 0.3s, height 0.3s;
+      }
+
+      svg {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+// Социальные
+.button {
+  &--social,
+  &--social-menu,
+  &--arrow-left,
+  &--arrow-right {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 90%;
+      height: 90%;
+
+      border-radius: 50%;
+
+      transform: translate(-50%, -50%);
+
+      transition: width 0.3s, height 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #colors[accent];
+      border-color: #colors[accent];
+
+      &::before {
+        width: 83.33%;
+        height: 83.33%;
+
+        border-color: #colors[accent_light];
+
+        transition: width 0.3s, height 0.3s;
+      }
+    }
+
+    &:active {
+      background-color: #colors[accent_dark];
+      border-color: #colors[accent_dark];
+
+      &::before {
+        width: 90%;
+        height: 90%;
+
+        border-color: #colors[accent];
+
+        transition: width 0.3s, height 0.3s;
+      }
+
+      svg {
+        fill: #colors[white_100];
+
+        transition: fill 0.3s;
+      }
+    }
+  }
+
+  &--social,
+  &--arrow-left,
+  &--arrow-right {
+    border: 1px solid #colors[lines_bold];
+
+    &::before {
+      border: 1px solid #colors[lines_normal];
+    }
+  }
+
+  &--social,
+  &--social-menu {
+    width: 100%;
+    height: 100%;
+
+    svg {
+      transition: fill 0.3s;
+
+      transform: rotateY(0deg);
+
+      transition: fill 0.3s, transform 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: #colors[white_100];
+
+        transform: rotateY(360deg);
+
+        transition: fill 0.3s, transform 0.3s;
+      }
+    }
+
+    &:active {
+      svg {
+        fill: #colors[white_100];
+
+        transition: fill 0.3s;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      cursor: default;
+
+      border-color: #colors[lines_normal];
+
+      &::before {
+        border-color: #colors[lines_normal];
+      }
+
+      svg {
+        fill: #colors[lines_bold];
+      }
+    }
+  }
+
+  &--social {
+    svg {
+      fill: #colors[black_text];
+    }
+  }
+
+  &--social-menu {
+    svg {
+      fill: #colors[white_100];
+    }
+
+    border: 1px solid #colors[white_50];
+
+    &::before {
+      border: 1px solid #colors[white_20];
+    }
+  }
+}
+
+// Выбрать круиз
+.button {
   &--select {
     width: 25vw;
     height: 25vw;
@@ -188,7 +639,10 @@
       }
     }
   }
+}
 
+// Заказать/Подписаться
+.button {
   &--order,
   &--subscribe {
     position: relative;
@@ -344,9 +798,15 @@
       }
     }
   }
+}
 
+// Меню/Колесо/Закрыть
+.button {
   &--menu,
-  &--wheel {
+  &--menu-bottom,
+  &--wheel,
+  &--wheel-bottom,
+  &--close {
     .button__icon {
       position: relative;
 
@@ -355,15 +815,7 @@
       justify-content: center;
       align-items: center;
 
-      width: 15.6vw;
-      height: 15.6vw;
-
-      max-width: 50px;
-      max-height: 50px;
-
       border-radius: 50%;
-
-      border: 1px solid #colors[white_50];
 
       background-color: transparent;
 
@@ -384,13 +836,7 @@
 
         border-radius: 50%;
 
-        border: 1px solid #colors[white_20];
-
         transition: width 0.3s, height 0.3s;
-      }
-
-      svg {
-        fill: #colors[white_100];
       }
 
       @media (min-width: 768px) {
@@ -473,7 +919,69 @@
     }
   }
 
-  &--menu {
+  &--menu,
+  &--wheel {
+    .button__icon {
+      width: 15.6vw;
+      height: 15.6vw;
+
+      max-width: 50px;
+      max-height: 50px;
+
+      border: 1px solid #colors[white_50];
+
+      &::before {
+        border: 1px solid #colors[white_20];
+      }
+
+      svg {
+        fill: #colors[white_100];
+      }
+    }
+  }
+
+  &--close {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .button__icon {
+      width: 12.5vw;
+      height: 12.5vw;
+
+      max-width: 40px;
+      max-height: 40px;
+
+      border: 1px solid #colors[lines_bold];
+
+      &::before {
+        border: 1px solid #colors[lines_normal];
+      }
+
+      svg {
+        fill: #colors[accent_dark];
+      }
+
+      @media (min-width: 768px) {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      .button__icon {
+        svg {
+          fill: #colors[white_100];
+        }
+      }
+    }
+  }
+
+  &--menu,
+  &--menu-bottom {
     display: flex;
 
     justify-content: flex-start;
@@ -541,7 +1049,13 @@
         letter-spacing: 0.2em;
         text-transform: uppercase;
 
-        color: #colors[white_100];
+        &--white {
+          color: #colors[white_100];
+        }
+
+        &--black {
+          color: #colors[black_text];
+        }
       }
 
       @media (min-width: 1920px) {
@@ -634,156 +1148,13 @@
     }
   }
 
-  &--social,
-  &--social-menu,
-  &--arrow-left,
-  &--arrow-right {
+  &--wheel,
+  &--wheel-bottom {
     position: relative;
 
     display: flex;
 
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-
-    &::before {
-      content: '';
-
-      position: absolute;
-
-      top: 50%;
-      left: 50%;
-
-      width: 90%;
-      height: 90%;
-
-      border-radius: 50%;
-
-      transform: translate(-50%, -50%);
-
-      transition: width 0.3s, height 0.3s;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: #colors[accent];
-      border-color: #colors[accent];
-
-      &::before {
-        width: 83.33%;
-        height: 83.33%;
-
-        border-color: #colors[accent_light];
-
-        transition: width 0.3s, height 0.3s;
-      }
-    }
-
-    &:active {
-      background-color: #colors[accent_dark];
-      border-color: #colors[accent_dark];
-
-      &::before {
-        width: 90%;
-        height: 90%;
-
-        border-color: #colors[accent];
-
-        transition: width 0.3s, height 0.3s;
-      }
-
-      svg {
-        fill: #colors[white_100];
-
-        transition: fill 0.3s;
-      }
-    }
-  }
-
-  &--social,
-  &--arrow-left,
-  &--arrow-right {
-    border: 1px solid #colors[lines_bold];
-
-    &::before {
-      border: 1px solid #colors[lines_normal];
-    }
-  }
-
-  &--social,
-  &--social-menu {
-    width: 100%;
-    height: 100%;
-
-    svg {
-      transition: fill 0.3s;
-
-      transform: rotateY(0deg);
-
-      transition: fill 0.3s, transform 0.3s;
-    }
-
-    &:hover,
-    &:focus {
-      svg {
-        fill: #colors[white_100];
-
-        transform: rotateY(360deg);
-
-        transition: fill 0.3s, transform 0.3s;
-      }
-    }
-
-    &:active {
-      svg {
-        fill: #colors[white_100];
-
-        transition: fill 0.3s;
-      }
-    }
-
-    &.disabled {
-      pointer-events: none;
-
-      cursor: default;
-
-      border-color: #colors[lines_normal];
-
-      &::before {
-        border-color: #colors[lines_normal];
-      }
-
-      svg {
-        fill: #colors[lines_bold];
-      }
-    }
-  }
-
-  &--social {
-    svg {
-      fill: #colors[black_text];
-    }
-  }
-
-  &--social-menu {
-    svg {
-      fill: #colors[white_100];
-    }
-
-    border: 1px solid #colors[white_50];
-
-    &::before {
-      border: 1px solid #colors[white_20];
-    }
-  }
-
-  &--wheel {
-    position: relative;
-
-    display: flex;
-
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 
     @media (min-width: 768px) {
@@ -814,8 +1185,6 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
 
-      color: #colors[white_100];
-
       &--white {
         position: absolute;
         right: 120%;
@@ -826,11 +1195,19 @@
 
         pointer-events: none;
 
+        color: #colors[white_100];
+
         &.active {
           opacity: 1;
 
           pointer-events: all;
         }
+      }
+
+      &--black {
+        .mr_rem(10);
+
+        color: #colors[black_text];
       }
 
       @media (min-width: 768px) {
@@ -915,285 +1292,42 @@
     }
   }
 
-  &--arrow-left,
-  &--arrow-right {
-    width: 15.63vw;
-    height: 15.63vw;
-
-    max-width: 50px;
-    max-height: 50px;
-
-    @media (min-width: 768px) {
-      width: 6.51vw;
-      height: 6.51vw;
-    }
-
-    @media (min-width: 1280px) {
-      width: 3.9vw;
-      height: 3.9vw;
-    }
-
-    @media (min-width: 1920px) {
-      width: 4.69vw;
-      height: 4.69vw;
-
-      max-width: 60px;
-      max-height: 60px;
-    }
-
-    svg {
-      fill: #colors[white_100];
-    }
-
-    &:hover,
-    &:focus {
-      .big-ar-l {
-        transform: translateX(-2px);
-      }
-
-      .big-ar-r {
-        transform: translateX(2px);
-      }
-    }
-
-    &:active {
-      .big-ar-l {
-        transform: translateX(-4px);
-      }
-
-      .big-ar-r {
-        transform: translateX(4px);
-      }
-    }
-
-    &:disabled {
-      pointer-events: none;
-
-      cursor: default;
-
-      background-color: transparent;
-      border-color: #colors[white_20];
-
-      &::before {
-        width: 90%;
-        height: 90%;
-
-        border-color: #colors[white_20];
-
-        transition: width 0.3s, height 0.3s;
-      }
-
-      svg {
-        opacity: 0.2;
-      }
-    }
-  }
-
-  &--play {
-    position: relative;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    width: 18.75vw;
-    height: 18.75vw;
-
-    max-width: 60px;
-    max-height: 60px;
-
-    @media (min-width: 1920px) {
-      width: 4.17vw;
-      height: 4.17vw;
-
-      max-width: 80px;
-      max-height: 80px;
-    }
-
-    &::before {
-      content: '';
-
-      position: absolute;
-
-      top: 50%;
-      left: 50%;
-
-      z-index: 0;
-
-      width: 100%;
-      height: 100%;
-
-      transform: translate(-50%, -50%);
-
-      border-radius: 50%;
-
-      visibility: hidden;
-
-      border: 1px solid #colors[white_100];
-
-      transition: width 0.3s, height 0.3s, opacity 0.3s;
-    }
-
+  &--menu-bottom,
+  &--wheel-bottom {
     .button__icon {
-      position: relative;
+      width: 12.5vw;
+      height: 12.5vw;
 
-      display: flex;
+      max-width: 40px;
+      max-height: 40px;
 
-      justify-content: center;
-      align-items: center;
+      .ml_rem(0);
 
-      width: 100%;
-      height: 100%;
-
-      &::before,
-      &:after {
-        content: '';
-
-        position: absolute;
-
-        top: 50%;
-        left: 50%;
-
-        z-index: 0;
-
-        transform: translate(-50%, -50%);
-
-        border-radius: 50%;
-
-        transition: width 0.3s, height 0.3s;
-      }
+      border: 1px solid #colors[lines_bold];
 
       &::before {
-        width: 90%;
-        height: 90%;
-
-        background-color: #colors[white_100];
-      }
-
-      &:after {
-        width: 100%;
-        height: 100%;
-
-        border: 1px solid #colors[white_100];
+        border: 1px solid #colors[lines_normal];
       }
 
       svg {
-        position: relative;
+        fill: #colors[accent_dark];
+      }
 
-        z-index: 1;
+      @media (min-width: 1920px) {
+        width: 2.6vw;
+        height: 2.6vw;
 
-        width: 11px;
-
-        margin-right: -3px;
-
-        @media (min-width: 1920px) {
-          width: 13px;
-
-          margin-right: -5px;
-        }
+        max-width: 50px;
+        max-height: 50px;
       }
     }
 
     &:hover,
-    &:focus {
-      .button__icon {
-        &::before {
-          width: 87.5%;
-          height: 87.5%;
-
-          transition: width 0.3s, height 0.3s;
-        }
-
-        &:after {
-          width: 107.5%;
-          height: 107.5%;
-
-          transition: width 0.3s, height 0.3s;
-        }
-      }
-    }
-
+    &:focus,
     &:active {
-      &::before {
-        visibility: visible;
-
-        width: 300%;
-        height: 300%;
-
-        opacity: 0;
-
-        transition: width 0.3s, height 0.3s, opacity 0.3s;
+      svg {
+        fill: #colors[white_100];
       }
-
-      .button__icon {
-        &::before {
-          width: 90%;
-          height: 90%;
-
-          transition: width 0.3s, height 0.3s;
-        }
-
-        &:after {
-          width: 100%;
-          height: 100%;
-
-          transition: width 0.3s, height 0.3s;
-        }
-      }
-    }
-  }
-
-  &--download-desktop,
-  &--download-mobile {
-    .font_family_2();
-
-    font-style: normal;
-    font-weight: normal;
-
-    .rem(12, 15);
-
-    text-align: right;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-
-    color: #colors[white_100];
-
-    &:hover,
-    &:focus {
-      color: #colors[accent];
-    }
-
-    &:active {
-      color: #colors[white_50];
-    }
-  }
-
-  &--download-desktop {
-    display: none;
-
-    @media (min-width: 1280px) {
-      display: block;
-    }
-
-    @media (min-width: 1920px) {
-      .rem(14, 17);
-    }
-  }
-
-  &--download-mobile {
-    width: 100%;
-
-    .mb_rem(15);
-
-    text-align: center;
-
-    @media (min-width: 768px) {
-      .mb_rem(40);
-    }
-
-    @media (min-width: 1280px) {
-      display: none;
     }
   }
 }
