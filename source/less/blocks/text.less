@@ -10,6 +10,10 @@
 
   color: #colors[black_text];
 
+  p {
+    .w100();
+  }
+
   @media (min-width: 768px) {
     .rem(15, 26);
   }
@@ -48,6 +52,28 @@
       .mb_rem(232);
 
       max-width: 46.88%;
+    }
+  }
+
+  &--totem {
+    text-align: center;
+
+    p + p {
+      .mt_rem(17);
+    }
+
+    @media (min-width: 1280px) {
+      text-align: left;
+
+      p + p {
+        .mt_rem(28.5);
+      }
+    }
+
+    @media (min-width: 1920px) {
+      p + p {
+        .mt_rem(36);
+      }
     }
   }
 }

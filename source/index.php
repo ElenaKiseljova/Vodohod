@@ -5,11 +5,13 @@
 <main class="page-main">
   <section class="promo">
     <div class="promo__wrapper">
-      <p class="text text--promo">
-        Енисейская экспедиция с полетом на Плато Путорана.
-        Енисей – одна из самых протяженных, полноводных рек мира – всегда манила
-        исследователей, путешественников и любителей бросить вызов дикой природе.
-      </p>
+      <div class="text text--promo">
+        <p>
+          Енисейская экспедиция с полетом на Плато Путорана.
+          Енисей – одна из самых протяженных, полноводных рек мира – всегда манила
+          исследователей, путешественников и любителей бросить вызов дикой природе.
+        </p>
+      </div>
 
       <nav class="navigation navigation--promo" role="navigation">
         <ul class="navigation__list navigation__list--promo">
@@ -195,6 +197,137 @@
     </div>
   </section>
 
+  <section class="totem">
+    <div class="totem__wrapper">
+      <h2 class="h1 h1--totem">
+        Первый экспедиционный речной круиз по Енисею
+      </h2>
+
+      <div class="totem__left">
+        <blockquote class="quote quote--totem" cite="http:///">
+          <p>
+            Наши гости смогут ощутить особый клубный дух, так как на теплоходе расположено всего 46 кают.
+          </p>
+
+          <p>
+            В основу дизайна интерьеров
+            и декора теплохода легли этнические мотивы малых народностей Севера.
+          </p>
+        </blockquote>
+      </div>
+
+      <div class="totem__center">
+        <!-- <svg class="totem__runes" width="301" height="301">
+          <use xlink:href="#icon-runes-white"></use>
+        </svg> -->
+        <svg class="totem__runes" width="301" height="301" viewBox="0 0 634 633" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="rotate-right">
+            <use xlink:href="img/sprite-runes.svg#runes-white-right" />
+          </g>
+          <g class="rotate-left">
+            <use xlink:href="img/sprite-runes.svg#runes-white-left" />
+          </g>
+        </svg>
+
+        <picture class="totem__image">
+          <source media="(min-width: 1024px)" srcset="img/mask-1920.png" type="image/png">
+          <source media="(min-width: 425px)" srcset="img/mask-768.png" type="image/png">
+
+          <img src="img/mask-320.png" alt="Маска">
+        </picture>
+      </div>
+
+      <div class="totem__right">
+        <div class="text text--totem">
+          <p>
+            В начале 2020 года завершилась амбициозная модернизация теплохода до уровня 5 звезд по международным стандартам.
+          </p>
+
+          <p>
+            В результате переоборудования на шлюпочной палубе разместился большой ресторанно развлекательный комплекс, на солнечной палубе — зона SPA c тренажерным залом.
+          </p>
+
+          <p>
+            На всем протяжении круиза вы будете наслаждаться непревзойденной роскошью и домашней атмосферой.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="route">
+      <div class="route__top">
+        <h2 class="h2 h2--route">
+          Маршруты экспедиций
+        </h2>
+
+        <div class="route__slider route__slider--routs swiper-container">
+          <ul class="route__list route__list--routs swiper-wrapper">
+            <li class="route__item route__item--routs swiper-slide">
+              <button class="button button--routs" type="button" name="slide">
+                Енисейская экспедиция
+              </button>
+            </li>
+            <li class="route__item route__item--routs swiper-slide">
+              <button class="button button--routs" type="button" name="slide">
+                Плато Путорана
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="route__left">
+
+      </div>
+
+      <div class="route__right">
+        <svg width="300" height="422" viewBox="0 0 517 722" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite-map.svg#map" />
+
+          <g class="route__toggle route__toggle--dudinka" data-map="0">
+            <use xlink:href="img/sprite-map.svg#dudinka" />
+          </g>
+          <g class="route__toggle route__toggle--tyjaha" data-map="1">
+            <use xlink:href="img/sprite-map.svg#tyjaha" />
+          </g>
+          <g class="route__toggle route__toggle--ermakovo" data-map="2">
+            <use xlink:href="img/sprite-map.svg#ermakovo" />
+          </g>
+          <g class="route__toggle route__toggle--kangotovo" data-map="3">
+            <use xlink:href="img/sprite-map.svg#kangotovo" />
+          </g>
+          <g class="route__toggle route__toggle--jarcevo" data-map="4">
+            <use xlink:href="img/sprite-map.svg#jarcevo" />
+          </g>
+          <g class="route__toggle route__toggle--galanino" data-map="5">
+              <use xlink:href="img/sprite-map.svg#galanino" />
+          </g>
+          <g class="route__toggle route__toggle--putorana" data-map="6">
+            <use xlink:href="img/sprite-map.svg#plato-putorana" />
+          </g>
+          <g class="route__toggle route__toggle--igarka" data-map="7">
+            <use xlink:href="img/sprite-map.svg#igarka" />
+          </g>
+          <g class="route__toggle route__toggle--turuhansk" data-map="8">
+            <use xlink:href="img/sprite-map.svg#turuhansk" />
+          </g>
+          <g class="route__toggle route__toggle--bahta" data-map="9">
+            <use xlink:href="img/sprite-map.svg#bahta" />
+          </g>
+          <g class="route__toggle route__toggle--vorogovo" data-map="10">
+            <use xlink:href="img/sprite-map.svg#vorogovo" />
+          </g>
+          <g class="route__toggle route__toggle--enisejsk" data-map="11">
+            <use xlink:href="img/sprite-map.svg#enisejsk" />
+          </g>
+          <g class="route__toggle route__toggle--krasnojarsk" data-map="12">
+            <use xlink:href="img/sprite-map.svg#krasnojarsk" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
   <section class="subscribe">
     <div class="subscribe__wrapper">
       <div class="subscribe__text">
@@ -202,9 +335,11 @@
           Подписка на новости
         </h3>
 
-        <p class="text text--subscribe">
-          Никакого спама! Только полезные новости о премиумных круизах компании «ВодоходЪ»
-        </p>
+        <div class="text text--subscribe">
+          <p>
+            Никакого спама! Только полезные новости о премиумных круизах компании «ВодоходЪ»
+          </p>
+        </div>
       </div>
 
       <form class="subscribe__form" action="index.html" method="post">

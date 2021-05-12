@@ -201,7 +201,7 @@
     .font_family_2();
 
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
 
     .rem(12, 15);
 
@@ -497,7 +497,7 @@
     max-width: 150px;
     max-height: 150px;
 
-    font-weight: normal;
+    font-weight: 500;
 
     .rem(11, 13);
 
@@ -647,7 +647,7 @@
   &--subscribe {
     position: relative;
 
-    font-weight: normal;
+    font-weight: 500;
 
     .rem(11, 13);
 
@@ -1042,7 +1042,7 @@
         .font_family_2();
 
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
 
         .rem(13, 16);
 
@@ -1177,7 +1177,7 @@
       .font_family_2();
 
       font-style: normal;
-      font-weight: normal;
+      font-weight: 500;
 
       .rem(10, 12);
 
@@ -1328,6 +1328,35 @@
       svg {
         fill: #colors[white_100];
       }
+    }
+  }
+}
+
+.button {
+  &--routs {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: left;
+
+    .font_family_2();
+
+    font-style: normal;
+    font-weight: 500;
+
+    .rem(10, 12);
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      .rem(12, 15);
+    }
+
+    @media (min-width: 1920px) {
+      .rem(14, 17);
     }
   }
 }

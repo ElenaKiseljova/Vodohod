@@ -3,7 +3,7 @@
 
   .font_family_1();
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200;
 
   .rem(35, 40);
 
@@ -17,5 +17,17 @@
 
   @media (min-width: 1920px) {
     .rem(73, 102);
+  }
+
+  &--totem {
+    .mb_rem(20);
+
+    @media (min-width: 1280px) {
+      .mb_rem(-33);
+    }
+
+    @media (min-width: 1920px) {
+      .mb_rem(-51);
+    }
   }
 }

@@ -153,5 +153,6 @@
 
     <script src="js/form.min.js"></script>
     <script src="js/popup.min.js"></script>
+    <script src="js/swiper-init.min.js"></script>
   </body>
 </html>

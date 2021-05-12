@@ -1,0 +1,212 @@
+.totem,
+.totem__left,
+.totem__center,
+.totem__right {
+  .w100();
+}
+
+.totem {
+  .pt_rem(50);
+  .pb_rem(33);
+
+  overflow: hidden;
+
+  background-image: url('../img/totem-bg-320.jpg');
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-width: 425px) {
+    background-image: url('../img/totem-bg-768.jpg');
+  }
+
+  @media (min-width: 768px) {
+    .pb_rem(30);
+  }
+
+  @media (min-width: 1024px) {
+    background-image: url('../img/totem-bg-1280.jpg');
+  }
+
+  @media (min-width: 1280px) {
+    .pt_rem(70);
+  }
+
+  @media (min-width: 1360px) {
+    background-image: url('../img/totem-bg-1920.jpg');
+  }
+
+  @media (min-width: 1920px) {
+    .pt_rem(100);
+    .pb_rem(100);
+  }
+}
+
+.totem__wrapper {
+  .wrapper();
+
+  min-height: 100vh;
+
+  .pb_rem(35);
+
+  @media (min-width: 768px) {
+    .pb_rem(50);
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    .pb_rem(74);
+  }
+
+  @media (min-width: 1920px) {
+    .pb_rem(144.5);
+  }
+}
+
+.totem__left,
+.totem__right {
+  @media (min-width: 1280px) {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.totem__left {
+  .mb_rem(30);
+
+  @media (min-width: 768px) {
+    .pb_rem(50);
+  }
+
+  @media (min-width: 1280px) {
+    width: 32%;
+
+    .pb_rem(0);
+    .mb_rem(0);
+  }
+
+  @media (min-width: 1920px) {
+    width: 32.6%;
+  }
+}
+
+.totem__center {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .mb_rem(30);
+
+  @media (min-width: 768px) {
+    width: 61.72%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .pb_rem(50);
+  }
+
+  @media (min-width: 1280px) {
+    width: 35.6%;
+
+    .pb_rem(0);
+    .mb_rem(0);
+  }
+
+  @media (min-width: 1920px) {
+    width: 34.84%;
+  }
+}
+
+.totem__runes {
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  z-index: 0;
+
+  transform: translateY(-50%);
+
+  width: 100%;
+  height: auto;
+}
+
+.totem__image {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 52.53%;
+    height: auto;
+  }
+
+  @media (min-width: 1280px) {
+    width: 52.61%;
+  }
+
+  @media (min-width: 1920px) {
+    width: 57.57%;
+  }
+}
+
+.totem__right {
+  @media (min-width: 768px) {
+    width: 61.72%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1280px) {
+    width: 23.73%;
+  }
+
+  @media (min-width: 1920px) {
+    width: 18.96%;
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+
+.rotate-right {
+  animation-name: rotate-right;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.rotate-left {
+  animation-name: rotate-right;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}

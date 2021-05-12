@@ -1,0 +1,164 @@
+.route {
+  .wrapper();
+
+  min-height: 100vh;
+
+  .pt_rem(35);
+
+  @media (min-width: 768px) {
+    .pt_rem(50);
+  }
+
+  @media (min-width: 1280px) {
+    .pt_rem(74);
+  }
+
+  @media (min-width: 1920px) {
+    .pt_rem(144.5);
+  }
+}
+
+.route__left,
+.route__right {
+  .w100();
+}
+
+.route__top {
+  position: relative;
+
+  width: calc(100% + (50vw - 50%));
+
+  padding: 0;
+  margin: 0;
+
+  .pb_rem(17);
+
+  margin-right: calc(50vw - 50%);
+
+  border-bottom: 1px solid #colors[white_50];
+
+  &::before {
+    content: '';
+
+    position: absolute;
+
+    bottom: 3px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #colors[white_20];
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+
+    margin-right: 0;
+
+    .pb_rem(24);
+
+    overflow: hidden;
+  }
+
+  @media (min-width: 1280px) {
+    width: 51.53%;
+
+    margin-right: auto;
+  }
+
+  @media (min-width: 1920px) {
+    width: 49.95%;
+  }
+}
+
+.route__slider {
+  padding: 0;
+  margin: 0;
+
+  &--routs {
+    width: 58.06%;
+
+    margin-left: 0;
+    margin-right: auto;
+
+    &.swiper-container {
+      overflow: visible;
+    }
+
+    @media (min-width: 768px) {
+      width: 55.7%;
+    }
+  }
+}
+
+.route__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.route__item {
+  padding: 0;
+  margin: 0;
+
+  &.swiper-slide {
+    width: auto;
+
+    button {
+      color: #colors[white_50];
+    }
+  }
+
+  &.swiper-slide-active {
+    button {
+      color: #colors[white_100];
+    }
+
+    @media (min-width: 768px) {
+
+    }
+  }
+
+  &.swiper-slide-next {
+    button {
+      color: #colors[white_50];
+    }
+
+    & + .swiper-slide {
+      button {
+        color: #colors[white_50];
+        background: linear-gradient(to right, #colors[white_50] 0%, #colors[white_20] 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      & + .swiper-slide {
+        button {
+          color: #colors[white_20];
+          background: linear-gradient(to right, #colors[white_20] 0%, transparent 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        & + .swiper-slide {
+          button {
+            color: transparent;
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+
+    }
+  }
+}
+
+.route__toggle {
+  cursor: pointer;
+}
