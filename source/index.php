@@ -263,21 +263,52 @@
         <div class="route__slider route__slider--routs swiper-container">
           <ul class="route__list route__list--routs swiper-wrapper">
             <li class="route__item route__item--routs swiper-slide">
-              <button class="button button--routs" type="button" name="slide">
+              <span>
                 Енисейская экспедиция
-              </button>
+              </span>
             </li>
             <li class="route__item route__item--routs swiper-slide">
-              <button class="button button--routs" type="button" name="slide">
+              <span>
                 Плато Путорана
-              </button>
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="route__left">
+        <div class="route__slider route__slider--description swiper-container">
+          <ul class="route__list route__list--description swiper-wrapper">
+            <li class="route__item route__item--description swiper-slide">
+              <h5 class="route__title">
+                Красноярск
+              </h5>
 
+              <p class="text text--description">
+                Столица Красноярского края, крупнейший культурный, деловой и промышленный центр Восточной Сибири. «Красный яр» - так называли основанный в 1628 году казаками воеводы Андрея Дубенского острог. В 1690 году Сибирь была окончательно присоединена к России
+                и Красноярск получил статус города, а в начале 19 века стал центром Енисейской губернии.
+              </p>
+
+              <button class="route__more" type="button" name="more">
+                Читать подробнее
+              </button>
+            </li>
+            <li class="route__item route__item--description swiper-slide">
+              <h5 class="route__title">
+                Плато Путорана
+              </h5>
+
+              <p class="text text--description">
+                Плато Путорана, крупнейший культурный, деловой и промышленный центр Восточной Сибири. «Красный яр» - так называли основанный в 1628 году казаками воеводы Андрея Дубенского острог. В 1690 году Сибирь была окончательно присоединена к России
+                и Красноярск получил статус города, а в начале 19 века стал центром Енисейской губернии.
+              </p>
+
+              <button class="route__button" type="button" name="more">
+                Читать подробнее
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="route__right">
@@ -324,6 +355,10 @@
             <use xlink:href="img/sprite-map.svg#krasnojarsk" />
           </g>
         </svg>
+      </div>
+
+      <div class="route__bottom">
+
       </div>
     </div>
   </section>

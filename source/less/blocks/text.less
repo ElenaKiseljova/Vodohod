@@ -14,11 +14,11 @@
     .w100();
   }
 
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .rem(15, 26);
   }
 
-  @media (min-width: 1920px) {
+  @media only screen and (min-width: 1920px) {
     .rem(18, 36);
   }
 
@@ -38,17 +38,17 @@
 
     color: #colors[white_100];
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
       .mb_rem(238);
     }
 
-    @media (min-width: 1280px) {
+    @media only screen and (min-width: 1280px) {
       .mb_rem(92);
 
       max-width: 51%;
     }
 
-    @media (min-width: 1920px) {
+    @media only screen and (min-width: 1920px) {
       .mb_rem(232);
 
       max-width: 46.88%;
@@ -62,7 +62,7 @@
       .mt_rem(17);
     }
 
-    @media (min-width: 1280px) {
+    @media only screen and (min-width: 1280px) {
       text-align: left;
 
       p + p {
@@ -70,10 +70,14 @@
       }
     }
 
-    @media (min-width: 1920px) {
+    @media only screen and (min-width: 1920px) {
       p + p {
         .mt_rem(36);
       }
     }
+  }
+
+  &--description {
+    color: #colors[white_100];
   }
 }

@@ -57,28 +57,28 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (min-width: 425px) {
+  @media only screen and (min-width: 425px) {
     background-image: url('../img/menu-bg-768.jpg');
   }
 
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .pt_rem(115);
   }
 
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     background-image: url('../img/menu-bg-1280.jpg');
   }
 
-  @media (min-width: 1280px) {
+  @media only screen and (min-width: 1280px) {
     .pt_rem(223);
     .pb_rem(15);
   }
 
-  @media (min-width: 1360px) {
+  @media only screen and (min-width: 1360px) {
     background-image: url('../img/menu-bg-1920.jpg');
   }
 
-  @media (min-width: 1920px) {
+  @media only screen and (min-width: 1920px) {
     .pt_rem(345);
     .pb_rem(30);
   }
@@ -87,7 +87,7 @@
 .menu__runes {
   display: none;
 
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     position: absolute;
 
     top: 50%;
@@ -112,7 +112,7 @@
     }
   }
 
-  @media (min-width: 1280px) {
+  @media only screen and (min-width: 1280px) {
     left: 50%;
 
     width: 39.06%;
@@ -120,7 +120,7 @@
     max-width: 500px;
   }
 
-  @media (min-width: 1920px) {
+  @media only screen and (min-width: 1920px) {
     width: 37.5%;
     max-width: 720px;
   }
@@ -163,26 +163,26 @@
       background-color: #colors[white_20];
     }
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
       flex-direction: row;
 
       justify-content: space-between;
       align-items: flex-start;
     }
 
-    @media (min-width: 1280px) {
+    @media only screen and (min-width: 1280px) {
       align-items: center;
 
       .pt_rem(19);
     }
 
-    @media (min-width: 1920px) {
+    @media only screen and (min-width: 1920px) {
       .pt_rem(34);
     }
   }
 
   &--top {
-    @media (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
       display: flex;
 
       flex-direction: column;
@@ -191,7 +191,7 @@
       align-items: flex-end;
     }
 
-    @media (min-width: 1280px) {
+    @media only screen and (min-width: 1280px) {
       width: 79.69%;
 
       flex-direction: row;
@@ -220,7 +220,7 @@
   order: 1;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .menu__center {
     order: 1;
   }
