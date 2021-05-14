@@ -147,12 +147,22 @@
     <!-- Затемнение всплывающих окон -->
     <div class="popup__overlay"></div>
 
+    <!-- img/sprite.svg -->
+    <div class="visually-hidden" aria-label="Спрайт svg">
+      <?php
+        include("img/sprite.svg");
+      ?>
+    </div>
+
     <!-- Скрипты -->
+
     <script src="libs/swiper.min.js"></script>
     <script src="js/menu.min.js"></script>
 
     <script src="js/form.min.js"></script>
     <script src="js/popup.min.js"></script>
+    <script src="js/show-more.min.js"></script>
     <script src="js/swiper-init.min.js"></script>
+    <script src="js/routs.min.js"></script>
   </body>
 </html>

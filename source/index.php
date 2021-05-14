@@ -262,103 +262,119 @@
 
         <div class="route__slider route__slider--routs swiper-container">
           <ul class="route__list route__list--routs swiper-wrapper">
-            <li class="route__item route__item--routs swiper-slide">
-              <span>
+            <!-- routs.js -->
+            <!-- <li class="route__item route__item--routs swiper-slide">
+              <h3>
                 Енисейская экспедиция
-              </span>
-            </li>
-            <li class="route__item route__item--routs swiper-slide">
-              <span>
-                Плато Путорана
-              </span>
-            </li>
+              </h3>
+            </li> -->
           </ul>
         </div>
       </div>
 
-      <div class="route__left">
-        <div class="route__slider route__slider--description swiper-container">
-          <ul class="route__list route__list--description swiper-wrapper">
-            <li class="route__item route__item--description swiper-slide">
-              <h5 class="route__title">
-                Красноярск
-              </h5>
+      <div class="route__content">
+        <div class="route__left">
+          <div class="route__slider route__slider--description swiper-container">
+            <ul class="route__list route__list--description swiper-wrapper">
+              <!-- routs.js -->
+              <!-- <li class="route__item route__item--description swiper-slide">
+                <h5 class="route__title">
+                  Красноярск
+                </h5>
 
-              <p class="text text--description">
-                Столица Красноярского края, крупнейший культурный, деловой и промышленный центр Восточной Сибири. «Красный яр» - так называли основанный в 1628 году казаками воеводы Андрея Дубенского острог. В 1690 году Сибирь была окончательно присоединена к России
-                и Красноярск получил статус города, а в начале 19 века стал центром Енисейской губернии.
-              </p>
+                <p class="text text--description">
+                  Столица Красноярского края, крупнейший культурный, деловой и промышленный центр Восточной Сибири. «Красный яр» - так называли основанный в 1628 году казаками воеводы Андрея Дубенского острог. В 1690 году Сибирь была окончательно присоединена к России
+                  и Красноярск получил статус города, а в начале 19 века стал центром Енисейской губернии.
+                </p>
 
-              <button class="route__more" type="button" name="more">
-                Читать подробнее
-              </button>
-            </li>
-            <li class="route__item route__item--description swiper-slide">
-              <h5 class="route__title">
-                Плато Путорана
-              </h5>
-
-              <p class="text text--description">
-                Плато Путорана, крупнейший культурный, деловой и промышленный центр Восточной Сибири. «Красный яр» - так называли основанный в 1628 году казаками воеводы Андрея Дубенского острог. В 1690 году Сибирь была окончательно присоединена к России
-                и Красноярск получил статус города, а в начале 19 века стал центром Енисейской губернии.
-              </p>
-
-              <button class="route__button" type="button" name="more">
-                Читать подробнее
-              </button>
-            </li>
-          </ul>
+                <button class="route__more" type="button" name="more">
+                  Читать подробнее
+                </button>
+              </li>
+               -->
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="route__right">
-        <svg width="300" height="422" viewBox="0 0 517 722" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite-map.svg#map" />
-
-          <g class="route__toggle route__toggle--dudinka" data-map="0">
-            <use xlink:href="img/sprite-map.svg#dudinka" />
-          </g>
-          <g class="route__toggle route__toggle--tyjaha" data-map="1">
-            <use xlink:href="img/sprite-map.svg#tyjaha" />
-          </g>
-          <g class="route__toggle route__toggle--ermakovo" data-map="2">
-            <use xlink:href="img/sprite-map.svg#ermakovo" />
-          </g>
-          <g class="route__toggle route__toggle--kangotovo" data-map="3">
-            <use xlink:href="img/sprite-map.svg#kangotovo" />
-          </g>
-          <g class="route__toggle route__toggle--jarcevo" data-map="4">
-            <use xlink:href="img/sprite-map.svg#jarcevo" />
-          </g>
-          <g class="route__toggle route__toggle--galanino" data-map="5">
+        <div class="route__right">
+          <svg width="517" height="722" viewBox="0 0 517 722" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="route__toggle route__toggle--dudinka">
+              <use xlink:href="img/sprite-map.svg#dudinka" />
+            </g>
+            <g class="route__toggle route__toggle--tyjaha">
+              <use xlink:href="img/sprite-map.svg#tyjaha" />
+            </g>
+            <g class="route__toggle route__toggle--igarka">
+              <use xlink:href="img/sprite-map.svg#igarka" />
+            </g>
+            <g class="route__toggle route__toggle--ermakovo">
+              <use xlink:href="img/sprite-map.svg#ermakovo" />
+            </g>
+            <g class="route__toggle route__toggle--turuhansk">
+              <use xlink:href="img/sprite-map.svg#turuhansk" />
+            </g>
+            <g class="route__toggle route__toggle--kangotovo">
+              <use xlink:href="img/sprite-map.svg#kangotovo" />
+            </g>
+            <g class="route__toggle route__toggle--alinskoe">
+              <use xlink:href="img/sprite-map.svg#alinskoe" />
+            </g>
+            <g class="route__toggle route__toggle--bahta">
+              <use xlink:href="img/sprite-map.svg#bahta" />
+            </g>
+            <g class="route__toggle route__toggle--vorogovo">
+              <use xlink:href="img/sprite-map.svg#vorogovo" />
+            </g>
+            <g class="route__toggle route__toggle--jarcevo">
+              <use xlink:href="img/sprite-map.svg#jarcevo" />
+            </g>
+            <g class="route__toggle route__toggle--enisejsk">
+              <use xlink:href="img/sprite-map.svg#enisejsk" />
+            </g>
+            <g class="route__toggle route__toggle--galanino">
               <use xlink:href="img/sprite-map.svg#galanino" />
-          </g>
-          <g class="route__toggle route__toggle--putorana" data-map="6">
-            <use xlink:href="img/sprite-map.svg#plato-putorana" />
-          </g>
-          <g class="route__toggle route__toggle--igarka" data-map="7">
-            <use xlink:href="img/sprite-map.svg#igarka" />
-          </g>
-          <g class="route__toggle route__toggle--turuhansk" data-map="8">
-            <use xlink:href="img/sprite-map.svg#turuhansk" />
-          </g>
-          <g class="route__toggle route__toggle--bahta" data-map="9">
-            <use xlink:href="img/sprite-map.svg#bahta" />
-          </g>
-          <g class="route__toggle route__toggle--vorogovo" data-map="10">
-            <use xlink:href="img/sprite-map.svg#vorogovo" />
-          </g>
-          <g class="route__toggle route__toggle--enisejsk" data-map="11">
-            <use xlink:href="img/sprite-map.svg#enisejsk" />
-          </g>
-          <g class="route__toggle route__toggle--krasnojarsk" data-map="12">
-            <use xlink:href="img/sprite-map.svg#krasnojarsk" />
-          </g>
-        </svg>
-      </div>
+            </g>
+            <g class="route__toggle route__toggle--barabanovo">
+              <use xlink:href="img/sprite-map.svg#barabanovo" />
+            </g>
+            <g class="route__toggle route__toggle--krasnojarsk">
+              <use xlink:href="img/sprite-map.svg#krasnojarsk" />
+            </g>
+            <g class="route__toggle route__toggle--putorana">
+              <use xlink:href="img/sprite-map.svg#plato-putorana" />
+            </g>
 
-      <div class="route__bottom">
+            <use xlink:href="img/sprite-map.svg#map" />
+          </svg>
+        </div>
 
+        <div class="route__bottom">
+          <button class="button button--arrow-left prev prev--nodes" type="button" name="arrow">
+            <svg width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+            </svg>
+          </button>
+
+          <div class="route__slider-wraper">
+            <div class="route__slider route__slider--nodes swiper-container">
+              <ul class="route__list route__list--nodes swiper-wrapper">
+                <!-- <li class="route__item route__item--nodes swiper-slide">
+                  <h3>
+                    Красноярск
+                  </h3>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+
+          <button class="button button--arrow-right next next--nodes" type="button" name="arrow">
+            <svg width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>

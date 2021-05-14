@@ -1,25 +1,11 @@
 .route {
   .wrapper();
 
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: flex-start;
-  align-items: center;
-
   min-height: 100vh;
 
   .pt_rem(35);
 
   @media only screen and (min-width: 768px) {
-    flex-direction: row;
-
-    flex-wrap: wrap;
-
-    justify-content: space-between;
-    align-items: flex-start;
-
     .pt_rem(50);
   }
 
@@ -32,48 +18,72 @@
   }
 }
 
-.route__left,
-.route__right {
-  .w100();
+.route,
+.route__content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
 
   @media only screen and (min-width: 768px) {
-    width: 100%;
+    flex-direction: row;
 
-    margin-right: 0;
+    flex-wrap: wrap;
 
-    .pb_rem(24);
-
-    overflow: hidden;
-  }
-
-  @media only screen and (min-width: 1280px) {
-    width: 40%;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
-.route__top,
-.route__left {
-  @media only screen and (min-width: 1280px) {
-    width: 51.53%;
-
-    margin-right: auto;
-
-    overflow: hidden;
-  }
-
-  @media only screen and (min-width: 1920px) {
-    width: 49.95%;
-  }
+.route__content,
+.route__left,
+.route__right {
+  .w100();
 }
 
 .route__right {
   order: 1;
 
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
   .mb_rem(20);
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    order: 2;
+
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    width: 35.14%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 35.08%;
+  }
+
+  @media (min-width: 1920px) {
+    width: 28.41%;
+  }
 }
 
 .route__left {
-  order: 2;
+  order: 3;
+
+  @media (min-width: 768px) {
+    order: 1;
+
+    width: 48.61%;
+  }
 }
 
 .route__title {
@@ -81,6 +91,9 @@
 
   padding: 0;
   margin: 0;
+
+  .mt_rem(13);
+  .mb_rem(19);
 
   .font_family_1();
 
@@ -91,6 +104,7 @@
 
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-align: left;
 
   color: #colors[white_100];
 
@@ -108,6 +122,8 @@
 }
 
 .route__more {
+  display: none;
+
   padding: 0;
   margin: 0;
 
@@ -131,7 +147,9 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 
-
+  &.active {
+    display: block;
+  }
 }
 
 .route__top {
@@ -144,12 +162,13 @@
   padding: 0;
   margin: 0;
 
-  .pb_rem(17);
   .mb_rem(15);
 
-  margin-right: calc(50vw - 50%);
+  margin-right: calc(50% - 50vw);
 
   border-bottom: 1px solid #colors[white_50];
+
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -169,8 +188,26 @@
     width: 100%;
 
     margin-right: 0;
+  }
 
-    .pb_rem(24);
+  @media only screen and (min-width: 1920px) {
+    margin-right: 50.05%;
+  }
+}
+
+.route__slider-wraper {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 69.44%;
+
+    padding: 0;
+    margin: 0;
 
     overflow: hidden;
   }
@@ -194,6 +231,20 @@
       width: 55.7%;
     }
   }
+
+  &--nodes {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      display: block;
+
+      width: 20%;
+
+      &.swiper-container {
+        overflow: visible;
+      }
+    }
+  }
 }
 
 .route__list {
@@ -209,7 +260,10 @@
 
   cursor: pointer;
 
-  span {
+  h3 {
+    padding: 0;
+    margin: 0;
+
     pointer-events: none;
 
     color: #colors[white_50];
@@ -235,27 +289,48 @@
     }
   }
 
+  &--routs {
+    h3 {
+      .pb_rem(17);
+    }
+
+    @media (min-width: 768px) {
+      h3 {
+        .pb_rem(24);
+      }
+    }
+
+    @media (min-width: 1920px) {
+      h3 {
+        .pb_rem(37);
+      }
+    }
+  }
+
+  &--nodes {
+    h3 {
+      .pb_rem(15);
+      .pt_rem(15);
+    }
+  }
+
   &.swiper-slide {
-    width: auto;
+    //width: auto;
   }
 
   &.swiper-slide-active {
-    span {
+    h3 {
       color: #colors[white_100];
-    }
-
-    @media only screen and (min-width: 768px) {
-
     }
   }
 
   &.swiper-slide-next {
-    span {
+    h3 {
       color: #colors[white_50];
     }
 
     & + .swiper-slide {
-      span {
+      h3 {
         color: #colors[white_50];
         background: linear-gradient(to right, #colors[white_50] 0%, #colors[white_20] 100%);
         -webkit-background-clip: text;
@@ -263,7 +338,7 @@
       }
 
       & + .swiper-slide {
-        span {
+        h3 {
           color: #colors[white_20];
           background: linear-gradient(to right, #colors[white_20] 0%, transparent 100%);
           -webkit-background-clip: text;
@@ -271,7 +346,7 @@
         }
 
         & + .swiper-slide {
-          span {
+          h3 {
             color: transparent;
             background: none;
             -webkit-background-clip: unset;
@@ -288,5 +363,67 @@
 }
 
 .route__toggle {
+  display: block;
+
   cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease-in;
+
+  &.active {
+    display: block;
+
+    opacity: 1;
+    pointer-events: all;
+
+    transition: opacity 0.3s ease-in;
+  }
+}
+
+.route__bottom {
+  order: 2;
+
+  align-self: flex-end;
+
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 35%;
+  max-width: 130px;
+
+  padding: 0;
+  margin: 0;
+
+  .mb_rem(-50);
+
+  @media (min-width: 768px) {
+    order: 3;
+
+    width: 100%;
+    max-width: none;
+
+    .mb_rem(0);
+  }
+}
+
+.route__top,
+.route__left,
+.route__bottom {
+  @media only screen and (min-width: 1280px) {
+    width: 51.53%;
+
+    overflow: hidden;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 49.95%;
+  }
 }

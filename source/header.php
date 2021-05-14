@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Wild life</title>
+    <title>
+      ВодоходЪ - Круиз по Енисею. Теплоход 5* "Максим Горький"
+    </title>
+
+    <meta name="description" content="Первый экспедиционный круиз по Енисею на премиальном теплоходе «Максим Горький». Красноярск - Дудинка. Плато Путорана." />
 
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -29,13 +33,6 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="visually-hidden" aria-label="Спрайт svg">
-      <!-- img/sprite.svg -->
-      <?php
-        include("img/sprite.svg");
-      ?>
-    </div>
-
     <header class="page-header page-header--top">
       <div class="page-header__wrapper page-header__wrapper--top">
         <div class="page-header__left page-header__left--top">

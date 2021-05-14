@@ -302,7 +302,14 @@
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &.swiper-button-disabled,
+    &:disabled:hover,
+    &.swiper-button-disabled:hover,
+    &:disabled:focus,
+    &.swiper-button-disabled:focus,
+    &:disabled:active,
+    &.swiper-button-disabled:active {
       pointer-events: none;
 
       cursor: default;
