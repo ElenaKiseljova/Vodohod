@@ -235,7 +235,7 @@
                 if (mapToggle.classList.contains('active') && (indexNodes.indexOf(i) === -1)) {
                   mapToggle.classList.remove('active');
                 } else if (!mapToggle.classList.contains('active') && (indexNodes.indexOf(i) > -1)) {
-                  mapToggle.setAttribute('data-map', i);
+                  mapToggle.setAttribute('data-map', indexNodes.indexOf(i));
                   mapToggle.classList.add('active');
                 }
               });
