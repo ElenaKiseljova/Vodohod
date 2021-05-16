@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
       routDescriptionInit: function () {
-        if ((window.innerWidth >= 768) && routsDescriptionSlider && argsSwiperRoutsDescriptionSlider) {
-          if (routsNodesSlider && argsSwiperRoutsNodesSlider && argsSwiperRoutsDescriptionSlider) {
+        if (routsDescriptionSlider && argsSwiperRoutsDescriptionSlider) {
+          if ((window.innerWidth >= 768) && routsNodesSlider && argsSwiperRoutsNodesSlider && argsSwiperRoutsDescriptionSlider) {
             routsNodesSwiper = new Swiper(routsNodesSlider, argsSwiperRoutsNodesSlider);
 
             argsSwiperRoutsDescriptionSlider.thumbs = {

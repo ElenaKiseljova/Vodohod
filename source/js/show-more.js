@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var showMore = function (countChars, classText, classButton) {
+  window.showMore = function (countChars, classText, classButton) {
     let texts = document.querySelectorAll(classText);
     let buttons = document.querySelectorAll(classButton);
 
@@ -24,10 +24,5 @@
         }
       });
     }
-  }
-
-  // Кнопка "Читать больше" видна только в мобильной версии
-  if (window.innerWidth < 768) {
-    showMore(133, '.text--description', '.route__more');
   }
 })();

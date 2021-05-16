@@ -2,7 +2,7 @@
 
 (function () {
   try {
-    // Маршруты
+    // Маршруты (для теста заданы названия просто так)
     let routsNames = [
       'Енисейская экспедиция',
       'Плато Путорана',
@@ -10,6 +10,7 @@
       'Экспедиция на Плато Путорана'
     ];
 
+    // Порядок элементов объекта должен совпадать с порядком DOM элементов пунктов маршрута ".route__toggle"
     let routsNodes = [
       // 0
       {
@@ -199,6 +200,12 @@
             let htmlTemplateRoutsDescription = templateRoutsListDescription.join(' ');
 
             routsListDescription.innerHTML = htmlTemplateRoutsDescription;
+
+            // Кнопка "Читать больше" видна только в мобильной версии
+            if (window.innerWidth < 768) {
+              // Импорт функции из show-more.js
+              window.showMore(133, '.text--description', '.route__more');
+            }
           },
           // Функция создает пункты списка ".route__list--nodes"
           createSliderNodesElement : function (i) {
@@ -220,36 +227,16 @@
             let indexNodes = routs[i].map((rout) => {
               return routsNodes.indexOf(rout);
             });
-            /*
+
             let mapToggles = document.querySelectorAll('.route__toggle');
 
             if (mapToggles) {
-
-              let k = 0;
               mapToggles.forEach((mapToggle, i) => {
-                if (indexNodes.indexOf(i) > -1) {
+                if (mapToggle.classList.contains('active') && (indexNodes.indexOf(i) === -1)) {
+                  mapToggle.classList.remove('active');
+                } else if (!mapToggle.classList.contains('active') && (indexNodes.indexOf(i) > -1)) {
+                  mapToggle.setAttribute('data-map', i);
                   mapToggle.classList.add('active');
-                  mapToggle.setAttribute('data-map', k);
-                  k++;
-                } else if ((indexNodes.indexOf(i) === -1) && mapToggle.classList.contains('active')) {
-                  mapToggle.classList.remove('active');
-                }
-              });
-            }*/
-
-            let mapToggles = document.querySelectorAll('.route__toggle');
-
-            if (mapToggles) {
-              mapToggles.forEach((mapToggle, i) => {
-                if (mapToggle.classList.contains('active')) {
-                  mapToggle.classList.remove('active');
-                }
-              });
-
-              indexNodes.forEach((indexNode, i) => {
-                if (mapToggles[indexNode]) {
-                  mapToggles[indexNode].setAttribute('data-map', i);
-                  mapToggles[indexNode].classList.add('active');
                 }
               });
             }
