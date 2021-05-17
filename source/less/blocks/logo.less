@@ -41,4 +41,25 @@
       }
     }
   }
+
+  &--footer {
+    .mb_rem(15);
+
+    fill: #colors[accent];
+
+    @media (min-width: 768px) {
+      .mb_rem(0);
+    }
+
+    @media (min-width: 1280px) {
+      .mb_rem(20);
+    }
+
+    @media (min-width: 1920px) {
+      svg {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
 }

@@ -1,8 +1,6 @@
 .route {
   .wrapper();
 
-  min-height: 100vh;
-
   .pt_rem(35);
 
   @media only screen and (min-width: 768px) {
@@ -69,10 +67,14 @@
 
   @media (min-width: 1280px) {
     width: 35.08%;
+
+    .mt_rem(-179);
+    .mb_rem(-120);
   }
 
   @media (min-width: 1920px) {
     width: 28.41%;
+    .mt_rem(-165);
   }
 }
 
@@ -83,6 +85,14 @@
     order: 1;
 
     width: 48.61%;
+  }
+
+  @media (min-width: 1280px) {
+    .mt_rem(100);
+  }
+
+  @media (min-width: 1920px) {
+    .mt_rem(190);
   }
 }
 
@@ -109,9 +119,12 @@
   color: #colors[white_100];
 
   @media (min-width: 768px) {
-    .rem(36, 40);
+    width: 100%;
 
+    margin: 0;
     .mb_rem(10);
+
+    .rem(36, 40);
   }
 
   @media (min-width: 1920px) {
@@ -188,10 +201,12 @@
     width: 100%;
 
     margin-right: 0;
+    .mb_rem(50);
   }
 
   @media only screen and (min-width: 1920px) {
     margin-right: 50.05%;
+    margin-bottom: 0;
   }
 }
 
@@ -211,6 +226,14 @@
 
     overflow: hidden;
   }
+
+  @media only screen and (min-width: 1280px) {
+    width: 70.69%;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 69.61%;
+  }
 }
 
 .route__slider {
@@ -228,7 +251,15 @@
     }
 
     @media only screen and (min-width: 768px) {
-      width: 55.7%;
+      width: 29.17%;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      width: 26.21%;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 27.22%;
     }
   }
 
@@ -243,6 +274,18 @@
       &.swiper-container {
         overflow: visible;
       }
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 21%;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      width: 25.61%;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 27.22%;
     }
   }
 }
@@ -315,7 +358,7 @@
   }
 
   &.swiper-slide {
-    //width: auto;
+    width: auto;
   }
 
   &.swiper-slide-active {
@@ -411,12 +454,23 @@
     max-width: none;
 
     .mb_rem(0);
+    .mt_rem(40);
+  }
+
+  @media only screen and (min-width: 1280px) {
+    width: 51.53%;
+
+    .mt_rem(50);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 41.04%;
+    .mt_rem(80);
   }
 }
 
 .route__top,
-.route__left,
-.route__bottom {
+.route__left {
   @media only screen and (min-width: 1280px) {
     width: 51.53%;
 

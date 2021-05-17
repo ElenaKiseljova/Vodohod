@@ -99,12 +99,14 @@
            При замене из админки картинки - имя файла и его расположение должно совпадать с версткой.
            Либо заменить здесь текст 'img/promo-1280.jpg' и в файле sprite.svg на новый путь к картинке.
       -->
-      <picture>
+      <picture itemscope itemtype="http://schema.org/ImageObject">
         <source media="(min-width: 1360px)" srcset="img/promo-1920.jpg" type="image/jpg">
         <source media="(min-width: 1024px)" srcset="img/promo-1280.jpg" type="image/jpg">
         <source media="(min-width: 425px)" srcset="img/promo-768.jpg" type="image/jpg">
 
-        <img src="img/promo-320.jpg" alt="Фон">
+        <img itemprop="contentUrl" src="img/promo-320.jpg" alt="Фон">
+
+        <meta itemprop="name" content="Фон">
       </picture>
       <div class="promo__mask"></div>
     </div>
@@ -115,7 +117,7 @@
       <div class="page-header__left page-header__left--bottom">
         <button class="button button--menu-bottom" type="button" name="menu">
           <span class="button__icon">
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="button__icon button__icon--white" width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                    fill-rule="evenodd"
                    clip-rule="evenodd"
@@ -229,11 +231,13 @@
           </g>
         </svg>
 
-        <picture class="totem__image">
+        <picture class="totem__image" itemscope itemtype="http://schema.org/ImageObject">
           <source media="(min-width: 1024px)" srcset="img/mask-1920.png" type="image/png">
           <source media="(min-width: 425px)" srcset="img/mask-768.png" type="image/png">
 
-          <img src="img/mask-320.png" alt="Маска">
+          <img itemprop="contentUrl" src="img/mask-320.png" alt="Маска">
+
+          <meta itemprop="name" content="Маска">
         </picture>
       </div>
 
@@ -350,7 +354,7 @@
 
         <div class="route__bottom">
           <button class="button button--arrow-left prev prev--nodes" type="button" name="arrow">
-            <svg width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
               <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
             </svg>
@@ -369,12 +373,246 @@
           </div>
 
           <button class="button button--arrow-right next next--nodes" type="button" name="arrow">
-            <svg width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- На время верстки (начало) -->
+  <a href="/uikit.php">
+    Ui Kit
+  </a>
+  <!-- На время верстки (конец) -->
+
+  <section class="reviews">
+    <div class="reviews__wrapper">
+      <h2 class="h2 h2--reviews">
+        Яркие впечатления наших гостей
+      </h2>
+
+      <div class="reviews__slider swiper-container">
+        <ul class="reviews__list swiper-wrapper">
+          <li class="reviews__item swiper-slide" itemscope itemtype="https://schema.org/Review">
+            <picture class="reviews__image" itemscope itemtype="http://schema.org/ImageObject">
+              <source media="(min-width: 1360px)" srcset="img/reviews-1920.jpg" type="image/jpg">
+              <source media="(min-width: 1024px)" srcset="img/reviews-1280.jpg" type="image/jpg">
+              <source media="(min-width: 425px)" srcset="img/reviews-768.jpg" type="image/jpg">
+
+              <img itemprop="contentUrl" src="img/reviews-320.jpg" alt="Reviews">
+
+              <meta itemprop="name" content="Reviews">
+            </picture>
+
+            <div class="reviews__content">
+              <div class="text text--reviews" itemprop="reviewBody">
+                <p>
+                  В круиз по Енисею собрались наспех,
+                  но ни разу не пожалели. Классно все: программа, теплоход, кухня, персонал. Видимо были включены в программу отличная
+                  для сентября и этих мест погода, а также отличная компания наших соседей туристов. Искренне рада, что и наши ребята из Водохода научились отлично делать турпродукт.
+                  Все "Принцессы" тихо курят в сторонке.
+                  Желаю компании больше хороших новых маршрутов и процветания на долгие времена.
+                  А мы вас всегда поддержим.
+                </p>
+              </div>
+
+              <div class="reviews__bottom">
+                <div class="text-small text-small--reviews">
+                  <h6>
+                    По Енисею :
+                  </h6>
+
+                  <p>
+                    Красноярск, Енисейск, Норильск
+                  </p>
+                </div>
+
+                <h5 class="h5 h5--reviews" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">
+                    Константин
+                  </span>
+                  <span itemprop="familyName">
+                    Константинопольский
+                  </span>
+                </h5>
+
+                <div class="reviews__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <!-- Модификатор равен рейтингу. Например: 4 - четыре закрашенные звезды и одна пустая. -->
+                  <div class="reviews__stars reviews__stars--5">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <meta itemprop="worstRating" content="1">
+                  <meta itemprop="ratingValue" content="5">
+                  <meta itemprop="bestRating" content="5"/>
+                </div>
+                <time class="text-small text-small--date">
+                  17 сентября 2020
+                  <meta itemprop="datePublished" content="2020-09-17"/>
+                </time>
+              </div>
+            </div>
+          </li>
+          <li class="reviews__item swiper-slide" itemscope itemtype="https://schema.org/Review">
+            <picture class="reviews__image" itemscope itemtype="http://schema.org/ImageObject">
+              <source media="(min-width: 1360px)" srcset="img/reviews-1920.jpg" type="image/jpg">
+              <source media="(min-width: 1024px)" srcset="img/reviews-1280.jpg" type="image/jpg">
+              <source media="(min-width: 425px)" srcset="img/reviews-768.jpg" type="image/jpg">
+
+              <img itemprop="contentUrl" src="img/reviews-320.jpg" alt="Reviews">
+
+              <meta itemprop="name" content="Reviews">
+            </picture>
+
+            <div class="reviews__content">
+              <div class="text text--reviews" itemprop="reviewBody">
+                <p>
+                  В круиз по Енисею собрались наспех,
+                  но ни разу не пожалели. Классно все: программа, теплоход, кухня, персонал. Видимо были включены в программу отличная
+                  для сентября и этих мест погода, а также отличная компания наших соседей туристов. Искренне рада, что и наши ребята из Водохода научились отлично делать турпродукт.
+                  Все "Принцессы" тихо курят в сторонке.
+                  Желаю компании больше хороших новых маршрутов и процветания на долгие времена.
+                  А мы вас всегда поддержим.
+                </p>
+              </div>
+
+              <div class="reviews__bottom">
+                <div class="text-small text-small--reviews">
+                  <h6>
+                    По Енисею :
+                  </h6>
+
+                  <p>
+                    Красноярск, Енисейск, Норильск
+                  </p>
+                </div>
+
+                <h5 class="h5 h5--reviews" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">
+                    Константин
+                  </span>
+                  <span itemprop="familyName">
+                    Константинопольский
+                  </span>
+                </h5>
+
+                <div class="reviews__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <!-- Модификатор равен рейтингу. Например: 4 - четыре закрашенные звезды и одна пустая. -->
+                  <div class="reviews__stars reviews__stars--5">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <meta itemprop="worstRating" content="1">
+                  <meta itemprop="ratingValue" content="5">
+                  <meta itemprop="bestRating" content="5"/>
+                </div>
+                <time class="text-small text-small--date">
+                  22 ноября 2020
+                  <meta itemprop="datePublished" content="2020-11-22"/>
+                </time>
+              </div>
+            </div>
+          </li>
+          <li class="reviews__item swiper-slide" itemscope itemtype="https://schema.org/Review">
+            <picture class="reviews__image" itemscope itemtype="http://schema.org/ImageObject">
+              <source media="(min-width: 1360px)" srcset="img/reviews-1920.jpg" type="image/jpg">
+              <source media="(min-width: 1024px)" srcset="img/reviews-1280.jpg" type="image/jpg">
+              <source media="(min-width: 425px)" srcset="img/reviews-768.jpg" type="image/jpg">
+
+              <img itemprop="contentUrl" src="img/reviews-320.jpg" alt="Reviews">
+
+              <meta itemprop="name" content="Reviews">
+            </picture>
+
+            <div class="reviews__content">
+              <div class="text text--reviews" itemprop="reviewBody">
+                <p>
+                  В круиз по Енисею собрались наспех,
+                  но ни разу не пожалели. Классно все: программа, теплоход, кухня, персонал. Видимо были включены в программу отличная
+                  для сентября и этих мест погода, а также отличная компания наших соседей туристов. Искренне рада, что и наши ребята из Водохода научились отлично делать турпродукт.
+                  Все "Принцессы" тихо курят в сторонке.
+                  Желаю компании больше хороших новых маршрутов и процветания на долгие времена.
+                  А мы вас всегда поддержим.
+                </p>
+              </div>
+
+              <div class="reviews__bottom">
+                <div class="text-small text-small--reviews">
+                  <h6>
+                    По Енисею :
+                  </h6>
+
+                  <p>
+                    Красноярск, Енисейск, Норильск
+                  </p>
+                </div>
+
+                <h5 class="h5 h5--reviews" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">
+                    Константин
+                  </span>
+                  <span itemprop="familyName">
+                    Константинопольский
+                  </span>
+                </h5>
+
+                <div class="reviews__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <!-- Модификатор равен рейтингу. Например: 4 - четыре закрашенные звезды и одна пустая. -->
+                  <div class="reviews__stars reviews__stars--5">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <meta itemprop="worstRating" content="1">
+                  <meta itemprop="ratingValue" content="5">
+                  <meta itemprop="bestRating" content="5"/>
+                </div>
+                <time class="text-small text-small--date">
+                  18 сентября 2020
+                  <meta itemprop="datePublished" content="2020-09-18"/>
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reviews__toggle">
+        <button class="button button--arrow-left-big prev prev--reviews" type="button" name="arrow">
+          <svg class="button__icon button__icon--brown" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+          </svg>
+        </button>
+
+        <div class="fraction fraction--reviews">
+          <span class="fraction__current">
+            005
+          </span>
+
+          <span class="fraction__all">
+            020
+          </span>
+        </div>
+
+        <button class="button button--arrow-right-big next next--reviews" type="button" name="arrow">
+          <svg class="button__icon button__icon--brown" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -412,12 +650,6 @@
       </form>
     </div>
   </section>
-
-  <!-- На время верстки (начало) -->
-  <a href="/uikit.php">
-    Ui Kit
-  </a>
-  <!-- На время верстки (конец) -->
 </main>
 
 <?php

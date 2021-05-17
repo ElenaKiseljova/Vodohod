@@ -86,4 +86,42 @@
       transition: height 1s ease-in-out;
     }
   }
+
+  &--reviews {
+    .mb_rem(20);
+
+    p:first-child:first-letter {
+      display: inline-block;
+
+    	float: left;
+
+      margin: 0 10px 0 0;
+
+      font-weight: 200;
+
+      .rem(38, 38);
+
+      vertical-align:bottom;
+    }
+
+    @media (min-width: 768px) {
+      .mb_rem(33);
+
+      p:first-child:first-letter {
+        .rem(48, 48);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .mb_rem(24);
+    }
+
+    @media (min-width: 1920px) {
+      flex-grow: 1;
+
+      p:first-child:first-letter {
+        .rem(66, 66);
+      }
+    }
+  }
 }

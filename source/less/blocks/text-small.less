@@ -17,4 +17,31 @@
   @media only screen and (min-width: 1920px) {
     .rem(16, 30);
   }
+
+  &--reviews,
+  &--date {
+    color: #colors[gray_text];
+
+    h6,
+    p {
+      display: inline;
+
+      padding: 0;
+      margin: 0;
+
+      font: inherit;
+    }
+  }
+
+  &--reviews {
+    .mb_rem(5);
+
+    @media (min-width: 1920px) {
+      .mb_rem(10);
+    }
+  }
+
+  &--date {
+    width: auto;
+  }
 }

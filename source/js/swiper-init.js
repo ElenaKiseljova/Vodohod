@@ -101,8 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
           routsNameSwiper.on('slideChange', function () {
             let index = routsNameSwiper.activeIndex;
 
-
-
             window.routs.createSliderDescriptionElement(index);
             window.routs.createSliderNodesElement(index);
             // Инициализация слайдеров из файла swiper-init.js
@@ -150,5 +148,39 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   } catch (e) {
     console.log(e);
+  }
+
+  try {
+    let reviewsContainer = document.querySelector('.reviews__slider.swiper-container');
+
+    if (reviewsContainer) {
+      var argsSwiperReviews = {
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        resizeObserver: true,
+        navigation: {
+          nextEl: '.next--reviews',
+          prevEl: '.prev--reviews'
+        },
+        pagination: {
+          el: '.fraction--reviews',
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            function numberAppend(d) {
+              return (d < 10) ? '00' + d.toString() : '0' + d.toString();
+            }
+            return '<span class="fraction__current">' + numberAppend(current) + '</span>' +
+                   '<span class="fraction__all">' + numberAppend(total) + '</span>';
+          }
+        },
+      };
+
+      let reviewsSwiper = new Swiper(reviewsContainer, argsSwiperReviews);
+    }
+  } catch (e) {
+    console.log(e);
+  } finally {
+
   }
 });

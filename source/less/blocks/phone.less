@@ -12,7 +12,9 @@
     }
   }
 
-  &--header-bottom {
+  &--header-bottom,
+  &--footer-left,
+  &--footer-right {
     h6 {
       color: #colors[gray_text];
     }
@@ -26,7 +28,9 @@
   &--header-bottom,
   &--menu-mobile,
   &--menu-individual,
-  &--menu-corporation {
+  &--menu-corporation,
+  &--footer-left,
+  &--footer-right {
     display: flex;
 
     flex-direction: column;
@@ -38,8 +42,6 @@
       padding: 0;
       margin: 0;
 
-      .font_family_2();
-
       font-style: normal;
     }
 
@@ -50,12 +52,22 @@
     }
 
     a {
-      font-weight: 500;
-
       &:hover,
       &:focus {
         color: #colors[accent];
       }
+    }
+  }
+
+  &--header,
+  &--header-bottom,
+  &--menu-mobile,
+  &--menu-individual,
+  &--menu-corporation {
+    a {
+      .font_family_2();
+
+      font-weight: 500;
 
       &:active {
         color: #colors[white_50];
@@ -242,6 +254,106 @@
 
     @media only screen and (min-width: 1280px) {
       justify-content: flex-end;
+    }
+  }
+
+  &--footer-left,
+  &--footer-right {
+    .mb_rem(20);
+
+    h6,
+    a {
+      text-align: center;
+    }
+
+    h6 {
+      .mb_rem(5);
+    }
+
+    a {
+      .font_family_1();
+
+      font-weight: 400;
+
+      .rem(20, 24);
+
+      &:active {
+        color: #colors[accent_light];
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+
+      .mb_rem(0);
+
+      h6 {
+        .mb_rem(10);
+
+        .rem(12, 14);
+      }
+
+      a {
+        .rem(30, 36);
+      }
+
+      a + a {
+        .mb_rem(5);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      width: 35%;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      h6 {
+        .mb_rem(15);
+
+        .rem(14, 17);
+      }
+
+      a {
+        .rem(36, 40);
+      }
+
+      a + a {
+        .mb_rem(10);
+      }
+    }
+  }
+
+  &--footer-left {
+    order: 1;
+
+    @media only screen and (min-width: 768px) {
+      align-items: flex-start;
+
+      h6,
+      a {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      order: 0;
+    }
+  }
+
+  &--footer-right {
+    order: 2;
+
+    @media only screen and (min-width: 768px) {
+      align-items: flex-end;
+
+      h6,
+      a {
+        text-align: right;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      order: 2;
     }
   }
 }

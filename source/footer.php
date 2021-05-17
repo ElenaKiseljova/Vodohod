@@ -1,7 +1,128 @@
 
-    <footer class="page-footer">
+    <footer class="page-footer" itemscope itemtype="http://schema.org/Organization">
       <div class="page-footer__wrapper">
-        Футер
+        <div class="phone phone--footer-left">
+          <h6>
+            Для индивидуальных заказчиков:
+          </h6>
+
+          <a href="tel:+74954454650">
+            <span itemprop="telephone">
+              +7 (495) 445 46 50
+            </span>
+          </a>
+
+          <a href="mail:premium@vodohod.ru">
+            <span itemprop="email">
+              premium@vodohod.ru
+            </span>
+          </a>
+        </div>
+
+        <div class="page-footer__center">
+          <svg width="200" height="12" aria-label="Узор">
+            <use xlink:href="#icon-pattern-footer"></use>
+          </svg>
+
+          <a class="logo logo--footer" href="#">
+            <svg width="92" height="30" aria-label="Логотип">
+              <use xlink:href="#icon-logo"></use>
+            </svg>
+            <span class="visually-hidden" itemprop="name">
+              ВодоходЪ - круизы и путешествия
+            </span>
+          </a>
+
+          <address class="page-footer__text page-footer__text--center" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="postalCode">125040</span>,
+            <span itemprop="addressLocality">г. Москва</span>,
+            <span itemprop="streetAddress">Ленинградский проспект, д. 15, стр. 14, этаж 4, пом. V</span>
+          </address>
+
+          <ul class="social social--footer">
+            <li class="social__item social__item--footer">
+              <a class="button button--social" href="" target="_blank">
+                <span class="visually-hidden">
+                  Facebook
+                </span>
+                <svg width="16" height="16">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item social__item--footer">
+              <a class="button button--social" href="" target="_blank">
+                <span class="visually-hidden">
+                  Instagram
+                </span>
+                <svg width="16" height="16">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item social__item--footer">
+              <a class="button button--social" href="" target="_blank">
+                <span class="visually-hidden">
+                  Вконтакте
+                </span>
+                <svg width="18" height="12">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item social__item--footer">
+              <a class="button button--social" href="" target="_blank">
+                <span class="visually-hidden">
+                  Однокласники
+                </span>
+                <svg width="18" height="18">
+                  <use xlink:href="#icon-odnoklassniki"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="phone phone--footer-right">
+          <h6>
+            Для корпоративных заказчиков:
+          </h6>
+
+          <a href="tel:+749515046370">
+            <span itemprop="telephone">
+              +7 (495) 150-46-37
+            </span>
+          </a>
+
+          <a href="mail:corp@vodohod.ru">
+            <span itemprop="email">
+              corp@vodohod.ru
+            </span>
+          </a>
+        </div>
+
+        <div class="page-footer__bottom">
+          <p class="page-footer__text page-footer__text--copyright">
+            © 2020, ВодоходЪ
+          </p>
+          <p class="page-footer__text page-footer__text--privacy">
+            <a href="#">Политика конфиденциальности</a>
+          </p>
+          <p class="page-footer__text page-footer__text--offerts">
+            <a href="#">Публичная оферта</a>
+          </p>
+          <p class="page-footer__text page-footer__text--number">
+            <span>Реестровый номер туроператора</span> <span>серия РТО № 002057</span>
+          </p>
+          <p class="page-footer__text page-footer__text--creators">
+            Дизайн и разработка сайта:
+            <a href="#">
+              <span>
+                TODO Agency
+              </span>
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
 
