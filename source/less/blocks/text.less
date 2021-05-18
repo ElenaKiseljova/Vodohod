@@ -27,7 +27,7 @@
   }
 
   &--promo {
-    max-width: 85%;
+    flex-grow: 1;
 
     .mb_rem(68);
 
@@ -39,6 +39,7 @@
     color: #colors[white_100];
 
     @media only screen and (min-width: 768px) {
+      max-width: 85%;
       .mb_rem(238);
     }
 
@@ -88,6 +89,8 @@
   }
 
   &--reviews {
+    flex-grow: 1;
+
     .mb_rem(20);
 
     p:first-child:first-letter {
@@ -117,8 +120,6 @@
     }
 
     @media (min-width: 1920px) {
-      flex-grow: 1;
-
       p:first-child:first-letter {
         .rem(66, 66);
       }

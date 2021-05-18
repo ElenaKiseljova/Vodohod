@@ -1,0 +1,392 @@
+.timetable {
+  .w100();
+
+  .pt_rem(50);
+
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    .pt_rem(109);
+  }
+}
+
+.timetable__wrapper {
+  .wrapper();
+
+  @media (min-width: 768px) {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+}
+
+.timetable__slider-wrapper {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  .w100();
+
+  @media (min-width: 768px) {
+    width: 69.03%;
+
+    margin-right: calc(50% - 50vw);
+
+    overflow: hidden;
+  }
+
+  @media (min-width: 1280px) {
+    width: calc(73.98% + (50vw - 50%));
+  }
+
+  @media (min-width: 1920px) {
+    width: calc(83.13% + (50vw - 50%));
+  }
+}
+
+.timetable__slider {
+  padding: 0;
+  margin: 0;
+
+  &--months {
+    width: 75%; //57% - сентябрь не влезет
+
+    &.swiper-container {
+      overflow: visible;
+    }
+
+    @media (min-width: 768px) {
+      width: 70%;//45.27%
+    }
+
+    @media (min-width: 1920px) {
+      width: 82%;
+    }
+  }
+
+  &--timetable {
+    @media (min-width: 768px) {
+      .mt_rem(30);
+    }
+  }
+}
+
+.timetable__list,
+.timetable__nodes {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.timetable__item {
+  padding: 0;
+  margin: 0;
+
+  &.swiper-slide-active {
+    color: #colors[accent];
+  }
+
+  &--months {
+    color: #colors[lines_normal];
+  }
+
+  &--inner {
+    .pt_rem(20);
+    .pb_rem(20);
+
+    border-bottom: 1px solid #colors[lines_normal];
+
+    &:first-of-type {
+      border-top: 1px solid #colors[lines_normal];
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .pt_rem(40);
+      .pb_rem(35);
+    }
+
+    @media (min-width: 1280px) {
+      .pb_rem(40);
+    }
+
+    @media (min-width: 1920px) {
+      .pt_rem(50);
+      .pb_rem(50);
+    }
+  }
+}
+
+.timetable__header {
+  .w100();
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 16.95%;
+  }
+
+  @media (min-width: 1920px) {
+    width: 13.19%;
+  }
+}
+
+.timetable__title {
+  padding: 0;
+  margin: 0;
+
+  .pt_rem(20);
+  .pb_rem(10);
+
+  .font_family_1();
+
+  font-style: normal;
+  font-weight: 200;
+
+  .rem(30, 42);
+
+  color: inherit;
+
+  text-align: left;
+
+  @media (min-width: 768px) {
+    .pt_rem(0);
+    .pb_rem(0);
+
+    .rem(48, 48);//67
+  }
+}
+
+.timetable__date {
+  .w100();
+
+  .mb_rem(10);
+
+  color: #colors[accent];
+
+  vertical-align: middle;
+
+  @media (min-width: 768px) {
+    width: 13.89%;
+
+    .mt_rem(12);
+    .mb_rem(0);
+
+    text-align: center;
+  }
+
+  @media (min-width: 1280px) {
+    width: 8.47%;
+
+    .mt_rem(4);
+  }
+
+  @media (min-width: 1920px) {
+    width: 8.8%;
+
+    .mt_rem(0);
+  }
+}
+
+.timetable__date-days {
+  .mr_rem(5);
+
+  .font_family_1();
+
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(24, 34);
+
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    display: block;
+
+    .mr_rem(0);
+
+    .rem(30, 40);
+  }
+
+  @media (min-width: 1920px) {
+    .rem(48, 52);
+  }
+}
+
+.timetable__date-months {
+  .font_family_2();
+
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(14, 17);
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  @media (min-width: 1920px) {
+    .rem(18, 22);
+  }
+}
+
+.timetable__content {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+
+  .w100();
+
+  @media (min-width: 768px) {
+    justify-content:flex-start;
+
+    width: 82.64%;
+  }
+
+  @media (min-width: 1280px) {
+    flex-wrap: nowrap;
+
+    justify-content: flex-end;
+
+    width: 83.05%;
+  }
+
+  @media (min-width: 1920px) {
+    width: 83.13%;
+  }
+}
+
+.timetable__left {
+  .w100();
+
+  @media (min-width: 1280px) {
+    width: 57%;
+
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.timetable__nodes {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+
+  .mb_rem(5);
+}
+
+.timetable__node {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  .font_family_1();
+  font-style: normal;
+  font-weight: normal;
+  .rem(20, 24);
+
+  color: #colors[black_text];
+
+  &:not(:first-of-type) {
+    &::before {
+      content: '';
+
+      display: inline-block;
+
+      width: 12px;
+      height: 8px;
+
+      .mr_rem(5);
+      .ml_rem(5);
+
+      background-image: url('../img/arrow-timetable.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .rem(30, 36);
+
+    &:not(:first-of-type) {
+      &::before {
+        width: 16px;
+        height: 11px;
+
+        .mr_rem(10);
+        .ml_rem(10);
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .rem(36, 40);
+
+    &:not(:first-of-type) {
+      &::before {
+        width: 24px;
+        height: 17px;
+
+        .mr_rem(15);
+        .ml_rem(15);
+      }
+    }
+  }
+}
+
+.timetable__price {
+  padding: 0;
+  margin: 0;
+
+  .font_family_2();
+
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(18, 30);
+
+  color: #colors[black_text];
+
+  @media only screen and (min-width: 768px) {
+    .mr_rem(50);
+
+    .rem(20, 40);
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .mr_rem(68);
+
+    text-align: right;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .mr_rem(123);
+
+    .rem(30, 58);
+  }
+}

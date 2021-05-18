@@ -2,10 +2,9 @@
   position: relative;
 
   .w100();
-  min-height: 100vh;
 
   .pt_rem(117);
-  .pb_rem(40);
+  .pb_rem(44);
 
   @media only screen and (min-width: 768px) {
     .pt_rem(156);
@@ -70,6 +69,13 @@
   position: relative;
 
   z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
 
   .wrapper();
 }
@@ -169,6 +175,8 @@
 }
 
 .promo__title {
+  flex-grow: 1;
+
   display: flex;
 
   flex-direction: column;
@@ -210,6 +218,10 @@
     font-weight: 300;
 
     .rem(18, 22);
+  }
+
+  @media (orientation: landscape) and (min-width: 768px) {
+    flex-grow: 0;
   }
 
   @media only screen and (min-width: 768px) {

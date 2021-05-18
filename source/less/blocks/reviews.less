@@ -39,6 +39,8 @@
 }
 
 .reviews__list {
+  align-items: stretch;
+
   .w100();
 
   list-style: none;
@@ -55,17 +57,19 @@
   padding: 0;
   margin: 0;
 
+  height: auto;
+
   @media (min-width: 768px) {
     flex-direction: row;
 
     flex-wrap: wrap;
 
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   @media (min-width: 1920px) {
-    align-items: stretch;
+
   }
 }
 
@@ -90,9 +94,10 @@
   overflow: hidden;
 
   img {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     max-width: none;
+    object-fit: cover;
   }
 
   &::before,
@@ -129,7 +134,7 @@
     width: 41.67vw;
     height: 41.67vw;
 
-    .mb_rem(0);
+    .mb_rem(185);
   }
 
   @media (min-width: 1280px) {
@@ -138,6 +143,8 @@
 
     max-width: 420px;
     max-height: 420px;
+
+    .mb_rem(0);
   }
 
   @media (min-width: 1920px) {
@@ -150,24 +157,32 @@
 }
 
 .reviews__content {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
   .w100();
 
   @media (min-width: 768px) {
     width: 45.97vw;
+    max-width: 350px;
   }
 
   @media (min-width: 1280px) {
     width: 29.69vw;
+    max-width: 380px;
 
     margin-left: auto;
     margin-right: 0;
   }
 
   @media (min-width: 1920px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    width: 30.89vw;
+
+    max-width: 595px;
   }
 }
 
@@ -185,30 +200,48 @@
 
   .pt_rem(23);
 
-  border-top: 1px solid #colors[lines_bold];
-
-  &::before {
+  &::before,
+  &::after {
     content: '';
 
     position: absolute;
 
-    top: 3px;
-    left: 0;
+    right: 0;
 
     width: 100%;
     height: 1px;
+  }
+
+  &::before {
+    top: 3px;
 
     background-color: #colors[lines_normal];
   }
 
+  &::after {
+    top: 0px;
+
+    background-color: #colors[lines_bold];
+  }
+
   @media (min-width: 768px) {
     .pt_rem(33);
+
+    &::before,
+    &::after {
+      width: 100vw;
+    }
   }
 
   @media (min-width: 1280px) {
     width: auto;
 
     .pt_rem(23);
+
+    &::before,
+    &::after {
+      width: 100%;
+    }
   }
 
   @media (min-width: 1920px) {
@@ -299,6 +332,8 @@
 
   .mt_rem(20);
 
+  background-color: #colors[bg];
+
   @media (min-width: 768px) {
     position: absolute;
 
@@ -310,9 +345,14 @@
     max-width: 225px;
 
     .mt_rem(0);
+    .mb_rem(25);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
+    .mb_rem(0);
+  }
+
+  @media (min-width: 1920px) {
     max-width: 245px;
   }
 }

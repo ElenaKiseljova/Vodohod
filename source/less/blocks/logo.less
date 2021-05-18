@@ -62,4 +62,44 @@
       }
     }
   }
+
+  &--video {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    z-index: 1;
+
+    width: 30%;
+
+    max-width: 90px;
+
+    .mt_rem(10);
+
+    transform: translateX(-50%);
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      fill: #colors[white_100];
+    }
+
+    @media (min-width: 768px) {
+      .mt_rem(33);
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 120px;
+
+      .mt_rem(40);
+    }
+
+    @media (min-width: 1920px) {
+      max-width: 212px;
+
+      .mt_rem(60);
+    }
+  }
 }

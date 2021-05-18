@@ -277,6 +277,7 @@
 
     <!-- Скрипты -->
 
+    <script src="js/promo.min.js"></script>
     <script src="libs/swiper.min.js"></script>
     <script src="js/menu.min.js"></script>
 
@@ -285,5 +286,6 @@
     <script src="js/show-more.min.js"></script>
     <script src="js/swiper-init.min.js"></script>
     <script src="js/routs.min.js"></script>
+    <script src="js/youtube.min.js"></script>
   </body>
 </html>

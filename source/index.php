@@ -117,7 +117,7 @@
       <div class="page-header__left page-header__left--bottom">
         <button class="button button--menu-bottom" type="button" name="menu">
           <span class="button__icon">
-            <svg class="button__icon button__icon--white" width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                    fill-rule="evenodd"
                    clip-rule="evenodd"
@@ -348,7 +348,9 @@
               <use xlink:href="img/sprite-map.svg#plato-putorana" />
             </g>
 
-            <use xlink:href="img/sprite-map.svg#map" />
+            <g class="route__map">
+              <use xlink:href="img/sprite-map.svg#map" />
+            </g>
           </svg>
         </div>
 
@@ -383,11 +385,552 @@
     </div>
   </section>
 
-  <!-- На время верстки (начало) -->
-  <a href="/uikit.php">
-    Ui Kit
-  </a>
-  <!-- На время верстки (конец) -->
+  <section class="video">
+    <div class="video__wrapper">
+      <div class="youtube" data-id="QBsY1pQbP30">
+        <div class="logo logo--video">
+          <svg width="90" height="30" aria-label="Логотип">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </div>
+        <h2 class="youtube__title">
+          Енисейская экспедиция
+        </h2>
+
+        <button class="youtube__button button button--play" type="button" name="play" aria-label="Включить/выключить видео">
+          <span class="button__icon">
+            <svg width="13" height="16">
+              <use xlink:href="#icon-play"></use>
+            </svg>
+          </span>
+        </button>
+
+        <picture class="youtube__thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+          <source media="(min-width: 1360px)" srcset="img/video-1920.jpg" type="image/jpg">
+          <source media="(min-width: 1024px)" srcset="img/video-1280.jpg" type="image/jpg">
+          <source media="(min-width: 425px)" srcset="img/video-768.jpg" type="image/jpg">
+
+          <img itemprop="contentUrl" src="img/video-320.jpg" alt="Poster">
+
+          <meta itemprop="name" content="Poster">
+        </picture>
+        <iframe class="youtube__iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="timetable">
+    <div class="timetable__wrapper">
+      <header class="timetable__header">
+        <h2 class="h4 h4--timetable">
+          Расписание
+        </h2>
+        <p class="hints hints--timetable">
+          *Стоимость указана за одного человека в двухместном размещении
+        </p>
+      </header>
+      <div class="timetable__slider-wrapper">
+        <div class="timetable__slider timetable__slider--months swiper-container">
+          <ul class="timetable__list timetable__list--months swiper-wrapper">
+            <li class="timetable__item timetable__item--months swiper-slide">
+              <h5 class="timetable__title">
+                Май 2021
+              </h5>
+            </li>
+            <li class="timetable__item timetable__item--months swiper-slide">
+              <h5 class="timetable__title">
+                Июнь 2021
+              </h5>
+            </li>
+            <li class="timetable__item timetable__item--months swiper-slide">
+              <h5 class="timetable__title">
+                Сентябрь 2021
+              </h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timetable__slider timetable__slider--timetable swiper-container">
+        <ul class="timetable__list timetable__list--timetable swiper-wrapper">
+          <li class="timetable__item timetable__item--timetable swiper-slide">
+            <ul class="timetable__list timetable__list--inner">
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    20-23
+                  </span>
+                  <span class="timetable__date-months">
+                    мая
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Енисейск
+                      </li>
+                      <li class="timetable__node">
+                        Галанино
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 62 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    24-27
+                  </span>
+                  <span class="timetable__date-months">
+                    мая
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Енисейск
+                      </li>
+                      <li class="timetable__node">
+                        Галанино
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 59 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    28-5
+                  </span>
+                  <span class="timetable__date-months">
+                    мая - июня
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Бахта
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + день на борту, Ярцево, Ворогово, Енисейск, Галанино, Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 156 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    29-5
+                  </span>
+                  <span class="timetable__date-months">
+                    мая - июня
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Бахта
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + день на борту, Ярцево, Ворогово, Енисейск, Галанино, Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 138 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="timetable__item timetable__item--timetable swiper-slide">
+            <ul class="timetable__list timetable__list--inner">
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    12-13
+                  </span>
+                  <span class="timetable__date-months">
+                    мая
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Енисейск
+                      </li>
+                      <li class="timetable__node">
+                        Галанино
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 62 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    24-27
+                  </span>
+                  <span class="timetable__date-months">
+                    мая
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Енисейск
+                      </li>
+                      <li class="timetable__node">
+                        Галанино
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 59 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    28-5
+                  </span>
+                  <span class="timetable__date-months">
+                    мая - июня
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Бахта
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + день на борту, Ярцево, Ворогово, Енисейск, Галанино, Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 156 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    29-5
+                  </span>
+                  <span class="timetable__date-months">
+                    мая - июня
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Бахта
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + день на борту, Ярцево, Ворогово, Енисейск, Галанино, Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 138 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="timetable__item timetable__item--timetable swiper-slide">
+            <ul class="timetable__list timetable__list--inner">
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    30-31
+                  </span>
+                  <span class="timetable__date-months">
+                    мая
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Енисейск
+                      </li>
+                      <li class="timetable__node">
+                        Галанино
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 62 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    24-27
+                  </span>
+                  <span class="timetable__date-months">
+                    мая
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Енисейск
+                      </li>
+                      <li class="timetable__node">
+                        Галанино
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 59 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    28-5
+                  </span>
+                  <span class="timetable__date-months">
+                    мая - июня
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Бахта
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + день на борту, Ярцево, Ворогово, Енисейск, Галанино, Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 156 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+              <li class="timetable__item timetable__item--inner">
+                <p class="timetable__date">
+                  <span class="timetable__date-days">
+                    29-5
+                  </span>
+                  <span class="timetable__date-months">
+                    мая - июня
+                  </span>
+                </p>
+
+                <div class="timetable__content">
+                  <div class="timetable__left">
+                    <ul class="timetable__nodes">
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                      <li class="timetable__node">
+                        Бахта
+                      </li>
+                      <li class="timetable__node">
+                        Красноярск
+                      </li>
+                    </ul>
+                    <p class="text-small text-small--timetable">
+                      + день на борту, Ярцево, Ворогово, Енисейск, Галанино, Барабаново
+                    </p>
+                  </div>
+
+                  <p class="timetable__price">
+                    от 138 000 ₽
+                  </p>
+
+                  <button class="button button--order-text openpopup" data-popup="order" type="button" name="order-text">
+                    Заказать
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section class="reviews">
     <div class="reviews__wrapper">
@@ -411,7 +954,7 @@
             <div class="reviews__content">
               <div class="text text--reviews" itemprop="reviewBody">
                 <p>
-                  В круиз по Енисею собрались наспех,
+                  Енисею собрались наспех,
                   но ни разу не пожалели. Классно все: программа, теплоход, кухня, персонал. Видимо были включены в программу отличная
                   для сентября и этих мест погода, а также отличная компания наших соседей туристов. Искренне рада, что и наши ребята из Водохода научились отлично делать турпродукт.
                   Все "Принцессы" тихо курят в сторонке.
@@ -442,7 +985,7 @@
 
                 <div class="reviews__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                   <!-- Модификатор равен рейтингу. Например: 4 - четыре закрашенные звезды и одна пустая. -->
-                  <div class="reviews__stars reviews__stars--5">
+                  <div class="reviews__stars reviews__stars--4">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -474,10 +1017,6 @@
             <div class="reviews__content">
               <div class="text text--reviews" itemprop="reviewBody">
                 <p>
-                  В круиз по Енисею собрались наспех,
-                  но ни разу не пожалели. Классно все: программа, теплоход, кухня, персонал. Видимо были включены в программу отличная
-                  для сентября и этих мест погода, а также отличная компания наших соседей туристов. Искренне рада, что и наши ребята из Водохода научились отлично делать турпродукт.
-                  Все "Принцессы" тихо курят в сторонке.
                   Желаю компании больше хороших новых маршрутов и процветания на долгие времена.
                   А мы вас всегда поддержим.
                 </p>
@@ -505,7 +1044,7 @@
 
                 <div class="reviews__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                   <!-- Модификатор равен рейтингу. Например: 4 - четыре закрашенные звезды и одна пустая. -->
-                  <div class="reviews__stars reviews__stars--5">
+                  <div class="reviews__stars reviews__stars--1">
                     <span></span>
                     <span></span>
                     <span></span>

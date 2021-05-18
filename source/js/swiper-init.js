@@ -1,13 +1,14 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Маршруты
   try {
     // Виды экспедиций
     let routsNameSlider = document.querySelector('.route__slider--routs.swiper-container');
 
     if (routsNameSlider) {
       var argsSwiperroutsNameSlider = {
-        speed: 800,
+        speed: 300,
         spaceBetween: 30,
         //loop: true,
         freeMode: true,
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (routsDescriptionSlider) {
       var argsSwiperRoutsDescriptionSlider = {
-        speed: 800,
+        speed: 300,
         slidesPerView: 1,
         effect: 'fade',
         fadeEffect: {
@@ -64,13 +65,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (routsNodesSlider) {
           var argsSwiperRoutsNodesSlider = {
-            speed: 800,
+            speed: 300,
             spaceBetween: 60,
             freeMode: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
             slidesPerView: 'auto',
             //init: false,
+            navigation: {
+              nextEl: '.next--nodes',
+              prevEl: '.prev--nodes'
+            },
             resizeObserver: true,
 
             // Responsive breakpoints
@@ -89,6 +94,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
+
+    // Функция для активации пунктов карты
+    let activatingMapNodes = function (sliderSwiper, sliderThumbSwiper = null) {
+      let mapToggles = document.querySelectorAll('.route__toggle.active');
+
+      if (mapToggles) {
+        mapToggles.forEach((mapToggle, i) => {
+          let index = mapToggle.getAttribute('data-map');
+
+          if (index && routsDescriptionSwiper) {
+            mapToggle.addEventListener('click', function () {
+              sliderSwiper.slideTo(index);
+
+              if (sliderThumbSwiper != null) {
+                sliderThumbSwiper.slideTo(index);
+              }
+            });
+          }
+        });
+      }
+    };
 
     // Объект экспорта в файл routs.js
     var routsNameSwiper, routsNodesSwiper, routsDescriptionSwiper;
@@ -121,18 +147,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
           routsDescriptionSwiper = new Swiper(routsDescriptionSlider, argsSwiperRoutsDescriptionSlider);
 
-          let mapToggles = document.querySelectorAll('.route__toggle.active');
-
-          if (mapToggles) {
-            mapToggles.forEach((mapToggle, i) => {
-              let index = mapToggle.getAttribute('data-map');
-
-              if (index && routsDescriptionSwiper) {
-                mapToggle.addEventListener('click', function () {
-                  routsDescriptionSwiper.slideTo(index);
-                });
-              }
-            });
+          if (routsNodesSwiper) {
+            // Активация пунктов карты
+            activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
+          } else {
+            // Активация пунктов карты
+            activatingMapNodes(routsDescriptionSwiper);
           }
         }
       },
@@ -143,6 +163,14 @@ document.addEventListener('DOMContentLoaded', function () {
           if ((window.innerWidth >= 768) && routsNodesSwiper) {
             routsNodesSwiper.updateSlides();
           }
+
+          if (routsNodesSwiper) {
+            // Активация пунктов карты
+            activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
+          } else {
+            // Активация пунктов карты
+            activatingMapNodes(routsDescriptionSwiper);
+          }
         }
       }
     };
@@ -150,15 +178,61 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(e);
   }
 
+  // Расписание
+
+  try {
+    let timetableMonthsContainer = document.querySelector('.timetable__slider--months.swiper-container');
+    let timetableTimetableContainer = document.querySelector('.timetable__slider--timetable.swiper-container');
+
+    if (timetableMonthsContainer && timetableTimetableContainer) {
+      var argsSwiperTimetableMonths = {
+        speed: 300,
+        slidesPerView: 1,
+        slideToClickedSlide: true,
+        spaceBetween: 30,
+        resizeObserver: true,
+      };
+
+      let timetableMonthsSwiper = new Swiper(timetableMonthsContainer, argsSwiperTimetableMonths);
+
+      var argsSwiperTimetable = {
+        speed: 300,
+        slidesPerView: 1,
+        slideToClickedSlide: true,
+        resizeObserver: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        thumbs: {
+          swiper: timetableMonthsSwiper,
+        }
+      };
+
+      let timetableTimetableSwiper = new Swiper(timetableTimetableContainer, argsSwiperTimetable);
+
+      timetableMonthsSwiper.on('slideChange', function () {
+        timetableTimetableSwiper.slideTo(timetableMonthsSwiper.activeIndex);
+      });
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Отзывы
   try {
     let reviewsContainer = document.querySelector('.reviews__slider.swiper-container');
 
     if (reviewsContainer) {
       var argsSwiperReviews = {
-        speed: 800,
+        speed: 300,
+        loop: true,
         slidesPerView: 1,
-        spaceBetween: 30,
         resizeObserver: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
         navigation: {
           nextEl: '.next--reviews',
           prevEl: '.prev--reviews'
@@ -180,7 +254,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (e) {
     console.log(e);
-  } finally {
-
   }
 });
