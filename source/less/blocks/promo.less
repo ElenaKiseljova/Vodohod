@@ -1,14 +1,31 @@
 .promo {
   position: relative;
 
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+
   .w100();
 
   .pt_rem(117);
   .pb_rem(44);
 
+  min-height: 100vh;
+
+  @media (orientation: portrait) and (max-height: 567px) {
+    .pt_rem(80);
+    .pb_rem(20);
+  }
+
   @media only screen and (min-width: 768px) {
     .pt_rem(156);
     .pb_rem(154);
+  }
+
+  @media (orientation: landscape) and (max-height: 1023px) {
+    .pt_rem(130);
+    .pb_rem(100);
   }
 
   @media only screen and (min-width: 1280px) {

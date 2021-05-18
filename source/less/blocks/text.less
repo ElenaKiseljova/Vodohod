@@ -29,7 +29,8 @@
   &--promo {
     flex-grow: 1;
 
-    .mb_rem(68);
+    //.mb_rem(68);
+    .pb_rem(30);
 
     margin-left: auto;
     margin-right: auto;
@@ -38,19 +39,23 @@
 
     color: #colors[white_100];
 
+    @media (orientation: portrait) and (max-height: 567px) {
+      .pb_rem(15);
+    }
+
     @media only screen and (min-width: 768px) {
       max-width: 85%;
-      .mb_rem(238);
+      //.mb_rem(238);
     }
 
     @media only screen and (min-width: 1280px) {
-      .mb_rem(92);
+      //.mb_rem(92);
 
       max-width: 51%;
     }
 
     @media only screen and (min-width: 1920px) {
-      .mb_rem(232);
+      //.mb_rem(232);
 
       max-width: 46.88%;
     }
