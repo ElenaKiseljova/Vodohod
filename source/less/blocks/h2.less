@@ -52,4 +52,42 @@
       max-width: 480px;
     }
   }
+
+  &--cave {
+    width: auto;
+
+    margin-right: 22%;
+    .mb_rem(20);
+
+    color: #colors[white_100];
+
+    @media (min-width: 768px) {
+      margin-right: 8.8%;
+    }
+
+    @media (min-width: 1280px) {
+      margin-right: 14.4%;
+    }
+
+    @media (min-width: 1920px) {
+      margin-right: auto;
+    }
+  }
+
+  &--leisure {
+    .mb_rem(10);
+
+    @media (min-width: 768px) {
+      .mb_rem(20);
+    }
+
+    @media (min-width: 1280px) {
+      flex-shrink: 0;
+
+      width: 16%;
+
+      .mb_rem(0);
+      margin-right: 27%;
+    }
+  }
 }

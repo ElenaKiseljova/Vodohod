@@ -244,13 +244,104 @@ document.addEventListener('DOMContentLoaded', function () {
             function numberAppend(d) {
               return (d < 10) ? '00' + d.toString() : '0' + d.toString();
             }
-            return '<span class="fraction__current">' + numberAppend(current) + '</span>' +
-                   '<span class="fraction__all">' + numberAppend(total) + '</span>';
+            return '<span class="fraction__current fraction__current--reviews">' + numberAppend(current) + '</span>' +
+                   '<span class="fraction__all fraction__all--reviews">' + numberAppend(total) + '</span>';
           }
         },
       };
 
       let reviewsSwiper = new Swiper(reviewsContainer, argsSwiperReviews);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Слайдер с пещерными рисунками
+  try {
+    let caveContainerText = document.querySelector('.cave__slider--text.swiper-container');
+    let caveContainerImages = document.querySelector('.cave__slider--images.swiper-container');
+
+    if (caveContainerText && caveContainerImages) {
+      var argsSwiperCaveText = {
+        speed: 800,
+        loop: true,
+        slidesPerView: 1,
+        resizeObserver: true,
+        navigation: {
+          nextEl: '.next--cave',
+          prevEl: '.prev--cave'
+        },
+        pagination: {
+          el: '.fraction--cave',
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            function numberAppend(d) {
+              return (d < 10) ? '00' + d.toString() : '0' + d.toString();
+            }
+            return '<span class="fraction__current fraction__current--cave">' + numberAppend(current) + '</span>' +
+                   '<span class="fraction__all fraction__all--cave">' + numberAppend(total) + '</span>';
+          }
+        },
+      };
+
+      let caveSwiperText = new Swiper(caveContainerText, argsSwiperCaveText);
+
+      var argsSwiperCaveImages = {
+        speed: 800,
+        loop: true,
+        slidesPerView: 1,
+        resizeObserver: true,
+      };
+
+      let caveSwiperImages = new Swiper(caveContainerImages, argsSwiperCaveImages);
+
+      if (caveSwiperText && caveSwiperImages) {
+        caveSwiperText.on('slideNextTransitionStart', function () {
+          console.log('next');
+
+          caveSwiperImages.slideNext();
+        });
+
+        caveSwiperText.on('slidePrevTransitionStart', function () {
+          console.log('prev');
+          caveSwiperImages.slidePrev();
+        });
+      }
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Досуг
+  try {
+    let leisureContainer = document.querySelector('.leisure__slider.swiper-container');
+
+    if (leisureContainer) {
+      var argsSwiperLeisure = {
+        speed: 300,
+        loop: true,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        spaceBetween: 20,
+        resizeObserver: true,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 80,
+          },
+
+          // when window width is >= 1280px
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 90,
+          },
+        }
+      };
+
+      let leisureSwiper = new Swiper(leisureContainer, argsSwiperLeisure);
     }
   } catch (e) {
     console.log(e);

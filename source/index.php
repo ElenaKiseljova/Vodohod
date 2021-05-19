@@ -419,6 +419,192 @@
     </div>
   </section>
 
+  <section class="leisure">
+    <div class="leisure__wrapper">
+      <header class="leisure__header">
+        <h2 class="h2 h2--leisure">
+          Досуг на борту
+        </h2>
+
+        <p class="text text--leisure">
+          Для Вас работает SPA-зона с обширным набором услуг: фитнес зал,
+          массажный кабинет, сибирский банный комплекс. В вечернее пребывание
+          на борту мы хотели добавить что-то по-сибирски душевное, поэтому
+          на шлюпочной палубе всех желающих ждет наш караоке клуб.
+        </p>
+      </header>
+
+      <div class="leisure__slider-wrapper">
+        <div class="leisure__slider leisure__slider--text swiper-container">
+          <ul class="leisure__list swiper-wrapper">
+            <li class="leisure__item swiper-slide">
+              <h3 class="h4 h4--leisure">
+                Фитнес
+              </h3>
+
+              <picture class="leisure__image" itemscope itemtype="http://schema.org/ImageObject">
+                <source media="(min-width: 1360px)" srcset="img/leisure-1-1920.jpg" type="image/jpg">
+                <source media="(min-width: 425px)" srcset="img/leisure-1-768.jpg" type="image/jpg">
+
+                <img itemprop="contentUrl" src="img/leisure-1-320.jpg" alt="leisure">
+
+                <meta itemprop="name" content="leisure">
+              </picture>
+
+              <p class="text-small text-small--leisure">
+                Йога, пилатес, поддерживающие тренировки - это то,
+                что нужно, чтобы сохранить форму на отдыхе.
+              </p>
+            </li>
+            <li class="leisure__item swiper-slide">
+              <h3 class="h4 h4--leisure">
+                Wellness и SPA
+              </h3>
+
+              <picture class="leisure__image" itemscope itemtype="http://schema.org/ImageObject">
+                <source media="(min-width: 1360px)" srcset="img/leisure-2-1920.jpg" type="image/jpg">
+                <source media="(min-width: 425px)" srcset="img/leisure-1-768.jpg" type="image/jpg">
+
+                <img itemprop="contentUrl" src="img/leisure-1-320.jpg" alt="leisure">
+
+                <meta itemprop="name" content="leisure">
+              </picture>
+
+              <p class="text-small text-small--leisure">
+                Сибирская сауна и массаж – лучший способ релаксации после насыщенного дня. Расслабьтесь, восстановите силы, запаситесь энергией.
+              </p>
+            </li>
+            <li class="leisure__item swiper-slide">
+              <h3 class="h4 h4--leisure">
+                Караоке
+              </h3>
+
+              <picture class="leisure__image" itemscope itemtype="http://schema.org/ImageObject">
+                <source media="(min-width: 1360px)" srcset="img/leisure-3-1920.jpg" type="image/jpg">
+                <source media="(min-width: 425px)" srcset="img/leisure-1-768.jpg" type="image/jpg">
+
+                <img itemprop="contentUrl" src="img/leisure-1-320.jpg" alt="leisure">
+
+                <meta itemprop="name" content="leisure">
+              </picture>
+
+              <p class="text-small text-small--leisure">
+                Если вы прекрасно поете, обязательно сходите в караоке-бар, а если с пением у вас не очень, все равно сходите - здесь все свои.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cave">
+    <div class="cave__wrapper">
+      <div class="cave__slider cave__slider--text swiper-container">
+        <ul class="cave__list cave__list--text swiper-wrapper">
+          <li class="cave__item cave__item--text swiper-slide">
+            <h3 class="h2 h2--cave">
+              Откройте самые невероятные места планеты
+            </h3>
+
+            <p class="text-small text-small--cave">
+              Спуститесь в подземные ледяные пещеры, поднимитесь на плато Путорана,
+              побывайте в местах, которых  нет на картах. Испытайте себя в экспедиции
+              на уникальном маршруте в сердце Сибири.
+            </p>
+          </li>
+          <li class="cave__item cave__item--text swiper-slide">
+            <h3 class="h2 h2--cave">
+              Невероятные места планеты
+            </h3>
+
+            <p class="text-small text-small--cave">
+              Спуститесь в подземные ледяные пещеры, поднимитесь на плато Путорана,
+              побывайте в местах, которых  нет на картах. Испытайте себя в экспедиции
+              на уникальном маршруте в сердце Сибири.
+            </p>
+          </li>
+          <li class="cave__item cave__item--text swiper-slide">
+            <h3 class="h2 h2--cave">
+              Откройте самые невероятные места планеты Откройте самые
+            </h3>
+
+            <p class="text-small text-small--cave">
+              Спуститесь в подземные
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cave__bottom">
+        <div class="cave__buttons">
+          <button class="button button--arrow-left prev prev--cave" type="button" name="arrow">
+            <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+            </svg>
+          </button>
+
+          <button class="button button--arrow-right next next--cave" type="button" name="arrow">
+            <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="fraction fraction--cave">
+          <span class="fraction__current fraction__current--cave">
+            001
+          </span>
+
+          <span class="fraction__all fraction__all--cave">
+            004
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="cave__slider cave__slider--images swiper-container">
+      <ul class="cave__list cave__list--images swiper-wrapper">
+        <li class="cave__item cave__item--images swiper-slide">
+          <picture itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/cave-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Reviews">
+
+            <meta itemprop="name" content="Cave">
+          </picture>
+        </li>
+        <li class="cave__item cave__item--images swiper-slide">
+          <picture itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/cave-1920-2.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Reviews">
+
+            <meta itemprop="name" content="Cave">
+          </picture>
+        </li>
+        <li class="cave__item cave__item--images swiper-slide">
+          <picture itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/cave-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Reviews">
+
+            <meta itemprop="name" content="Cave">
+          </picture>
+        </li>
+      </ul>
+
+      <div class="cave__mask"></div>
+    </div>
+  </section>
+
   <section class="timetable">
     <div class="timetable__wrapper">
       <header class="timetable__header">
@@ -1137,11 +1323,11 @@
         </button>
 
         <div class="fraction fraction--reviews">
-          <span class="fraction__current">
+          <span class="fraction__current fraction__current--reviews">
             005
           </span>
 
-          <span class="fraction__all">
+          <span class="fraction__all fraction__all--reviews">
             020
           </span>
         </div>
