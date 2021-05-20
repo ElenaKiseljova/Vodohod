@@ -250,7 +250,9 @@
   &--arrow-left,
   &--arrow-right,
   &--arrow-left-big,
-  &--arrow-right-big {
+  &--arrow-right-big,
+  &--arrow-left-rest,
+  &--arrow-right-rest {
     .button__icon {
       &--white {
         fill: #colors[white_100];
@@ -307,7 +309,9 @@
   }
 
   &--arrow-left,
-  &--arrow-right {
+  &--arrow-right,
+  &--arrow-left-rest,
+  &--arrow-right-rest {
     width: 15.63vw;
     height: 15.63vw;
 
@@ -367,6 +371,32 @@
   }
 
   &--arrow-left-big,
+  &--arrow-right-big,
+  &--arrow-left-rest,
+  &--arrow-right-rest {
+    &:disabled,
+    &.swiper-button-disabled,
+    &:disabled:hover,
+    &.swiper-button-disabled:hover,
+    &:disabled:focus,
+    &.swiper-button-disabled:focus,
+    &:disabled:active,
+    &.swiper-button-disabled:active {
+      pointer-events: none;
+
+      cursor: default;
+
+      background-color: transparent;
+
+      opacity: 0.7;
+
+      .button__icon {
+        fill: #colors[lines_normal];
+      }
+    }
+  }
+
+  &--arrow-left-big,
   &--arrow-right-big {
     width: 18.75vw;
     height: 18.75vw;
@@ -388,27 +418,6 @@
       width: 3.13vw;
       height: 3.13vw;
     }
-
-    &:disabled,
-    &.swiper-button-disabled,
-    &:disabled:hover,
-    &.swiper-button-disabled:hover,
-    &:disabled:focus,
-    &.swiper-button-disabled:focus,
-    &:disabled:active,
-    &.swiper-button-disabled:active {
-      pointer-events: none;
-
-      cursor: default;
-
-      background-color: transparent;
-
-      opacity: 0.5;
-
-      .button__icon {
-        fill: #colors[lines_normal];
-      }
-    }
   }
 }
 
@@ -419,7 +428,9 @@
   &--arrow-left,
   &--arrow-right,
   &--arrow-left-big,
-  &--arrow-right-big {
+  &--arrow-right-big,
+  &--arrow-left-rest,
+  &--arrow-right-rest {
     position: relative;
 
     display: flex;
@@ -485,7 +496,9 @@
 
   &--social,
   &--arrow-left-big,
-  &--arrow-right-big {
+  &--arrow-right-big,
+  &--arrow-left-rest,
+  &--arrow-right-rest {
     border: 1px solid #colors[lines_bold];
 
     &::before {

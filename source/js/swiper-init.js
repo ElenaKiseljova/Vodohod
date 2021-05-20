@@ -60,43 +60,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Города (табы)
 
-      if (window.innerWidth >= 768) {
-        var routsNodesSlider = document.querySelector('.route__slider--nodes.swiper-container');
+      var routsNodesSlider = document.querySelector('.route__slider--nodes.swiper-container');
 
-        if (routsNodesSlider) {
-          var argsSwiperRoutsNodesSlider = {
-            speed: 300,
-            spaceBetween: 60,
-            freeMode: true,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-            slidesPerView: 'auto',
-            //init: false,
-            navigation: {
-              nextEl: '.next--nodes',
-              prevEl: '.prev--nodes'
+      if (routsNodesSlider) {
+        var argsSwiperRoutsNodesSlider = {
+          speed: 300,
+          spaceBetween: 60,
+          freeMode: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+          slidesPerView: 'auto',
+          //init: false,
+          navigation: {
+            nextEl: '.next--nodes',
+            prevEl: '.prev--nodes'
+          },
+          resizeObserver: true,
+
+          // Responsive breakpoints
+          breakpoints: {
+            // when window width is >= 1280px
+            1280: {
+              spaceBetween: 30,
             },
-            resizeObserver: true,
 
-            // Responsive breakpoints
-            breakpoints: {
-              // when window width is >= 1280px
-              1280: {
-                spaceBetween: 30,
-              },
-
-              // when window width is >= 1920px
-              1920: {
-                spaceBetween: 50,
-              },
-            }
-          };
-        }
+            // when window width is >= 1920px
+            1920: {
+              spaceBetween: 50,
+            },
+          }
+        };
       }
     }
 
     // Функция для активации пунктов карты
-    let activatingMapNodes = function (sliderSwiper, sliderThumbSwiper = null) {
+    var activatingMapNodes = function (sliderSwiper, sliderThumbSwiper = null) {
       let mapToggles = document.querySelectorAll('.route__toggle.active');
 
       if (mapToggles) {
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     };
 
-    // Объект экспорта в файл routs.js
+    // Объект экспорта в файлы routs.js
     var routsNameSwiper, routsNodesSwiper, routsDescriptionSwiper;
 
     window.swiperChange = {
@@ -137,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       routDescriptionInit: function () {
         if (routsDescriptionSlider && argsSwiperRoutsDescriptionSlider) {
-          if ((window.innerWidth >= 768) && routsNodesSlider && argsSwiperRoutsNodesSlider && argsSwiperRoutsDescriptionSlider) {
+          if (routsNodesSlider && argsSwiperRoutsNodesSlider && argsSwiperRoutsDescriptionSlider) {
             routsNodesSwiper = new Swiper(routsNodesSlider, argsSwiperRoutsNodesSlider);
 
             argsSwiperRoutsDescriptionSlider.thumbs = {
@@ -157,23 +155,75 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
       routDescriptionUpdate: function () {
-        if (routsDescriptionSwiper) {
+        if (routsDescriptionSwiper && routsNodesSwiper) {
           routsDescriptionSwiper.updateSlides();
+          routsNodesSwiper.updateSlides();
 
-          if ((window.innerWidth >= 768) && routsNodesSwiper) {
-            routsNodesSwiper.updateSlides();
-          }
-
-          if (routsNodesSwiper) {
-            // Активация пунктов карты
-            activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
-          } else {
-            // Активация пунктов карты
-            activatingMapNodes(routsDescriptionSwiper);
-          }
+          // Активация пунктов карты
+          activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
         }
       }
     };
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Отдых
+
+  try {
+    let restContainer = document.querySelector('.rest__slider.swiper-container');
+
+    if (restContainer) {
+      var argsSwiperRest = {
+        speed: 300,
+        loop: true,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        resizeObserver: true,
+        navigation: {
+          nextEl: '.next--rest',
+          prevEl: '.prev--rest'
+        },
+        pagination: {
+          el: '.fraction--rest',
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            function numberAppend(d) {
+              return (d < 10) ? '00' + d.toString() : '0' + d.toString();
+            }
+            return '<span class="fraction__current fraction__current--rest">' + numberAppend(current) + '</span>' +
+                   '<span class="fraction__all fraction__all--rest">' + numberAppend(total) + '</span>';
+          }
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 768px
+          768: {
+            spaceBetween: 20,
+          },
+        }
+      };
+
+      let restSwiper = null;
+
+      // Объект экспорта в файлы rest.js
+      window.swiperChange.restSliderInit = function () {
+        if (restSwiper === null) {
+          restSwiper = new Swiper(restContainer, argsSwiperRest);
+        }
+      };
+
+      window.swiperChange.restSliderDestroy = function () {
+        if (restSwiper !== null) {
+          restSwiper.destroy();
+
+          restSwiper = null;
+        }
+      };
+    }
   } catch (e) {
     console.log(e);
   }
@@ -324,6 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         spaceBetween: 20,
+        slidesPerView: 1,
         resizeObserver: true,
         // Responsive breakpoints
         breakpoints: {

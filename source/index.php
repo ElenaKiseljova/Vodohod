@@ -385,6 +385,202 @@
     </div>
   </section>
 
+  <section class="rest">
+    <div class="rest__wrapper">
+      <header class="rest__header">
+        <h2 class="h2 h2--rest">
+          Отдых с лучшим видом
+        </h2>
+
+        <div class="rest__tabs-wrapper">
+          <ul class="rest__tabs">
+            <li class="rest__tab active">
+              <button class="rest__button active" type="button" name="rest">
+                Сибирский паб
+              </button>
+              <p class="rest__text visually-hidden">
+                Посмотрите в окно, оглянитесь вокруг, прочувствуйте атмосферу Сибири и русского Севера. Закажите подходящие к настроению закуски и напитки. Традиционные напитки и закуски, легкая музыка и приятное общение – что еще нужно для хорошего вечера.
+              </p>
+            </li>
+            <li class="rest__tab">
+              <button class="rest__button" type="button" name="rest">
+                Винотека
+              </button>
+              <p class="rest__text visually-hidden">
+                Винотека в окно, оглянитесь вокруг, прочувствуйте атмосферу Сибири и русского Севера. Закажите подходящие к настроению закуски и напитки. Традиционные напитки и закуски, легкая музыка и приятное общение – что еще нужно для хорошего вечера.
+              </p>
+            </li>
+            <li class="rest__tab">
+              <button class="rest__button" type="button" name="rest">
+                Улов дня
+              </button>
+              <p class="rest__text visually-hidden">
+                Улов дня в окно, оглянитесь вокруг, прочувствуйте атмосферу Сибири и русского Севера. Закажите подходящие к настроению закуски и напитки. Традиционные напитки и закуски, легкая музыка и приятное общение – что еще нужно для хорошего вечера.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="rest__slider-wrapper">
+        <div class="rest__slider swiper-container">
+          <ul class="rest__list swiper-wrapper">
+            <!-- Templates id="rest-slides-" -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="rest__content">
+        <p class="text-small text-small--rest">
+          <!-- Текст подставляется rest.js из-под кнопок -->
+        </p>
+
+        <div class="rest__buttons">
+          <button class="button button--arrow-left-rest prev prev--rest" type="button" name="arrow">
+            <svg class="button__icon button__icon--brown" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+            </svg>
+          </button>
+
+          <div class="fraction fraction--rest">
+            <span class="fraction__current fraction__current--rest">
+              005
+            </span>
+
+            <span class="fraction__all fraction__all--rest">
+              020
+            </span>
+          </div>
+
+          <button class="button button--arrow-right-rest next next--rest" type="button" name="arrow">
+            <svg class="button__icon button__icon--brown" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <template id="rest-slides-0">
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+      </template>
+      <template id="rest-slides-1">
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+      </template>
+      <template id="rest-slides-2">
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+        <li class="rest__item swiper-slide">
+          <picture class="rest__image" itemscope itemtype="http://schema.org/ImageObject">
+            <source media="(min-width: 1360px)" srcset="img/rest-1920.jpg" type="image/jpg">
+            <source media="(min-width: 1024px)" srcset="img/rest-1280.jpg" type="image/jpg">
+            <source media="(min-width: 425px)" srcset="img/rest-768.jpg" type="image/jpg">
+
+            <img itemprop="contentUrl" src="img/rest-320.jpg" alt="rest">
+
+            <meta itemprop="name" content="rest">
+          </picture>
+        </li>
+      </template>
+    </div>
+  </section>
+
   <section class="video">
     <div class="video__wrapper">
       <div class="youtube" data-id="QBsY1pQbP30">
@@ -435,7 +631,7 @@
       </header>
 
       <div class="leisure__slider-wrapper">
-        <div class="leisure__slider leisure__slider--text swiper-container">
+        <div class="leisure__slider swiper-container">
           <ul class="leisure__list swiper-wrapper">
             <li class="leisure__item swiper-slide">
               <h3 class="h4 h4--leisure">
@@ -572,7 +768,7 @@
             <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
             <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
 
-            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Reviews">
+            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Cave">
 
             <meta itemprop="name" content="Cave">
           </picture>
@@ -583,7 +779,7 @@
             <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
             <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
 
-            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Reviews">
+            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Cave">
 
             <meta itemprop="name" content="Cave">
           </picture>
@@ -594,7 +790,7 @@
             <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
             <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
 
-            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Reviews">
+            <img itemprop="contentUrl" src="img/cave-320.jpg" alt="Cave">
 
             <meta itemprop="name" content="Cave">
           </picture>

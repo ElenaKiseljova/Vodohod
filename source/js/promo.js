@@ -18,15 +18,6 @@
       if (heightPromo > browserHeight) {
         promo.style.minHeight = browserHeight + 'px';
       }
-
-      // // Обнуляем стили внешних отступов для текста
-      // promoText.style.marginBottom = '0px';
-      //
-      // // Задаем новую высоту секции Промо
-      // promo.style.height = browserHeight + 'px';
-      //
-      // // Растягиваем враппер Промо на всю его высоту
-      // promoWrapper.style.height = '100%';
     }
   };
 

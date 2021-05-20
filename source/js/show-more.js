@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  // Функция экспорта в routs.js
   window.showMore = function (countChars, classText, classButton) {
     let texts = document.querySelectorAll(classText);
     let buttons = document.querySelectorAll(classButton);

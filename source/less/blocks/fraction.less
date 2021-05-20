@@ -28,6 +28,10 @@
     width: 25.23%;
   }
 
+  &--rest {
+    width: 30%;
+  }
+
   &--cave {
     width: 45px;
 
@@ -40,7 +44,8 @@
 .fraction__current {
   .mb_rem(4);
 
-  &--reviews {
+  &--reviews,
+  &--rest {
     color: #colors[black_text];
   }
 
@@ -56,7 +61,8 @@
 .fraction__all {
   align-self: flex-end;
 
-  &--reviews {
+  &--reviews,
+  &--rest {
     color: #colors[gray_text];
 
     &::before {
