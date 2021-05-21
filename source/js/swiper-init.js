@@ -168,6 +168,26 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(e);
   }
 
+  // Расписание
+
+  try {
+    let emotionsContainer = document.querySelector('.emotions__slider.swiper-container');
+
+    if (emotionsContainer) {
+      var argsSwiperEmotions = {
+        speed: 0,
+        slidesPerView: 1,
+        allowTouchMove: false,
+        effect: 'fade',
+        resizeObserver: true,
+      };
+
+      let emotionsSwiper = new Swiper(emotionsContainer, argsSwiperEmotions);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
   // Отдых
 
   try {

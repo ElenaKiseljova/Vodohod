@@ -287,6 +287,9 @@
     <script src="js/show-more.min.js"></script>
     <script src="js/swiper-init.min.js"></script>
     <script src="js/routs.min.js"></script>
+    <script src="js/emotions.min.js"></script>
+    <script src="js/tab-list-change-height.min.js"></script>
+    <script src="js/decks.min.js"></script>
     <script src="js/rest.min.js"></script>
     <script src="js/youtube.min.js"></script>
   </body>

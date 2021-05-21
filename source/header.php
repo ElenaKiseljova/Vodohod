@@ -143,17 +143,17 @@
 
           <ul class="navigation__list navigation__list--menu-left">
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#">
+              <a href="#totam">
                 Экспедиция
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#">
+              <a href="#route">
                 Маршруты
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#">
+              <a href="#decks">
                 Теплоход
               </a>
             </li>
@@ -163,12 +163,12 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#">
+              <a href="#emotions">
                 Что входит в круиз
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#">
+              <a href="#rest">
                 Бары и рестораны
               </a>
             </li>
@@ -178,27 +178,27 @@
         <nav class="navigation navigation--menu-right" role="navigation">
           <ul class="navigation__list navigation__list--menu-right">
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#">
+              <a href="#video">
                 Видео о круизе
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#">
+              <a href="#leisure">
                 Досуг на борту
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#">
+              <a href="#cave">
                 Впечатления
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#">
+              <a href="#timetable">
                 Расписание
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#">
+              <a href="#reviews">
                 Отзывы гостей
               </a>
             </li>

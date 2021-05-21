@@ -29,8 +29,6 @@
 
               restSliderList.innerHTML = '';
               restSliderList.appendChild(restSlidesTemplateContent);
-              //console.log(restSlidesTemplateContent);
-              //window.swiperChange.restSliderInit
             }
           };
 
@@ -59,67 +57,9 @@
           });
         });
       }
+
+      window.tabListChangeHeight(restTabList, 'rest__tabs');
     }
-
-    let flagEventClik;
-
-    var restTabListChangeHeight = function () {
-      let defaultHeightRestTabList;
-
-      restTabList.style.height = 'auto';
-
-      defaultHeightRestTabList = restTabList.offsetHeight;
-
-      console.log(defaultHeightRestTabList);
-
-      let onRestTabListToggle = function (evt) {
-        if (!evt.target.closest('.rest__tabs')) {
-          toggleRestTabList();
-        }
-      };
-
-      let toggleRestTabList = function () {
-        if (restTabList.classList.contains('active')) {
-
-          restTabList.classList.remove('active');
-
-          restTabList.style = '';
-
-          document.removeEventListener('click', onRestTabListToggle);
-        } else if (!restTabList.classList.contains('active')) {
-
-          restTabList.classList.add('active');
-          restTabList.style.height = defaultHeightRestTabList + 'px';
-
-          document.addEventListener('click', onRestTabListToggle);
-        }
-      };
-
-      let onRestTabListClick = function (evt) {
-        if (evt.target.classList.contains('rest__tabs')) {
-          toggleRestTabList();
-          console.log('click');
-        }
-      };
-
-      if (window.innerWidth < 768) {
-
-        restTabList.style = '';
-        restTabList.classList.add('changed');
-
-        if (!flagEventClik) {
-          restTabList.addEventListener('click', onRestTabListClick);
-
-          flagEventClik = true;
-        }
-      } else {
-        if (restTabList.classList.contains('changed')) {
-          restTabList.classList.remove('changed');
-        }
-      }
-    };
-
-    restTabListChangeHeight();
 
     let replaceContent = function () {
       if (restContent && restHeader) {
@@ -140,7 +80,10 @@
     replaceContent();
 
     window.addEventListener('resize', function () {
-      restTabListChangeHeight();
+      if (restTabList) {
+        window.tabListChangeHeight(restTabList, 'rest__tabs');
+      }
+
       replaceContent();
     });
 

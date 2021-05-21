@@ -1,0 +1,397 @@
+.decks,
+.decks__top,
+.decks__bottom,
+.decks__list {
+  .w100();
+}
+
+.decks {
+  .pt_rem(50);
+
+  @media only screen and (min-width: 768px) {
+    .mb_rem(100);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .mb_rem(200);
+  }
+}
+
+.decks__wrapper {
+  .wrapper();
+}
+
+.decks__top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.decks__container {
+  position: relative;
+
+  width: 89%;
+
+  padding: 0;
+  margin: 0;
+
+  .pb_rem(20);
+  .pt_rem(20);
+  .pl_rem(20);
+  .pr_rem(20);
+
+  background-image: url('../img/voodoo.svg'),
+                    url('../img/decks-bg-320.jpg');
+  background-position: calc(100% + 65px) calc(100% - 50px), center;
+  background-size: auto 188px, cover;
+  background-repeat: no-repeat;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 1;
+
+    background: transparent;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+
+    border: 1px solid #colors[white_50];
+  }
+
+  &::after {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+
+    border: 1px solid #colors[white_20];
+  }
+
+  @media only screen and (min-width: 425px) {
+    background-image: url('../img/voodoo.svg'),
+                      url('../img/decks-bg-768.jpg');
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 91.67%;
+
+    .pb_rem(30);
+    .pt_rem(30);
+    .pl_rem(30);
+    .pr_rem(30);
+
+    &::before {
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+    }
+
+    &::after {
+      width: calc(100% - 26px);
+      height: calc(100% - 26px);
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    width: 66.1%;
+
+    background-image: url('../img/voodoo.svg'),
+                      url('../img/decks-bg-1280.jpg');
+  }
+
+  @media only screen and (min-width: 1366px) {
+    background-image: url('../img/voodoo.svg'),
+                      url('../img/decks-bg-1920.jpg');
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 66.32%;
+
+    .pb_rem(40);
+    .pt_rem(40);
+    .pl_rem(40);
+    .pr_rem(40);
+  }
+}
+
+.decks__tabs-wrapper {
+  position: relative;
+
+  z-index: 3;
+
+  height: 22px;
+
+  .mb_rem(19);
+
+  @media only screen and (min-width: 768px) {
+    height: auto;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    flex-grow: 1;
+  }
+}
+
+.decks__tabs {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 0;
+  margin: 0;
+
+  .pl_rem(12);
+  .pt_rem(10);
+  .pr_rem(27);
+  .pb_rem(10);
+
+  .ml_rem(-12);
+  .mt_rem(-10);
+
+  border-radius: 0 10px 10px 0;
+
+  background-color: transparent;
+
+  list-style: none;
+
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    top: 20px;
+    right: 10px;
+
+    z-index: 1;
+
+    width: 12px;
+    height: 8px;
+
+    background-image: url('../img/desck-toggle.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transform: rotate(0deg);
+  }
+
+  &.changed {
+    height: 100%;
+
+    box-sizing: content-box;
+
+    background-color: transparent;
+
+    transition: height 0.3s ease-in, background-color 0s 0.3s;
+
+    &.active {
+      box-sizing: border-box;
+
+      background-color: #colors[white_20];
+
+      transition: height 0.3s ease-in;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    position: static;
+
+    flex-direction: row;
+
+    .w100();
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.decks__tab {
+  order: 1;
+
+  &:not(:last-of-type) {
+    .mb_rem(10);
+  }
+
+  &.active {
+    order: 0;
+
+    .mb_rem(10);
+  }
+
+  .font_family_1();
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(16, 22);
+
+  letter-spacing: 0.05em;
+
+  @media only screen and (min-width: 768px) {
+    width: auto;
+
+    &:not(:last-of-type) {
+      .mb_rem(0);
+    }
+
+    .rem(16, 22);
+
+    &.active {
+      order: 1;
+
+      .mb_rem(0);
+    }
+  }
+
+  @media (min-width: 1280px) {
+
+  }
+
+  @media (min-width: 1920px){
+    .rem(24, 34);
+  }
+}
+
+.decks__button {
+  .button_default();
+
+  .font_family_1();
+  font-style: normal;
+  font-weight: normal;
+
+  .rem(16, 22);
+
+  letter-spacing: 0.05em;
+
+  color: #colors[white_50];
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .rem(16, 22);
+
+    &::before,
+    &::after {
+      flex-shrink: 0;
+
+      content: '';
+
+      display: block;
+
+      width: 8px;
+      height: 16px;
+
+      .mt_rem(3);
+
+      background-image: url('../img/decks-pseudo.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      opacity: 0;
+    }
+
+    &::after {
+      .ml_rem(10);
+    }
+
+    &::before {
+      .mr_rem(10);
+      transform: rotate(180deg);
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .rem(24, 34);
+
+    &::before {
+      width: 20px;
+      height: 40px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: #colors[white_100];
+  }
+
+  &:active,
+  &.active {
+    color: #colors[white_100];
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    pointer-events: none;
+  }
+}
+
+.decks__list {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .pl_rem(12);
+  .pr_rem(12);
+  .mb_rem(80);
+
+  list-style: none;
+}
+
+.decks__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  opacity: 0;
+
+  transition: opacity 0.3s;
+
+  &.active {
+    position: static;
+
+    opacity: 1;
+
+    transition: opacity 0.3s;
+  }
+}

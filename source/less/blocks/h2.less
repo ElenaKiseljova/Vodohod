@@ -108,4 +108,40 @@
       width: 94.55%;
     }
   }
+
+  &--emotions {
+    .mb_rem(20);
+
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+      .mb_rem(50);
+    }
+
+    @media only screen and (min-width: 1920px) {
+      .mb_rem(80);
+    }
+  }
+
+  &--decks {
+    width: auto;
+
+    .ml_rem(3);
+
+    writing-mode: vertical-lr;
+
+    transform: rotate(180deg);
+
+    @media only screen and (min-width: 768px) {
+      .ml_rem(10);
+    }
+
+    @media only screen and (min-width: 1280px) {
+      .ml_rem(0);
+
+      writing-mode: horizontal-tb;
+
+      transform: rotate(0);
+    }
+  }
 }

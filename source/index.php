@@ -3,7 +3,7 @@
 ?>
 
 <main class="page-main">
-  <section class="promo">
+  <section class="promo" id="promo">
     <div class="promo__wrapper">
       <div class="text text--promo">
         <p>
@@ -16,12 +16,12 @@
       <nav class="navigation navigation--promo" role="navigation">
         <ul class="navigation__list navigation__list--promo">
           <li class="navigation__item navigation__item--promo">
-            <a href="#">
+            <a href="#route">
               Маршруты
             </a>
           </li>
           <li class="navigation__item navigation__item--promo">
-            <a href="#">
+            <a href="#decks">
               теплоход
             </a>
           </li>
@@ -31,22 +31,22 @@
             </a>
           </li>
           <li class="navigation__item navigation__item--promo">
-            <a href="#">
+            <a href="#rest">
               Рестораны
             </a>
           </li>
           <li class="navigation__item navigation__item--promo">
-            <a href="#">
+            <a href="#leisure">
               Развлечения
             </a>
           </li>
           <li class="navigation__item navigation__item--promo">
-            <a href="#">
+            <a href="#timetable">
               Расписание
             </a>
           </li>
           <li class="navigation__item navigation__item--promo">
-            <a href="#">
+            <a href="#reviews">
               Отзывы
             </a>
           </li>
@@ -99,7 +99,7 @@
            При замене из админки картинки - имя файла и его расположение должно совпадать с версткой.
            Либо заменить здесь текст 'img/promo-1280.jpg' и в файле sprite.svg на новый путь к картинке.
       -->
-      <picture itemscope itemtype="http://schema.org/ImageObject">
+      <picture class="promo__image" itemscope itemtype="http://schema.org/ImageObject">
         <source media="(min-width: 1360px)" srcset="img/promo-1920.jpg" type="image/jpg">
         <source media="(min-width: 1024px)" srcset="img/promo-1280.jpg" type="image/jpg">
         <source media="(min-width: 425px)" srcset="img/promo-768.jpg" type="image/jpg">
@@ -200,7 +200,7 @@
   </section>
 
   <section class="totem">
-    <div class="totem__wrapper">
+    <div class="totem__wrapper" id="totam">
       <h2 class="h1 h1--totem">
         Первый экспедиционный речной круиз по Енисею
       </h2>
@@ -258,7 +258,7 @@
       </div>
     </div>
 
-    <div class="route">
+    <div class="route" id="route">
       <div class="route__top">
         <h2 class="h2 h2--route">
           Маршруты экспедиций
@@ -385,7 +385,217 @@
     </div>
   </section>
 
-  <section class="rest">
+  <section class="decks" id="decks">
+    <div class="decks__wrapper">
+      <div class="decks__top">
+        <h2 class="h2 h2--decks">
+          План палуб
+        </h2>
+
+        <div class="decks__container">
+          <div class="decks__tabs-wrapper">
+            <ul class="decks__tabs">
+              <li class="decks__tab active">
+                <button class="decks__button active" type="button" name="decks">
+                  Главная палуба
+                </button>
+              </li>
+              <li class="decks__tab">
+                <button class="decks__button" type="button" name="decks">
+                  Средняя палуба
+                </button>
+              </li>
+              <li class="decks__tab">
+                <button class="decks__button" type="button" name="decks">
+                  Шлюпочная палуба
+                </button>
+              </li>
+              <li class="decks__tab">
+                <button class="decks__button" type="button" name="decks">
+                  Солнечная палуба
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="decks__list">
+            <li class="decks__item active" data-title="Атриум «Арктика»">
+              <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
+                <img itemprop="contentUrl" src="img/deck-main.svg" alt="Атриум «Арктика»">
+
+                <meta itemprop="name" content="Атриум «Арктика»">
+              </div>
+            </li>
+            <li class="decks__item" data-title="Атриум «Тайга»">
+              <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
+                <img itemprop="contentUrl" src="img/deck-middle.svg" alt="Атриум «Тайга»">
+
+                <meta itemprop="name" content="Атриум «Тайга»">
+              </div>
+            </li>
+            <li class="decks__item" data-title="Атриум «Степь»">
+              <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
+                <img itemprop="contentUrl" src="img/deck-boat.svg" alt="Атриум «Степь»">
+
+                <meta itemprop="name" content="Атриум «Степь»">
+              </div>
+            </li>
+            <li class="decks__item" data-title="Атриум «Солнечная»">
+              <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
+                <img itemprop="contentUrl" src="img/deck-sun.svg" alt="Атриум «Солнечная»">
+
+                <meta itemprop="name" content="Атриум «Солнечная»">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="decks__bottom">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="emotions">
+    <div class="emotions__wrapper">
+      <h2 class="h2 h2--emotions">
+        Мы позаботились о том,
+        чтобы вы получили максимум новых впечатлений
+        и положительных эмоций.
+      </h2>
+
+      <svg class="emotions__subline emotions__subline--top" width="1820" height="10">
+        <use xlink:href="#icon-line-emotions"></use>
+      </svg>
+
+      <div class="emotions__left">
+        <div class="emotions__images">
+          <div class="emotions__slider swiper-container">
+            <ul class="emotions__list emotions__list--images swiper-wrapper">
+              <li class="emotions__item emotions__item--image swiper-slide" id="emotions-image-1">
+                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                  <source media="(min-width: 1920px)" srcset="img/emotions-1-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/emotions-1-1280.jpg" type="image/jpg">
+                  <source media="(min-width: 425px)" srcset="img/emotions-1-768.jpg" type="image/jpg">
+
+                  <img itemprop="contentUrl" src="img/emotions-1-320.jpg" alt="emotions">
+
+                  <meta itemprop="name" content="emotions">
+                </picture>
+              </li>
+              <li class="emotions__item emotions__item--image swiper-slide" id="emotions-image-2">
+                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                  <source media="(min-width: 1920px)" srcset="img/emotions-2-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/emotions-2-1280.jpg" type="image/jpg">
+                  <source media="(min-width: 425px)" srcset="img/emotions-2-768.jpg" type="image/jpg">
+
+                  <img itemprop="contentUrl" src="img/emotions-2-320.jpg" alt="emotions">
+
+                  <meta itemprop="name" content="emotions">
+                </picture>
+              </li>
+              <li class="emotions__item emotions__item--image swiper-slide" id="emotions-image-3">
+                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                  <source media="(min-width: 1920px)" srcset="img/emotions-3-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/emotions-3-1280.jpg" type="image/jpg">
+                  <source media="(min-width: 425px)" srcset="img/emotions-3-768.jpg" type="image/jpg">
+
+                  <img itemprop="contentUrl" src="img/emotions-3-320.jpg" alt="emotions">
+
+                  <meta itemprop="name" content="emotions">
+                </picture>
+              </li>
+            </ul>
+          </div>
+
+          <svg class="emotions__subline emotions__subline--images" width="1820" height="10">
+            <use xlink:href="#icon-line-emotions"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="emotions__right">
+        <ul class="emotions__list emotions__list--text">
+          <li class="emotions__item emotions__item--text" id="emotions-text-1">
+            <h4 class="h4 h4--emotions">
+              Лучшие краеведы Русского Севера
+            </h4>
+
+            <p class="text text--emotions">
+              За короткое, пусть и насыщенное, путешествие невозможно в полной
+              мере постичь всю магию и душу Сибири. Для того, чтобы ваше знакомство с Русским Севером состоялось более близко,
+              мы пригласили самых опытных экспертов по части истории и жизни Красноярского края. За короткое, пусть и насыщенное, путешествие невозможно в полной
+              мере постичь всю магию и душу Сибири. Для того, чтобы ваше знакомство с Русским Севером состоялось более близко,
+              мы пригласили самых опытных экспертов по части истории и жизни Красноярского края.
+            </p>
+
+            <button class="emotions__more" type="button" name="more">
+              <span class="emotions__more-default">
+                Развернуть
+              </span>
+              <span class="emotions__more-active">
+                Cвернуть
+              </span>
+              <svg width="16" height="12">
+                <use xlink:href="#icon-emotions-toggle"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="emotions__item emotions__item--text" id="emotions-text-2">
+            <h4 class="h4 h4--emotions">
+              Вертолетный тур на плато Путорана
+            </h4>
+
+            <p class="text text--emotions">
+              Знакомство с плато Путорана с высоты птичьего полета - одно
+              из самых захватывающих впечатлений экспедиции. На большом пассажирском вертолете МИ-8Т вы совершите незабываемую прогулку над одним из самых красивых, удивительных и загадочных мест планеты Знакомство с плато Путорана с высоты птичьего полета - одно
+              из самых захватывающих впечатлений экспедиции. На большом пассажирском вертолете МИ-8Т вы совершите незабываемую прогулку над одним из самых красивых, удивительных и загадочных мест планеты
+            </p>
+
+            <button class="emotions__more" type="button" name="more">
+              <span class="emotions__more-default">
+                Развернуть
+              </span>
+              <span class="emotions__more-active">
+                Cвернуть
+              </span>
+              <svg width="16" height="12">
+                <use xlink:href="#icon-emotions-toggle"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="emotions__item emotions__item--text" id="emotions-text-3">
+            <h4 class="h4 h4--emotions">
+              Экипировка для экспедиции
+            </h4>
+
+            <p class="text text--emotions">
+              Главное в экспедиции — это не только готовность к новым впечатлениям, но еще комфорт и безопасность. Вы отправитесь
+              в сибирскую тайгу, населенную различными обитателями фауны — животными и насекомыми.
+              Для того, чтобы ничего не отвлекало вас от красоты заповедных лесов, вы получите специальную экипировку подходящего размера.
+            </p>
+
+            <button class="emotions__more" type="button" name="more">
+              <span class="emotions__more-default">
+                Развернуть
+              </span>
+              <span class="emotions__more-active">
+                Cвернуть
+              </span>
+              <svg width="16" height="12">
+                <use xlink:href="#icon-emotions-toggle"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <svg class="emotions__subline emotions__subline--bottom" width="1820" height="10">
+        <use xlink:href="#icon-line-emotions"></use>
+      </svg>
+    </div>
+  </section>
+
+  <section class="rest" id="rest">
     <div class="rest__wrapper">
       <header class="rest__header">
         <h2 class="h2 h2--rest">
@@ -581,7 +791,7 @@
     </div>
   </section>
 
-  <section class="video">
+  <section class="video"id="video">
     <div class="video__wrapper">
       <div class="youtube" data-id="QBsY1pQbP30">
         <div class="logo logo--video">
@@ -615,7 +825,7 @@
     </div>
   </section>
 
-  <section class="leisure">
+  <section class="leisure" id="leisure">
     <div class="leisure__wrapper">
       <header class="leisure__header">
         <h2 class="h2 h2--leisure">
@@ -694,7 +904,7 @@
     </div>
   </section>
 
-  <section class="cave">
+  <section class="cave" id="cave">
     <div class="cave__wrapper">
       <div class="cave__slider cave__slider--text swiper-container">
         <ul class="cave__list cave__list--text swiper-wrapper">
@@ -763,7 +973,7 @@
     <div class="cave__slider cave__slider--images swiper-container">
       <ul class="cave__list cave__list--images swiper-wrapper">
         <li class="cave__item cave__item--images swiper-slide">
-          <picture itemscope itemtype="http://schema.org/ImageObject">
+          <picture class="cave__image" itemscope itemtype="http://schema.org/ImageObject">
             <source media="(min-width: 1360px)" srcset="img/cave-1920.jpg" type="image/jpg">
             <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
             <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
@@ -774,7 +984,7 @@
           </picture>
         </li>
         <li class="cave__item cave__item--images swiper-slide">
-          <picture itemscope itemtype="http://schema.org/ImageObject">
+          <picture class="cave__image" itemscope itemtype="http://schema.org/ImageObject">
             <source media="(min-width: 1360px)" srcset="img/cave-1920-2.jpg" type="image/jpg">
             <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
             <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
@@ -785,7 +995,7 @@
           </picture>
         </li>
         <li class="cave__item cave__item--images swiper-slide">
-          <picture itemscope itemtype="http://schema.org/ImageObject">
+          <picture class="cave__image" itemscope itemtype="http://schema.org/ImageObject">
             <source media="(min-width: 1360px)" srcset="img/cave-1920.jpg" type="image/jpg">
             <source media="(min-width: 1024px)" srcset="img/cave-1280.jpg" type="image/jpg">
             <source media="(min-width: 425px)" srcset="img/cave-768.jpg" type="image/jpg">
@@ -801,7 +1011,7 @@
     </div>
   </section>
 
-  <section class="timetable">
+  <section class="timetable" id="timetable">
     <div class="timetable__wrapper">
       <header class="timetable__header">
         <h2 class="h4 h4--timetable">
@@ -1314,7 +1524,7 @@
     </div>
   </section>
 
-  <section class="reviews">
+  <section class="reviews" id="reviews">
     <div class="reviews__wrapper">
       <h2 class="h2 h2--reviews">
         Яркие впечатления наших гостей
@@ -1538,7 +1748,7 @@
     </div>
   </section>
 
-  <section class="subscribe">
+  <section class="subscribe" id="subscribe">
     <div class="subscribe__wrapper">
       <div class="subscribe__text">
         <h3 class="h3 h3--subscribe">
