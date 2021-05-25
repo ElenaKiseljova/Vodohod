@@ -395,68 +395,340 @@
         <div class="decks__container">
           <div class="decks__tabs-wrapper">
             <ul class="decks__tabs">
-              <li class="decks__tab active">
-                <button class="decks__button active" type="button" name="decks">
+              <!-- Порядковый номер пунктов в списке Табов должен совпадать с порядковым номером
+                   пунктов с изображениями палуб в списке ниже-->
+              <li class="decks__tab active" data-type="main">
+                <button class="decks__button active" data-title="Атриум «Арктика»" type="button" name="decks">
                   Главная палуба
                 </button>
               </li>
-              <li class="decks__tab">
-                <button class="decks__button" type="button" name="decks">
+              <li class="decks__tab" data-type="middle">
+                <button class="decks__button" data-title="Атриум «Тайга»" type="button" name="decks">
                   Средняя палуба
                 </button>
               </li>
-              <li class="decks__tab">
-                <button class="decks__button" type="button" name="decks">
+              <li class="decks__tab" data-type="boat">
+                <button class="decks__button" data-title="Атриум «Степь»" type="button" name="decks">
                   Шлюпочная палуба
                 </button>
               </li>
-              <li class="decks__tab">
-                <button class="decks__button" type="button" name="decks">
+              <li class="decks__tab" data-type="sun">
+                <button class="decks__button" data-title="Атриум «Солнечная»" type="button" name="decks">
                   Солнечная палуба
                 </button>
               </li>
             </ul>
           </div>
 
+          <!-- В дата-атрибуте 'data-room' элемента 'decks__room' находится идентификатор каюты
+               из скрипта 3D туров (полагаю, он там есть какой-то и нумирация идет сквозная, а не по палубам. Соответствует кадрам в галерее.). По клику на 'decks__room' - переход к просмотру 3D сцены помещения. -->
           <ul class="decks__list">
-            <li class="decks__item active" data-title="Атриум «Арктика»">
+            <li class="decks__item active" data-type="main">
               <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
                 <img itemprop="contentUrl" src="img/deck-main.svg" alt="Атриум «Арктика»">
 
                 <meta itemprop="name" content="Атриум «Арктика»">
               </div>
+
+              <!-- Ссылки на помещения -->
+              <div class="decks__row decks__row--main-1">
+                <button class="decks__room" data-room="1" type="button" name="decks-button">
+                  Сибирский паб
+                </button>
+              </div>
+              <div class="decks__row decks__row--main-2">
+                <button class="decks__room" data-room="2" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--main-3">
+                <button class="decks__room" data-room="3" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--main-4">
+                <button class="decks__room" data-room="4" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--main-5">
+                <button class="decks__room" data-room="5" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
             </li>
-            <li class="decks__item" data-title="Атриум «Тайга»">
+            <li class="decks__item" data-type="middle">
               <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
                 <img itemprop="contentUrl" src="img/deck-middle.svg" alt="Атриум «Тайга»">
 
                 <meta itemprop="name" content="Атриум «Тайга»">
               </div>
+              <!-- Ссылки на помещения -->
+              <div class="decks__row decks__row--middle-1">
+                <button class="decks__room" data-room="6" type="button" name="decks-button">
+                  конференц-зал
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-2">
+                <button class="decks__room" data-room="7" type="button" name="decks-button">
+                  одноместный
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-3">
+                <button class="decks__room" data-room="8" type="button" name="decks-button">
+                  одноместный
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-4">
+                <button class="decks__room" data-room="9" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-5">
+                <button class="decks__room" data-room="10" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-6">
+                <button class="decks__room" data-room="11" type="button" name="decks-button">
+                  одноместный
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-7">
+                <button class="decks__room" data-room="12" type="button" name="decks-button">
+                  одноместный
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-8">
+                <button class="decks__room" data-room="13" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-9">
+                <button class="decks__room" data-room="14" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-10">
+                <button class="decks__room" data-room="15" type="button" name="decks-button">
+                  3-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-11">
+                <button class="decks__room" data-room="16" type="button" name="decks-button">
+                  3-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-12">
+                <button class="decks__room" data-room="17" type="button" name="decks-button">
+                  одноместный
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-13">
+                <button class="decks__room" data-room="18" type="button" name="decks-button">
+                  одноместный
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-14">
+                <button class="decks__room" data-room="19" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-15">
+                <button class="decks__room" data-room="20" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--middle-16">
+                <button class="decks__room" data-room="21" type="button" name="decks-button">
+                  Ресторан Улов дня
+                </button>
+              </div>
             </li>
-            <li class="decks__item" data-title="Атриум «Степь»">
+            <li class="decks__item" data-type="boat">
               <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
                 <img itemprop="contentUrl" src="img/deck-boat.svg" alt="Атриум «Степь»">
 
                 <meta itemprop="name" content="Атриум «Степь»">
               </div>
+
+              <!-- Ссылки на помещения -->
+              <div class="decks__row decks__row--boat-1">
+                <button class="decks__room" data-room="22" type="button" name="decks-button">
+                  Винотека
+                </button>
+              </div>
+              <div class="decks__row decks__row--boat-2">
+                <button class="decks__room" data-room="23" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--boat-3">
+                <button class="decks__room" data-room="24" type="button" name="decks-button">
+                  2-местные делюкс
+                </button>
+              </div>
+              <div class="decks__row decks__row--boat-4">
+                <button class="decks__room" data-room="25" type="button" name="decks-button">
+                  Караоке бар
+                </button>
+              </div>
+              <div class="decks__row decks__row--boat-5">
+                <button class="decks__room" data-room="26" type="button" name="decks-button">
+                  Ресторан Енисей
+                </button>
+              </div>
+              <div class="decks__row decks__row--boat-6">
+                <button class="decks__room" data-room="27" type="button" name="decks-button">
+                  Ресторан Улов дня
+                </button>
+              </div>
             </li>
-            <li class="decks__item" data-title="Атриум «Солнечная»">
+            <li class="decks__item" data-type="sun">
               <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
                 <img itemprop="contentUrl" src="img/deck-sun.svg" alt="Атриум «Солнечная»">
 
                 <meta itemprop="name" content="Атриум «Солнечная»">
+              </div>
+
+              <!-- Ссылки на помещения -->
+              <div class="decks__row decks__row--sun-1">
+                <button class="decks__room" data-room="28" type="button" name="decks-button">
+                  Спа-центр
+                </button>
               </div>
             </li>
           </ul>
         </div>
       </div>
       <div class="decks__bottom">
+        <div class="scene">
+          <h3 class="h3 h3--scene">
+            <!-- decks.js -->
+          </h3>
 
+          <div class="scene__3d">
+            <!-- заглушка -->
+            <picture class="scene__image scene__image--test" itemscope itemtype="http://schema.org/ImageObject">
+              <source media="(min-width: 1920px)" srcset="img/atrium-prairie-1920.jpg" type="image/jpg">
+              <source media="(min-width: 1280px)" srcset="img/atrium-prairie-1280.jpg" type="image/jpg">
+              <source media="(min-width: 425px)" srcset="img/atrium-prairie-768.jpg" type="image/jpg">
+
+              <img itemprop="contentUrl" src="img/atrium-prairie-320.jpg" alt="atrium-prairie">
+
+              <meta itemprop="name" content="atrium-prairie">
+            </picture>
+            <!-- заглушка -->
+
+            <div class="scene__swipe">
+              <div class="scene__icon">
+                <img class="scene__svg scene__svg--mobile" src="img/swipe-mobile.svg" alt="swipe" width="50" height="50">
+                <img class="scene__svg scene__svg--desktop" src="img/swipe-desktop.svg" alt="mouse down" width="50" height="50">
+              </div>
+
+              <p class="hints hints--scene">
+                Нажмите левую кнопку мыши и перетяните, чтобы осмотреться
+              </p>
+            </div>
+
+            <div class="scene__gallery-toggle">
+              <p class="hints hints--gallery">
+                Посмотреть каюты
+              </p>
+
+              <button class="scene__toggle" type="button" name="gallery-toggle">
+                <img class="scene__svg scene__svg--show" src="img/room-show.svg" alt="gallery" width="22" height="22">
+                <img class="scene__svg scene__svg--hide" src="img/room-hide.svg" alt="gallery" width="22" height="22">
+              </button>
+            </div>
+          </div>
+          <div class="scene__gallery">
+            <div class="scene__slider swiper-container">
+              <ul class="scene__list swiper-wrapper">
+                <li class="scene__item swiper-slide">
+                  <div class="scene__image scene__image--slide" itemscope itemtype="http://schema.org/ImageObject">
+                    <img itemprop="contentUrl"  src="img/room-1.jpg" alt="room">
+
+                    <meta itemprop="name" content="room">
+                  </div>
+                  <h5 class="text-small text-small--room">
+                    Одноместная каюта
+                  </h5>
+
+                  <div class="scene__mask"></div>
+                </li>
+                <li class="scene__item swiper-slide">
+                  <div class="scene__image scene__image--slide" itemscope itemtype="http://schema.org/ImageObject">
+                    <img itemprop="contentUrl"  src="img/room-2.jpg" alt="room">
+
+                    <meta itemprop="name" content="room">
+                  </div>
+                  <h5 class="text-small text-small--room">
+                    Делюкс
+                  </h5>
+
+                  <div class="scene__mask"></div>
+                </li>
+                <li class="scene__item swiper-slide">
+                  <div class="scene__image scene__image--slide" itemscope itemtype="http://schema.org/ImageObject">
+                    <img itemprop="contentUrl"  src="img/room-3.jpg" alt="room">
+
+                    <meta itemprop="name" content="room">
+                  </div>
+                  <h5 class="text-small text-small--room">
+                    Делюкс трехместный
+                  </h5>
+
+                  <div class="scene__mask"></div>
+                </li>
+                <li class="scene__item swiper-slide">
+                  <div class="scene__image scene__image--slide" itemscope itemtype="http://schema.org/ImageObject">
+                    <img itemprop="contentUrl"  src="img/room-4.jpg" alt="room">
+
+                    <meta itemprop="name" content="room">
+                  </div>
+                  <h5 class="text-small text-small--room">
+                    Одноместная каюта
+                  </h5>
+
+                  <div class="scene__mask"></div>
+                </li>
+                <li class="scene__item swiper-slide">
+                  <div class="scene__image scene__image--slide" itemscope itemtype="http://schema.org/ImageObject">
+                    <img itemprop="contentUrl"  src="img/room-5.jpg" alt="room">
+
+                    <meta itemprop="name" content="room">
+                  </div>
+                  <h5 class="text-small text-small--room">
+                    Делюкс
+                  </h5>
+
+                  <div class="scene__mask"></div>
+                </li>
+                <li class="scene__item swiper-slide">
+                  <div class="scene__image scene__image--slide" itemscope itemtype="http://schema.org/ImageObject">
+                    <img itemprop="contentUrl"  src="img/room-6.jpg" alt="room">
+
+                    <meta itemprop="name" content="room">
+                  </div>
+                  <h5 class="text-small text-small--room">
+                    Делюкс трехместный
+                  </h5>
+
+                  <div class="scene__mask"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="scene__progress">
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="emotions">
+  <section class="emotions" id="emotions">
     <div class="emotions__wrapper">
       <h2 class="h2 h2--emotions">
         Мы позаботились о том,

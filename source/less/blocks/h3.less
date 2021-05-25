@@ -26,4 +26,28 @@
       .mb_rem(10);
     }
   }
+
+  &--scene {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+
+    .mt_rem(20);
+    .ml_rem(20);
+
+    color: #colors[white_100];
+
+    @media (min-width: 768px) {
+      .mt_rem(34);
+      .ml_rem(34);
+    }
+
+    @media (min-width: 1920px) {
+      .mt_rem(43);
+      .ml_rem(43);
+    }
+  }
 }

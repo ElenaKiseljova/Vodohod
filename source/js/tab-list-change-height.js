@@ -16,7 +16,7 @@
 
       defaultHeightTabList = tabList.offsetHeight;
 
-      console.log(defaultHeightTabList);
+      //console.log(defaultHeightTabList);
 
       let onTabListToggle = function (evt) {
         if (!evt.target.closest(`.${tabsClass}`)) {
@@ -44,7 +44,7 @@
       let onTabListClick = function (evt) {
         if (evt.target.classList.contains(tabsClass)) {
           toggleTabList();
-          console.log('click');
+          //console.log('click');
         }
       };
 

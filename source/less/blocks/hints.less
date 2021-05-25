@@ -22,4 +22,43 @@
   &--timetable {
     color: #colors[gray_text];
   }
+
+  &--scene,
+  &--gallery {
+    color: #colors[white_100];
+  }
+
+  &--scene {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+
+      max-width: 188px;
+
+      .ml_rem(10);
+
+      text-align: left;
+    }
+
+    @media (min-width: 1920px) {
+      max-width: 219px;
+
+      .ml_rem(15);
+    }
+  }
+
+  &--gallery {
+    max-width: 70px;
+
+    .mr_rem(10);
+
+    text-align: right;
+
+    @media (min-width: 1920px) {
+      max-width: 80px;
+
+      .mr_rem(15);
+    }
+  }
 }

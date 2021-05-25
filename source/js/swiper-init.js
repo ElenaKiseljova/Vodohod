@@ -168,6 +168,50 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(e);
   }
 
+  // Галерея из 3D
+
+  try {
+    let sceneContainer = document.querySelector('.scene__slider.swiper-container');
+
+    if (sceneContainer) {
+      var argsSwiperScene = {
+        speed: 300,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        resizeObserver: true,
+      };
+
+      let sceneSwiper = new Swiper(sceneContainer, argsSwiperScene);
+
+      let swiperProgress = function (slider, elementProgress) {
+        let newWidthElementProgress = slider.progress * 100;
+
+        if (newWidthElementProgress < 0) {
+          newWidthElementProgress = 0;
+        }
+
+        if (newWidthElementProgress > 100) {
+          newWidthElementProgress = 100;
+        }
+
+        elementProgress.style.width = newWidthElementProgress + '%';
+      };
+
+      let sceneProgress = document.querySelector('.scene__progress span');
+
+      sceneSwiper.on('progress', function () {
+        if (sceneProgress) {
+          swiperProgress(sceneSwiper, sceneProgress);
+        }
+      });
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
   // Расписание
 
   try {

@@ -1,6 +1,5 @@
 .decks,
 .decks__top,
-.decks__bottom,
 .decks__list {
   .w100();
 }
@@ -8,12 +7,14 @@
 .decks {
   .pt_rem(50);
 
+  overflow: hidden;
+
   @media only screen and (min-width: 768px) {
-    .mb_rem(100);
+    .pt_rem(100);
   }
 
   @media only screen and (min-width: 1920px) {
-    .mb_rem(200);
+    .pt_rem(200);
   }
 }
 
@@ -90,6 +91,9 @@
     .pl_rem(30);
     .pr_rem(30);
 
+    background-position: calc(100% + 83px) calc(100% - 50px), center;
+    background-size: auto 222px, cover;
+
     &::before {
       width: calc(100% - 20px);
       height: calc(100% - 20px);
@@ -116,10 +120,13 @@
   @media only screen and (min-width: 1920px) {
     width: 66.32%;
 
-    .pb_rem(40);
-    .pt_rem(40);
-    .pl_rem(40);
-    .pr_rem(40);
+    .pb_rem(42);
+    .pt_rem(42);
+    .pl_rem(33);
+    .pr_rem(33);
+
+    background-position: calc(100% + 112px) calc(100% - 75px), center;
+    background-size: auto 302px, cover;
   }
 }
 
@@ -134,10 +141,18 @@
 
   @media only screen and (min-width: 768px) {
     height: auto;
+
+    .mb_rem(26);
   }
 
   @media only screen and (min-width: 1280px) {
     flex-grow: 1;
+
+    .mb_rem(19);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .mb_rem(59);
   }
 }
 
@@ -208,7 +223,7 @@
     &.active {
       box-sizing: border-box;
 
-      background-color: #colors[white_20];
+      background-color: rgba(0, 0, 0, 0.8);
 
       transition: height 0.3s ease-in;
 
@@ -253,6 +268,8 @@
   letter-spacing: 0.05em;
 
   @media only screen and (min-width: 768px) {
+    flex-grow: 1;
+
     width: auto;
 
     &:not(:last-of-type) {
@@ -268,10 +285,6 @@
     }
   }
 
-  @media (min-width: 1280px) {
-
-  }
-
   @media (min-width: 1920px){
     .rem(24, 34);
   }
@@ -279,6 +292,8 @@
 
 .decks__button {
   .button_default();
+
+  width: 100%;
 
   .font_family_1();
   font-style: normal;
@@ -293,7 +308,7 @@
   @media only screen and (min-width: 768px) {
     display: flex;
 
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
 
     .rem(16, 22);
@@ -319,12 +334,7 @@
       opacity: 0;
     }
 
-    &::after {
-      .ml_rem(10);
-    }
-
     &::before {
-      .mr_rem(10);
       transform: rotate(180deg);
     }
   }
@@ -332,9 +342,10 @@
   @media only screen and (min-width: 1920px) {
     .rem(24, 34);
 
-    &::before {
-      width: 20px;
-      height: 40px;
+    &::before,
+    &::after {
+      width: 12px;
+      height: 24px;
     }
   }
 
@@ -368,11 +379,28 @@
   justify-content: center;
   align-items: center;
 
-  .pl_rem(12);
-  .pr_rem(12);
+  //.pl_rem(12);
+  //.pr_rem(12);
   .mb_rem(80);
 
   list-style: none;
+
+  @media only screen and (min-width: 768px) {
+    width: 70%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    width: 58.35%;
+
+    margin-right: 0;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 47.3%;
+  }
 }
 
 .decks__item {
@@ -383,15 +411,498 @@
 
   position: absolute;
 
-  opacity: 0;
+  z-index: 1;
 
-  transition: opacity 0.3s;
+  opacity: 0;
 
   &.active {
     position: static;
 
     opacity: 1;
 
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in;
+  }
+}
+
+.decks__image {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: auto;
+    height: 350px;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    img {
+      height: 709px;
+    }
+  }
+}
+
+.decks__row {
+  position: absolute;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  .pb_rem(7);
+
+  border-bottom: 1px solid #89765B;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    z-index: 1;
+
+    bottom: 1px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: rgba(137, 118, 91, 0.5);
+  }
+
+  &--boat-1,
+  &--boat-2,
+  &--boat-4,
+  &--boat-5,
+  &--boat-6,
+  &--main-1,
+  &--main-2,
+  &--main-4,
+  &--middle-1,
+  &[class*="--middle"]:nth-child(odd),
+  &--sun-1 {
+    left: 0;
+
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+  &--boat-1,
+  &--boat-4,
+  &--boat-5,
+  &--boat-6,
+  &--main-1,
+  &--middle-1,
+  &--middle-16,
+  &--sun-1 {
+    width: 49.78%;
+  }
+
+  &--boat-2,
+  &--boat-3,
+  &--main-2,
+  &--main-3,
+  &--main-4,
+  &--main-5,
+  &--middle-2,
+  &--middle-3,
+  &--middle-4,
+  &--middle-5,
+  &--middle-6,
+  &--middle-7,
+  &--middle-8,
+  &--middle-9,
+  &--middle-10,
+  &--middle-11,
+  &--middle-12,
+  &--middle-13,
+  &--middle-14,
+  &--middle-15 {
+    width: 44.05%;
+  }
+
+  &--boat-3,
+  &--main-3,
+  &--main-5,
+  &[class*="--middle"]:nth-child(even):not(.decks__row--middle-1) {
+    right: 0;
+
+    justify-content: flex-end;
+
+    text-align: right;
+  }
+
+  &--boat-1 {
+    top: 4.57%;
+  }
+
+  &--boat-2,
+  &--boat-3 {
+    top: 14.57%;
+  }
+
+  &--boat-4 {
+    top: 32.57%;
+  }
+
+  &--boat-5 {
+    top: 50%;
+  }
+
+  &--boat-6 {
+    top: 83%;
+  }
+
+  &--main-1 {
+    top: 10%;
+  }
+
+  &--main-2,
+  &--main-3 {
+    top: 18%;
+  }
+
+  &--main-4,
+  &--main-5 {
+    top: 38.5%;
+  }
+
+  &--middle-1 {
+    top: 6%;
+  }
+
+  &--middle-2,
+  &--middle-3 {
+    top: 14%;
+  }
+
+  &--middle-4,
+  &--middle-5 {
+    top: 20%;
+  }
+
+  &--middle-6,
+  &--middle-7 {
+    top: 30%;
+  }
+
+  &--middle-8,
+  &--middle-9 {
+    top: 36%;
+  }
+
+  &--middle-10,
+  &--middle-11 {
+    top: 46%;
+  }
+
+  &--middle-12,
+  &--middle-13 {
+    top: 56%;
+  }
+
+  &--middle-14,
+  &--middle-15 {
+    top: 62%;
+  }
+
+  &--middle-16 {
+    top: 84%;
+  }
+
+  &--sun-1 {
+    top: 38%;
+  }
+
+  @media (min-width: 768px) {
+    &--boat-1,
+    &--boat-4,
+    &--boat-5,
+    &--boat-6,
+    &--main-1,
+    &--middle-1,
+    &--middle-16,
+    &--sun-1 {
+      width: 50%;
+    }
+
+    &--boat-2,
+    &--boat-3,
+    &--main-2,
+    &--main-3,
+    &--main-4,
+    &--main-5,
+    &--middle-2,
+    &--middle-3,
+    &--middle-4,
+    &--middle-5,
+    &--middle-6,
+    &--middle-7,
+    &--middle-8,
+    &--middle-9,
+    &--middle-10,
+    &--middle-11,
+    &--middle-12,
+    &--middle-13,
+    &--middle-14,
+    &--middle-15 {
+      width: 46.67%;
+    }
+
+    &--boat-1 {
+      top: 6.57%;
+    }
+
+    &--boat-2,
+    &--boat-3 {
+      top: 17.57%;
+    }
+
+    &--boat-4 {
+      top: 31.57%;
+    }
+
+    &--boat-5 {
+      top: 52%;
+    }
+
+    &--boat-6 {
+      top: 87%;
+    }
+
+    &--main-2,
+    &--main-3 {
+      top: 21%;
+    }
+
+    &--main-4,
+    &--main-5 {
+      top: 42%;
+    }
+
+    &--middle-1 {
+      top: 7%;
+    }
+
+    &--middle-2,
+    &--middle-3 {
+      top: 16%;
+    }
+
+    &--middle-4,
+    &--middle-5 {
+      top: 22%;
+    }
+
+    &--middle-6,
+    &--middle-7 {
+      top: 28%;
+    }
+
+    &--middle-8,
+    &--middle-9 {
+      top: 38%;
+    }
+
+    &--middle-10,
+    &--middle-11 {
+      top: 48%;
+    }
+
+    &--middle-12,
+    &--middle-13 {
+      top: 55%;
+    }
+
+    &--middle-14,
+    &--middle-15 {
+      top: 61.5%;
+    }
+
+    &--middle-16 {
+      top: 87%;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    &--boat-1,
+    &--boat-4,
+    &--boat-5,
+    &--boat-6,
+    &--main-1,
+    &--middle-1,
+    &--middle-16,
+    &--sun-1 {
+      width: 50.47%;
+    }
+
+    &--boat-2,
+    &--boat-3,
+    &--main-2,
+    &--main-3,
+    &--main-4,
+    &--main-5,
+    &--middle-2,
+    &--middle-3,
+    &--middle-4,
+    &--middle-5,
+    &--middle-6,
+    &--middle-7,
+    &--middle-8,
+    &--middle-9,
+    &--middle-10,
+    &--middle-11,
+    &--middle-12,
+    &--middle-13,
+    &--middle-14,
+    &--middle-15 {
+      width: 45.59%;
+    }
+
+    &--boat-2,
+    &--boat-3 {
+      top: 18.57%;
+    }
+
+    &--boat-4 {
+      top: 33.57%;
+    }
+
+    &--boat-5 {
+      top: 53%;
+    }
+
+    &--boat-6 {
+      top: 89%;
+    }
+
+    &--main-2,
+    &--main-3 {
+      top: 21.5%;
+    }
+
+    &--main-4,
+    &--main-5 {
+      top: 44%;
+    }
+
+    &--middle-1 {
+      top: 8%;
+    }
+
+    &--middle-2,
+    &--middle-3 {
+      top: 18%;
+    }
+
+    &--middle-4,
+    &--middle-5 {
+      top: 24%;
+    }
+
+    &--middle-6,
+    &--middle-7 {
+      top: 30%;
+    }
+
+    &--middle-8,
+    &--middle-9 {
+      top: 40%;
+    }
+
+    &--middle-10,
+    &--middle-11 {
+      top: 50%;
+    }
+
+    &--middle-12,
+    &--middle-13 {
+      top: 57%;
+    }
+
+    &--middle-14,
+    &--middle-15 {
+      top: 63.5%;
+    }
+
+    &--middle-16 {
+      top: 89%;
+    }
+  }
+}
+
+.decks__room {
+  .button_default();
+
+  .font_family_2();
+
+  font-style: normal;
+  font-weight: 500;
+
+  .rem(10, 12);
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  text-align: inherit;
+
+  color: #colors[white_100];
+
+  &:hover,
+  &:focus {
+    color: #colors[accent];
+  }
+
+  &:active {
+    color: #colors[white_50];
+  }
+
+  @media only screen and (min-width: 768px) {
+    .rem(12, 15);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .rem(14, 17);
+  }
+}
+
+.decks__bottom {
+  width: 89%;
+  height: 491px;
+
+  padding: 0;
+
+  margin-right: auto;
+  .mt_rem(-70);
+
+  @media (min-width: 768px) {
+    width: 91.67%;
+    height: 500px;
+
+    .mt_rem(-50);
+  }
+
+  @media (min-width: 1280px) {
+    width: 57.63%;
+
+    .mt_rem(-428);
+  }
+
+  @media (min-width: 1920px) {
+    width: 66.32%;
+    height: 900px;
+
+    .mt_rem(-790);
   }
 }
