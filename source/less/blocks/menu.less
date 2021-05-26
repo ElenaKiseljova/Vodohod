@@ -72,7 +72,7 @@
   }
 
   @media only screen and (min-width: 1280px) {
-    .pt_rem(223);
+    .pt_rem(110);
     .pb_rem(15);
   }
 
@@ -81,7 +81,7 @@
   }
 
   @media only screen and (min-width: 1920px) {
-    .pt_rem(345);
+    .pt_rem(180);
     .pb_rem(30);
   }
 }
@@ -93,7 +93,7 @@
     position: absolute;
 
     top: 50%;
-    left: 0;
+    left: calc(50% - 50vw);
 
     z-index: 0;
 
@@ -104,7 +104,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 91.15%;
+    width: 97.22%;
 
     max-width: 700px;
 
@@ -117,13 +117,13 @@
   @media only screen and (min-width: 1280px) {
     left: 50%;
 
-    width: 39.06%;
+    width: 42.37%;
 
     max-width: 500px;
   }
 
   @media only screen and (min-width: 1920px) {
-    width: 37.5%;
+    width: 39.56%;
     max-width: 720px;
   }
 }
@@ -194,12 +194,18 @@
     }
 
     @media only screen and (min-width: 1280px) {
-      width: 79.69%;
-
       flex-direction: row;
 
       justify-content: space-between;
       align-items: flex-start;
+
+      width: 79.69%;
+
+      .pt_rem(113);
+    }
+
+    @media only screen and (min-width: 1920px){
+      .pt_rem(165);
     }
   }
 }

@@ -252,7 +252,9 @@
   &--arrow-left-big,
   &--arrow-right-big,
   &--arrow-left-rest,
-  &--arrow-right-rest {
+  &--arrow-right-rest,
+  &--arrow-left-rooms,
+  &--arrow-right-rooms {
     .button__icon {
       &--white {
         fill: #colors[white_100];
@@ -311,7 +313,9 @@
   &--arrow-left,
   &--arrow-right,
   &--arrow-left-rest,
-  &--arrow-right-rest {
+  &--arrow-right-rest,
+  &--arrow-left-rooms,
+  &--arrow-right-rooms {
     width: 15.63vw;
     height: 15.63vw;
 
@@ -373,7 +377,9 @@
   &--arrow-left-big,
   &--arrow-right-big,
   &--arrow-left-rest,
-  &--arrow-right-rest {
+  &--arrow-right-rest,
+  &--arrow-left-rooms,
+  &--arrow-right-rooms {
     &:disabled,
     &.swiper-button-disabled,
     &:disabled:hover,
@@ -430,7 +436,9 @@
   &--arrow-left-big,
   &--arrow-right-big,
   &--arrow-left-rest,
-  &--arrow-right-rest {
+  &--arrow-right-rest,
+  &--arrow-left-rooms,
+  &--arrow-right-rooms {
     position: relative;
 
     display: flex;
@@ -507,7 +515,9 @@
   }
 
   &--arrow-left,
-  &--arrow-right {
+  &--arrow-right,
+  &--arrow-left-rooms,
+  &--arrow-right-rooms {
     border: 1px solid #colors[white_50];
 
     &::before {
@@ -585,27 +595,26 @@
 
 // Выбрать круиз
 .button {
-  &--select {
-    width: 25vw;
-    height: 25vw;
+  &--select,
+  &--select-rooms {
+    width: 80px;
+    height: 80px;
   }
 
   &--select-promo {
-    width: 31.25vw;
-    height: 31.25vw;
+    width: 100px;
+    height: 100px;
   }
 
   &--select,
-  &--select-promo {
+  &--select-promo,
+  &--select-rooms {
     position: relative;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
-
-    max-width: 100px;
-    max-height: 100px;
 
     .font_family_2();
     font-style: normal;
@@ -719,11 +728,8 @@
     }
 
     @media only screen and (min-width: 768px) {
-      width: 15.63vw;
-      height: 15.63vw;
-
-      max-width: 120px;
-      max-height: 120px;
+      width: 120px;
+      height: 120px;
 
       .rem(13, 16);
 
@@ -733,9 +739,6 @@
     }
 
     @media only screen and (min-width: 1280px) {
-      width: 9.38vw;
-      height: 9.38vw;
-
       .rem(13, 16);
 
       .button__text {
@@ -744,11 +747,8 @@
     }
 
     @media only screen and (min-width: 1920px) {
-      width: 7.81vw;
-      height: 7.81vw;
-
-      max-width: 150px;
-      max-height: 150px;
+      width: 150px;
+      height: 150px;
 
       .rem(14, 18);
 

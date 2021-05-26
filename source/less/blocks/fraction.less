@@ -39,6 +39,12 @@
       width: 58px;
     }
   }
+
+  &--rooms-1,
+  &--rooms-2,
+  &--rooms-3 {
+    width: 50px;
+  }
 }
 
 .fraction__current {
@@ -49,9 +55,12 @@
     color: #colors[black_text];
   }
 
-  &--cave {
+  &--cave,
+  &--rooms {
     color: #colors[white_100];
+  }
 
+  &--cave {
     &::before {
       content: '/';
     }
@@ -70,7 +79,8 @@
     }
   }
 
-  &--cave {
+  &--cave,
+  &--rooms {
     color: #colors[white_50];
   }
 }

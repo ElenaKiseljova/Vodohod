@@ -1,6 +1,21 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Функция прогресса Swiper (кастомная)
+  var swiperProgress = function (slider, elementProgress) {
+    let newWidthElementProgress = slider.progress * 100;
+
+    if (newWidthElementProgress < 0) {
+      newWidthElementProgress = 0;
+    }
+
+    if (newWidthElementProgress > 100) {
+      newWidthElementProgress = 100;
+    }
+
+    elementProgress.style.width = newWidthElementProgress + '%';
+  };
+
   // Маршруты
   try {
     // Виды экспедиций
@@ -176,9 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (sceneContainer) {
       var argsSwiperScene = {
         speed: 300,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
+        // freeMode: true,
+        // watchSlidesVisibility: true,
+        // watchSlidesProgress: true,
         slidesPerView: 1,
         spaceBetween: 10,
         resizeObserver: true,
@@ -186,26 +201,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let sceneSwiper = new Swiper(sceneContainer, argsSwiperScene);
 
-      let swiperProgress = function (slider, elementProgress) {
-        let newWidthElementProgress = slider.progress * 100;
-
-        if (newWidthElementProgress < 0) {
-          newWidthElementProgress = 0;
-        }
-
-        if (newWidthElementProgress > 100) {
-          newWidthElementProgress = 100;
-        }
-
-        elementProgress.style.width = newWidthElementProgress + '%';
-      };
-
-      let sceneProgress = document.querySelector('.scene__progress span');
+      let sceneProgress = document.querySelector('.progress--scene span');
 
       sceneSwiper.on('progress', function () {
         if (sceneProgress) {
           swiperProgress(sceneSwiper, sceneProgress);
         }
+      });
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Типы кают
+
+  try {
+    let roomsContainers = document.querySelectorAll('.rooms__slider.swiper-container');
+
+    if (roomsContainers) {
+      roomsContainers.forEach((roomsContainer, i) => {
+        let argsSwiperRooms = {
+          speed: 300,
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+          slidesPerView: 1,
+          resizeObserver: true,
+          pagination: {
+            el: `.fraction--rooms-${i + 1}`,
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+              function numberAppend(d) {
+                return (d < 10) ? '00' + d.toString() : '0' + d.toString();
+              }
+              return '<span class="fraction__current fraction__current--rooms">' + numberAppend(current) + '</span>' +
+                     '<span class="fraction__all fraction__all--rooms">' + numberAppend(total) + '</span>';
+            }
+          },
+          navigation: {
+            nextEl: `.next--rooms-${i + 1}`,
+            prevEl: `.prev--rooms-${i + 1}`
+          },
+        };
+
+        let roomsSwiper = new Swiper(roomsContainer, argsSwiperRooms);
+
+        let roomsProgress = document.querySelector(`.progress--rooms-${i + 1} span`);
+
+        roomsSwiper.on('progress', function () {
+          if (roomsProgress) {
+            swiperProgress(roomsSwiper, roomsProgress);
+          }
+        });
       });
     }
   } catch (e) {

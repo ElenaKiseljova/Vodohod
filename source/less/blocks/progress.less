@@ -1,0 +1,86 @@
+.progress {
+  position: relative;
+
+  width: 100%;
+
+  span {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    z-index: 1;
+
+    display: block;
+
+    height: 1px;
+
+    transform: translateY(-50%);
+
+    transition: width 0.3s;
+  }
+
+  &--scene {
+    .pt_rem(2.5);
+    .pb_rem(2.5);
+
+    .mt_rem(27);
+
+    border-top: 1px solid #colors[lines_normal];
+    border-bottom: 1px solid #colors[lines_normal];
+
+    span {
+      background-color: #colors[accent];
+
+      &::after {
+        content: '';
+
+        position: absolute;
+
+        top: 50%;
+        right: 0;
+
+        display: block;
+
+        width: 18px;
+        height: 18px;
+
+        background-image: url('../img/slider.svg');
+        background-position: center;
+        background-size: 97%;
+        background-repeat: no-repeat;
+
+        transform: translate(50%, -50%);
+      }
+    }
+
+    @media (min-width: 768px) {
+      span {
+        &::after {
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+  }
+
+  &--rooms-1,
+  &--rooms-2,
+  &--rooms-3 {
+    .pt_rem(1.5);
+    .pb_rem(1.5);
+
+    .mb_rem(14);
+
+    border-top: 1px solid #colors[white_50];
+    border-bottom: 1px solid #colors[white_50];
+
+    span {
+      background-color: #colors[white_100];
+    }
+
+    @media (min-width: 768px) {
+      .mb_rem(20);
+    }
+  }
+}

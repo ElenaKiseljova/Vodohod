@@ -175,6 +175,30 @@
           </ul>
         </nav>
 
+        <div class="menu__runes">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720" fill="none">
+            <mask id="maskMenu" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="720">
+
+              <g class="rotate-right" >
+                <use xlink:href="img/sprite-runes.svg#runes-mask-right" />
+              </g>
+              <g class="rotate-left" >
+                <use xlink:href="img/sprite-runes.svg#runes-mask-left" />
+              </g>
+
+            </mask>
+            <g mask="url(#maskMenu)">
+              <rect x="-280" width="1280" height="720" fill="url(#patternMenu)"/>
+            </g>
+            <defs>
+              <pattern id="patternMenu" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0" transform="scale(0.000250892 0.00044603)"/>
+              </pattern>
+              <image id="image0" width="3986" height="2242" xlink:href="img/promo-1280.jpg"/>
+            </defs>
+          </svg>
+        </div>
+
         <nav class="navigation navigation--menu-right" role="navigation">
           <ul class="navigation__list navigation__list--menu-right">
             <li class="navigation__item navigation__item--menu-right">
@@ -287,32 +311,5 @@
             </a>
           </div>
         </div>
-      </div>
-
-      <div class="menu__runes">
-        <!-- <svg width="720" height="720">
-          <use xlink:href="#icon-runes"></use>
-        </svg> -->
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720" fill="none">
-          <mask id="maskMenu" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="720">
-
-            <g class="rotate-right" >
-              <use xlink:href="img/sprite-runes.svg#runes-mask-right" />
-            </g>
-            <g class="rotate-left" >
-              <use xlink:href="img/sprite-runes.svg#runes-mask-left" />
-            </g>
-
-          </mask>
-          <g mask="url(#maskMenu)">
-            <rect x="-280" width="1280" height="720" fill="url(#patternMenu)"/>
-          </g>
-          <defs>
-            <pattern id="patternMenu" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0" transform="scale(0.000250892 0.00044603)"/>
-            </pattern>
-            <image id="image0" width="3986" height="2242" xlink:href="img/promo-1280.jpg"/>
-          </defs>
-        </svg>
       </div>
     </div>

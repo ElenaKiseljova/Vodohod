@@ -124,59 +124,6 @@
   }
 }
 
-.scene__progress {
-  position: relative;
-
-  width: 100%;
-
-  .pt_rem(2);
-  .pb_rem(2);
-
-  .mt_rem(27);
-
-  border-top: 1px solid #colors[lines_normal];
-  border-bottom: 1px solid #colors[lines_normal];
-
-  span {
-    position: absolute;
-
-    top: 50%;
-    left: 0;
-
-    z-index: 1;
-
-    height: 1px;
-
-    background-color: #colors[accent];
-
-    transform: translateY(-50%);
-
-    transition: width 0.3s cubic-bezier(0.4, 0, 1, 1);
-
-    &::after {
-      content: '';
-
-      position: absolute;
-
-      top: 50%;
-      right: 0;
-
-      display: block;
-
-      width: 21px;
-      height: 21px;
-
-      background-color: #colors[white_100];
-      background-image: url('../img/slider.svg');
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-
-      transform: translate(50%, -50%);
-    }
-  }
-}
-
 .scene__list {
   padding: 0;
   margin: 0;

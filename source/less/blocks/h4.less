@@ -79,4 +79,35 @@
       width: 60%;
     }
   }
+
+  &--rooms,
+  &--rooms-area {
+    width: auto;
+
+    color: #colors[white_100];
+  }
+
+  &--rooms {
+    .mb_rem(5);
+
+    @media (min-width: 768px) {
+      .mb_rem(0);
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 155px;
+    }
+
+    @media (min-width: 1920px) {
+      max-width: 230px;
+    }
+  }
+
+  &--rooms-area {
+    opacity: 0;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
 }
