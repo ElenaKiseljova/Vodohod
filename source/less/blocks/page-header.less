@@ -1,15 +1,41 @@
 .page-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 7;
+
   .w100();
 
-  background: transparent;
-
   &--top {
-    position: fixed;
+    background: transparent;
 
-    top: 0;
-    left: 0;
+    &.active {
+      opacity: 0;
 
-    z-index: 7;
+      pointer-events: none;
+    }
+  }
+
+  &--bottom {
+    opacity: 0;
+
+    pointer-events: none;
+
+    background: #colors[bg];
+
+    transform: translateY(-2%);
+
+    &.active {
+      opacity: 1;
+
+      transform: translateY(0%);
+
+      pointer-events: all;
+
+      transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+    }
   }
 }
 

@@ -143,7 +143,7 @@
 
           <ul class="navigation__list navigation__list--menu-left">
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#totam">
+              <a href="#totem">
                 Экспедиция
               </a>
             </li>
@@ -158,7 +158,7 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#">
+              <a href="#rooms">
                 Каюты
               </a>
             </li>
@@ -179,10 +179,10 @@
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720" fill="none">
             <mask id="maskMenu" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="720">
 
-              <g class="rotate-right" >
+              <g class="menu__runes-right" >
                 <use xlink:href="img/sprite-runes.svg#runes-mask-right" />
               </g>
-              <g class="rotate-left" >
+              <g class="menu__runes-left" >
                 <use xlink:href="img/sprite-runes.svg#runes-mask-left" />
               </g>
 
@@ -228,14 +228,14 @@
             </li>
           </ul>
 
-          <button class="button button--reservation" type="button" name="reservation">
+          <a class="button button--reservation" href="#timetable">
             <span class="button__text">
               Забронировать
             </span>
             <svg width="380" height="90">
               <use xlink:href="#icon-reservation"></use>
             </svg>
-          </button>
+          </a>
         </nav>
       </div>
       <div class="menu__wrapper menu__wrapper--bottom">

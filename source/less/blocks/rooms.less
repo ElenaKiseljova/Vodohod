@@ -66,7 +66,7 @@
 
   list-style: none;
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1100px) {
     flex-direction: row;
 
     justify-content: center;
@@ -136,6 +136,7 @@
 
     &.active {
       height: 65.1vw;
+      max-height: none;
 
       &.mouseenter {
         .rooms__header {
@@ -149,7 +150,7 @@
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1100px) {
     flex-grow: 1;
 
     width: 33.3333vw;
@@ -247,6 +248,14 @@
 
   @media only screen and (min-width: 768px) {
     height: 96px;
+  }
+
+  @media only screen and (min-width:1100px) {
+    height: 150px;
+  }
+
+  @media only screen and (min-width:1280px) {
+    height: 98px;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -364,9 +373,11 @@
 
   @media (min-width: 768px) {
     height: 65.1vw;
+
+    max-height: none;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1100px) {
     width: 55.93vw;
     height: 100%;
 

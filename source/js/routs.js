@@ -194,7 +194,7 @@
                     </button>
                   </li>
                 `;
-            }
+            };
 
             let templateRoutsListDescription = routs[i].map((rout) => templateRoutDescription(rout));
             let htmlTemplateRoutsDescription = templateRoutsListDescription.join(' ');
@@ -257,6 +257,6 @@
   window.addEventListener('load', function () {
     // Инициализация слайдеров из файла swiper-init.js
     window.swiperChange.routNamesInit();
-    window.swiperChange.routDescriptionInit();
+    window.swiperChange.routDescriptionNodesInit();
   });
 })();

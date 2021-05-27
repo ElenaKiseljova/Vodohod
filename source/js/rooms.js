@@ -22,7 +22,7 @@
 
     rooms.forEach((room, i) => {
       let onMouseEnter = function () {
-        if (window.innerWidth >= 1280) {
+        if (window.innerWidth >= 1100) {
           setTimeout(function () {
             addActiveSlide(room);
           }, 500);
@@ -43,7 +43,7 @@
         // Класс для смены opacity
         room.classList.add('mouseleave');
 
-        if (window.innerWidth >= 1280) {
+        if (window.innerWidth >= 1100) {
           setTimeout(function () {
             removeActiveSlide(room);
           }, 500);

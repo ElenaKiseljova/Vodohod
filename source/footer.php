@@ -277,9 +277,20 @@
 
     <!-- Скрипты -->
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <!-- Swiper -->
+
+    <script src="libs/swiper.min.js"></script>
+
+    <!-- Theme's scripts -->
+    <script src="js/scroll-gsap.min.js"></script>
+    <script src="js/anchor.min.js"></script>
     <script src="js/remove-active-class-elements.min.js"></script>
     <script src="js/promo.min.js"></script>
-    <script src="libs/swiper.min.js"></script>
+
     <script src="js/menu.min.js"></script>
 
     <script src="js/form.min.js"></script>

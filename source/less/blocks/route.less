@@ -3,8 +3,6 @@
 
   .pt_rem(35);
 
-  overflow: hidden;
-
   @media only screen and (min-width: 768px) {
     .pt_rem(50);
   }
@@ -137,6 +135,8 @@
 }
 
 .route__more {
+  display: none;
+
   padding: 0;
   margin: 0;
 
@@ -328,6 +328,8 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
 
+    white-space: nowrap;
+
     @media only screen and (min-width: 768px) {
       .rem(12, 15);
     }
@@ -393,7 +395,7 @@
           -webkit-text-fill-color: transparent;
         }
 
-        & + .swiper-slide {
+        & ~ .swiper-slide {
           h3 {
             color: transparent;
             background: none;

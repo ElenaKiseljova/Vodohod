@@ -13,66 +13,68 @@
         </p>
       </div>
 
-      <nav class="navigation navigation--promo" role="navigation">
-        <ul class="navigation__list navigation__list--promo">
-          <li class="navigation__item navigation__item--promo">
-            <a href="#route">
-              Маршруты
-            </a>
-          </li>
-          <li class="navigation__item navigation__item--promo">
-            <a href="#decks">
-              теплоход
-            </a>
-          </li>
-          <li class="navigation__item navigation__item--promo">
-            <a href="#">
-              Каюты
-            </a>
-          </li>
-          <li class="navigation__item navigation__item--promo">
-            <a href="#rest">
-              Рестораны
-            </a>
-          </li>
-          <li class="navigation__item navigation__item--promo">
-            <a href="#leisure">
-              Развлечения
-            </a>
-          </li>
-          <li class="navigation__item navigation__item--promo">
-            <a href="#timetable">
-              Расписание
-            </a>
-          </li>
-          <li class="navigation__item navigation__item--promo">
-            <a href="#reviews">
-              Отзывы
-            </a>
-          </li>
-        </ul>
+      <div class="promo__content">
+        <nav class="navigation navigation--promo" role="navigation">
+          <ul class="navigation__list navigation__list--promo">
+            <li class="navigation__item navigation__item--promo">
+              <a href="#route">
+                Маршруты
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--promo">
+              <a href="#decks">
+                теплоход
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--promo">
+              <a href="#">
+                Каюты
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--promo">
+              <a href="#rest">
+                Рестораны
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--promo">
+              <a href="#leisure">
+                Развлечения
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--promo">
+              <a href="#timetable">
+                Расписание
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--promo">
+              <a href="#reviews">
+                Отзывы
+              </a>
+            </li>
+          </ul>
 
-        <svg class="navigation__subline" width="1023" height="10">
-          <use xlink:href="#icon-line-submenu"></use>
-        </svg>
-      </nav>
+          <svg class="navigation__subline" width="1023" height="10">
+            <use xlink:href="#icon-line-submenu"></use>
+          </svg>
+        </nav>
 
-      <h1 class="promo__title">
-        <span>
-          Wild life
-        </span>
-        <small>
-          Первый экспедиционный речной круиз по Енисею
-        </small>
-      </h1>
-
-      <div class="promo__select">
-        <a class="button button--select-promo" href="#timetable">
-          <span class="button__text">
-            Выбрать круиз
+        <h1 class="promo__title">
+          <span>
+            Wild life
           </span>
-          <span class="button__border"></span>
-        </a>
+          <small>
+            Первый экспедиционный речной круиз по Енисею
+          </small>
+        </h1>
+
+        <div class="promo__select">
+          <a class="button button--select-promo" href="#timetable">
+            <span class="button__text">
+              Выбрать круиз
+            </span>
+            <span class="button__border"></span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="promo__angle">
@@ -200,7 +202,7 @@
   </section>
 
   <section class="totem">
-    <div class="totem__wrapper" id="totam">
+    <div class="totem__wrapper" id="totem">
       <h2 class="h1 h1--totem">
         Первый экспедиционный речной круиз по Енисею
       </h2>
@@ -219,14 +221,11 @@
       </div>
 
       <div class="totem__center">
-        <!-- <svg class="totem__runes" width="301" height="301">
-          <use xlink:href="#icon-runes-white"></use>
-        </svg> -->
         <svg class="totem__runes" width="301" height="301" viewBox="0 0 634 633" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="rotate-right">
+          <g id="right">
             <use xlink:href="img/sprite-runes.svg#runes-white-right" />
           </g>
-          <g class="rotate-left">
+          <g id="left">
             <use xlink:href="img/sprite-runes.svg#runes-white-left" />
           </g>
         </svg>
@@ -728,7 +727,7 @@
     </div>
   </section>
 
-  <section class="rooms">
+  <section class="rooms" id="rooms">
     <ul class="rooms__list">
       <li class="rooms__item rooms__item--1">
         <div class="rooms__wrapper">

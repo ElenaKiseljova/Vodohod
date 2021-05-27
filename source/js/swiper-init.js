@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 30,
         //loop: true,
         freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
+        //watchSlidesVisibility: true,
+        //watchSlidesProgress: true,
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         //init: false,
@@ -60,56 +60,60 @@ document.addEventListener('DOMContentLoaded', function () {
     if (routsDescriptionSlider) {
       var argsSwiperRoutsDescriptionSlider = {
         speed: 300,
+        //loop: true,
         slidesPerView: 1,
         effect: 'fade',
         fadeEffect: {
           crossFade: true
         },
+        // navigation: {
+        //   nextEl: '.next--nodes',
+        //   prevEl: '.prev--nodes'
+        // },
+        //init: false,
+        resizeObserver: true,
+      };
+    }
+
+    // Города (табы)
+
+    var routsNodesSlider = document.querySelector('.route__slider--nodes.swiper-container');
+
+    if (routsNodesSlider) {
+      var argsSwiperRoutsNodesSlider = {
+        speed: 300,
+        //loop: true,
+        spaceBetween: 60,
+        freeMode: true,
+        //watchSlidesVisibility: true,
+        //watchSlidesProgress: true,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true,
+        //init: false,
         navigation: {
           nextEl: '.next--nodes',
           prevEl: '.prev--nodes'
         },
-        //init: false,
         resizeObserver: true,
-      };
 
-      // Города (табы)
-
-      var routsNodesSlider = document.querySelector('.route__slider--nodes.swiper-container');
-
-      if (routsNodesSlider) {
-        var argsSwiperRoutsNodesSlider = {
-          speed: 300,
-          spaceBetween: 60,
-          freeMode: true,
-          watchSlidesVisibility: true,
-          watchSlidesProgress: true,
-          slidesPerView: 'auto',
-          //init: false,
-          navigation: {
-            nextEl: '.next--nodes',
-            prevEl: '.prev--nodes'
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 1280px
+          1280: {
+            spaceBetween: 30,
           },
-          resizeObserver: true,
 
-          // Responsive breakpoints
-          breakpoints: {
-            // when window width is >= 1280px
-            1280: {
-              spaceBetween: 30,
-            },
-
-            // when window width is >= 1920px
-            1920: {
-              spaceBetween: 50,
-            },
-          }
-        };
-      }
+          // when window width is >= 1920px
+          1920: {
+            spaceBetween: 50,
+          },
+        }
+      };
     }
 
     // Функция для активации пунктов карты
     var activatingMapNodes = function (sliderSwiper, sliderThumbSwiper = null) {
+      // Пункты на карте
       let mapToggles = document.querySelectorAll('.route__toggle.active');
 
       if (mapToggles) {
@@ -118,10 +122,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
           if (index && routsDescriptionSwiper) {
             mapToggle.addEventListener('click', function () {
-              sliderSwiper.slideTo(index);
+              if (sliderSwiper.loop === false) {
+                sliderSwiper.slideTo(index);
 
-              if (sliderThumbSwiper != null) {
-                sliderThumbSwiper.slideTo(index);
+                if (sliderThumbSwiper != null) {
+                  sliderThumbSwiper.slideTo(index);
+                }
+              } else {
+                sliderSwiper.slideToLoop(index);
+
+                if (sliderThumbSwiper != null) {
+                  sliderThumbSwiper.slideToLoop(index);
+                }
               }
             });
           }
@@ -138,44 +150,69 @@ document.addEventListener('DOMContentLoaded', function () {
           routsNameSwiper = new Swiper(routsNameSlider, argsSwiperroutsNameSlider);
 
           routsNameSwiper.on('slideChange', function () {
-            let index = routsNameSwiper.activeIndex;
+            let index;
+
+            if (routsNameSwiper.loop === false) {
+              index = routsNameSwiper.activeIndex;
+            } else {
+              index = routsNameSwiper.realIndex;
+            }
 
             window.routs.createSliderDescriptionElement(index);
             window.routs.createSliderNodesElement(index);
-            // Инициализация слайдеров из файла swiper-init.js
-            window.swiperChange.routDescriptionUpdate();
-            //window.swiperChange.routDescriptionInit();
+
+            // Разрушени слайдеров Узлов и Описаний
+            window.swiperChange.routDescriptionNodesDestroy();
+
+            // Инициализация слайдеров Узлов и Описаний
+            window.swiperChange.routDescriptionNodesInit();
           });
         }
       },
-      routDescriptionInit: function () {
-        if (routsDescriptionSlider && argsSwiperRoutsDescriptionSlider) {
-          if (routsNodesSlider && argsSwiperRoutsNodesSlider && argsSwiperRoutsDescriptionSlider) {
-            routsNodesSwiper = new Swiper(routsNodesSlider, argsSwiperRoutsNodesSlider);
+      routDescriptionNodesInit: function () {
+        if (routsDescriptionSlider && routsNodesSlider && argsSwiperRoutsDescriptionSlider && argsSwiperRoutsNodesSlider) {
+          // Слайдер Узлов
+          routsNodesSwiper = new Swiper(routsNodesSlider, argsSwiperRoutsNodesSlider);
 
-            argsSwiperRoutsDescriptionSlider.thumbs = {
-              swiper: routsNodesSwiper,
-            };
-          }
-
+          // Слайдер Описаний
           routsDescriptionSwiper = new Swiper(routsDescriptionSlider, argsSwiperRoutsDescriptionSlider);
 
-          if (routsNodesSwiper) {
-            // Активация пунктов карты
-            activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
-          } else {
-            // Активация пунктов карты
-            activatingMapNodes(routsDescriptionSwiper);
-          }
+          routsNodesSwiper.on('slideChange', function () {
+            let index;
+
+            if (routsNodesSwiper.loop === false) {
+              index = routsNodesSwiper.activeIndex;
+
+              routsDescriptionSwiper.slideTo(index);
+            } else {
+              index = routsNodesSwiper.realIndex;
+
+              routsDescriptionSwiper.slideToLoop(index);
+            }
+          });
+
+          routsDescriptionSwiper.on('slideChange', function () {
+            let index;
+
+            if (routsDescriptionSwiper.loop === false) {
+              index = routsDescriptionSwiper.activeIndex;
+
+              routsNodesSwiper.slideTo(index);
+            } else {
+              index = routsDescriptionSwiper.realIndex;
+
+              routsNodesSwiper.slideToLoop(index);
+            }
+          });
+
+          // Активация пунктов карты и пунктов Узлового слайдера
+          activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
         }
       },
-      routDescriptionUpdate: function () {
+      routDescriptionNodesDestroy: function () {
         if (routsDescriptionSwiper && routsNodesSwiper) {
-          routsDescriptionSwiper.updateSlides();
-          routsNodesSwiper.updateSlides();
-
-          // Активация пунктов карты
-          activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
+          routsDescriptionSwiper.destroy();
+          routsNodesSwiper.destroy();
         }
       }
     };
@@ -459,13 +496,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (caveSwiperText && caveSwiperImages) {
         caveSwiperText.on('slideNextTransitionStart', function () {
-          console.log('next');
+          //console.log('next');
 
           caveSwiperImages.slideNext();
         });
 
         caveSwiperText.on('slidePrevTransitionStart', function () {
-          console.log('prev');
+          //console.log('prev');
           caveSwiperImages.slidePrev();
         });
       }
