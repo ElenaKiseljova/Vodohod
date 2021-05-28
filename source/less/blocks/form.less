@@ -41,6 +41,24 @@
 
       transition: opacity 0.3s;
     }
+
+    .form__field {
+      color: #colors[error];
+
+      border-color: #colors[error_light];
+
+      & ~ .form__field-border {
+        border-color: #colors[error];
+      }
+
+      & + .form__label {
+        .rem(10, 12);
+
+        .pt_rem(13);
+
+        transition: font-size 0.3s ease, padding-top 0.3s ease;
+      }
+    }
   }
 
   & + .form__error + .form__checkbox {
@@ -116,16 +134,6 @@
       .pt_rem(13);
 
       transition: font-size 0.3s ease, padding-top 0.3s ease;
-    }
-  }
-
-  &:focus:invalid {
-    color: #colors[error];
-
-    border-color: #colors[error_light];
-
-    & ~ .form__field-border {
-      border-color: #colors[error];
     }
   }
 

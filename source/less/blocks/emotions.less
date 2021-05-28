@@ -72,6 +72,11 @@
 
   z-index: 3;
 
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: stretch;
+
   @media only screen and (min-width: 1280px) {
     position: relative;
 
@@ -118,6 +123,7 @@
 
     margin-left: 0;
     margin-right: auto;
+    .mb_rem(0);
   }
 
   @media only screen and (min-width: 1280px) {
@@ -261,11 +267,13 @@
     height: auto;
   }
 
-  &--images {
+  &--image {
     display: flex;
 
     justify-content: center;
     align-items: center;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   }
 
   &--text {

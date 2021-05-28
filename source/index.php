@@ -1103,53 +1103,55 @@
       </svg>
 
       <div class="emotions__left">
-        <div class="emotions__images">
-          <div class="emotions__slider swiper-container">
-            <ul class="emotions__list emotions__list--images swiper-wrapper">
-              <li class="emotions__item emotions__item--image swiper-slide" id="emotions-image-1">
-                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
-                  <source media="(min-width: 1920px)" srcset="img/emotions-1-1920.jpg" type="image/jpg">
-                  <source media="(min-width: 1280px)" srcset="img/emotions-1-1280.jpg" type="image/jpg">
-                  <source media="(min-width: 425px)" srcset="img/emotions-1-768.jpg" type="image/jpg">
+        <div class="emotions__pin">
+          <div class="emotions__images">
+            <div class="emotions__slider swiper-container">
+              <ul class="emotions__list emotions__list--images swiper-wrapper">
+                <li class="emotions__item emotions__item--image swiper-slide">
+                  <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                    <source media="(min-width: 1920px)" srcset="img/emotions-1-1920.jpg" type="image/jpg">
+                    <source media="(min-width: 1280px)" srcset="img/emotions-1-1280.jpg" type="image/jpg">
+                    <source media="(min-width: 425px)" srcset="img/emotions-1-768.jpg" type="image/jpg">
 
-                  <img itemprop="contentUrl" src="img/emotions-1-320.jpg" alt="emotions">
+                    <img itemprop="contentUrl" src="img/emotions-1-320.jpg" alt="emotions">
 
-                  <meta itemprop="name" content="emotions">
-                </picture>
-              </li>
-              <li class="emotions__item emotions__item--image swiper-slide" id="emotions-image-2">
-                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
-                  <source media="(min-width: 1920px)" srcset="img/emotions-2-1920.jpg" type="image/jpg">
-                  <source media="(min-width: 1280px)" srcset="img/emotions-2-1280.jpg" type="image/jpg">
-                  <source media="(min-width: 425px)" srcset="img/emotions-2-768.jpg" type="image/jpg">
+                    <meta itemprop="name" content="emotions">
+                  </picture>
+                </li>
+                <li class="emotions__item emotions__item--image swiper-slide">
+                  <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                    <source media="(min-width: 1920px)" srcset="img/emotions-2-1920.jpg" type="image/jpg">
+                    <source media="(min-width: 1280px)" srcset="img/emotions-2-1280.jpg" type="image/jpg">
+                    <source media="(min-width: 425px)" srcset="img/emotions-2-768.jpg" type="image/jpg">
 
-                  <img itemprop="contentUrl" src="img/emotions-2-320.jpg" alt="emotions">
+                    <img itemprop="contentUrl" src="img/emotions-2-320.jpg" alt="emotions">
 
-                  <meta itemprop="name" content="emotions">
-                </picture>
-              </li>
-              <li class="emotions__item emotions__item--image swiper-slide" id="emotions-image-3">
-                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
-                  <source media="(min-width: 1920px)" srcset="img/emotions-3-1920.jpg" type="image/jpg">
-                  <source media="(min-width: 1280px)" srcset="img/emotions-3-1280.jpg" type="image/jpg">
-                  <source media="(min-width: 425px)" srcset="img/emotions-3-768.jpg" type="image/jpg">
+                    <meta itemprop="name" content="emotions">
+                  </picture>
+                </li>
+                <li class="emotions__item emotions__item--image swiper-slide">
+                  <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                    <source media="(min-width: 1920px)" srcset="img/emotions-3-1920.jpg" type="image/jpg">
+                    <source media="(min-width: 1280px)" srcset="img/emotions-3-1280.jpg" type="image/jpg">
+                    <source media="(min-width: 425px)" srcset="img/emotions-3-768.jpg" type="image/jpg">
 
-                  <img itemprop="contentUrl" src="img/emotions-3-320.jpg" alt="emotions">
+                    <img itemprop="contentUrl" src="img/emotions-3-320.jpg" alt="emotions">
 
-                  <meta itemprop="name" content="emotions">
-                </picture>
-              </li>
-            </ul>
+                    <meta itemprop="name" content="emotions">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+
+            <svg class="emotions__subline emotions__subline--images" width="1820" height="10">
+              <use xlink:href="#icon-line-emotions"></use>
+            </svg>
           </div>
-
-          <svg class="emotions__subline emotions__subline--images" width="1820" height="10">
-            <use xlink:href="#icon-line-emotions"></use>
-          </svg>
         </div>
       </div>
       <div class="emotions__right">
         <ul class="emotions__list emotions__list--text">
-          <li class="emotions__item emotions__item--text" id="emotions-text-1">
+          <li class="emotions__item emotions__item--text">
             <h4 class="h4 h4--emotions">
               Лучшие краеведы Русского Севера
             </h4>
@@ -1174,7 +1176,7 @@
               </svg>
             </button>
           </li>
-          <li class="emotions__item emotions__item--text" id="emotions-text-2">
+          <li class="emotions__item emotions__item--text">
             <h4 class="h4 h4--emotions">
               Вертолетный тур на плато Путорана
             </h4>
@@ -1197,7 +1199,7 @@
               </svg>
             </button>
           </li>
-          <li class="emotions__item emotions__item--text" id="emotions-text-3">
+          <li class="emotions__item emotions__item--text">
             <h4 class="h4 h4--emotions">
               Экипировка для экспедиции
             </h4>
@@ -2396,14 +2398,17 @@
         </div>
       </div>
 
-      <form class="subscribe__form" action="index.html" method="post">
+      <form class="subscribe__form" action="index.html" method="post" id="subscribe">
         <div class="subscribe__field">
           <input class="subscribe__input" value="" type="email" id="email-subscribe" name="email-subscribe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" required>
           <label class="subscribe__label" for="email-subscribe">
             Введите ваш e-mail
           </label>
+          <span class="subscribe__error">
+            Неправильно введён e-mail
+          </span>
         </div>
-        <button class="button button--subscribe" type="submit" name="subscribe">
+        <button class="button button--subscribe" type="submit" name="subscribe" disabled>
           <span class="button__text">
             Подписаться
           </span>

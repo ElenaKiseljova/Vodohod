@@ -28,20 +28,15 @@
       pin: true,
       pinSpacing: false,
       onUpdate: self => {
-        promoImage.style.transform = 'scale(' + (parseFloat(self.progress.toFixed(3)) + 1) + ')';
-        promoSection.style.minHeight = ((1 - parseFloat(self.progress.toFixed(3))) * 100) + 'vh';
-        promoSection.style.height = (heightPromoStart * (1 - parseFloat(self.progress.toFixed(3)))) + 'px';
-        promoText.style.opacity = 1 - (self.progress.toFixed(3) * 4);
+        promoImage.style.transform = 'scale(' + ((parseFloat(self.progress.toFixed(3))/3) + 1) + ')';
+        promoText.style.opacity = 1 - (self.progress.toFixed(3) * 2);
+        promoText.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
+        promoContent.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
 
-        let coeffitientMargin = -100;
-
-        if (window.innerWidth > 1280) {
-          coeffitientMargin = -20;
-        }
-
-        promoText.style.marginTop = (self.progress.toFixed(3) * coeffitientMargin) + 'vh';
-
-        //console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());
+        //console.log(
+        // "progress:", self.progress.toFixed(3),
+        // "direction:", self.direction,
+        // "velocity", self.getVelocity());
       }
     });
 
@@ -68,7 +63,7 @@
       }
     })
     .to('#right', {
-      rotation: 360 * 5,
+      rotation: 360,
       duration: 1,
       ease:'none',
       transformOrigin: 'center'
@@ -83,7 +78,7 @@
       }
     })
     .to('#left', {
-      rotation: -360 * 5,
+      rotation: -360,
       duration: 1,
       ease:'none',
       transformOrigin: 'center'
@@ -94,16 +89,44 @@
     let totemTitle = totemSection.querySelector('.h1--totem');
 
     if (totemTitle) {
-      console.log(totemSection.offsetTop);
       ScrollTrigger.create({
         trigger: totemSection,
         start: 'top top',
         end: 9999999,
-        markers: true,
+        //markers: true,
         onToggle: self =>  {
           toggleActiveClass(totemTitle);
         }
       });
     }
   }
+
+  // Трансформация секции Впечатлений
+
+  const markers = gsap.utils.toArray(".emotions__item--text");
+
+  markers.forEach(function(marker, index) {
+   ScrollTrigger.create({
+     trigger: marker,
+     start: 'top center',
+     end: 'bottom center',
+     markers: true,
+     onEnter: function() {
+       window.swiperChange.emotionsSlideTo(index);
+     },
+     onEnterBack: function() {
+       window.swiperChange.emotionsSlideTo(index);
+     }
+   });
+  });
+
+  let attr = {
+    trigger: '.emotions__pin',
+    start: 'top 10%',
+    end: 'bottom bottom',
+    pin: true,
+    pinSpacing: false,
+  };
+
+  ScrollTrigger.create(attr);
 })();

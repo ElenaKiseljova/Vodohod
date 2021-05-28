@@ -286,7 +286,7 @@
     <script src="libs/swiper.min.js"></script>
 
     <!-- Theme's scripts -->
-    <script src="js/scroll-gsap.min.js"></script>
+
     <script src="js/anchor.min.js"></script>
     <script src="js/remove-active-class-elements.min.js"></script>
     <script src="js/promo.min.js"></script>
@@ -304,5 +304,7 @@
     <script src="js/rooms.min.js"></script>
     <script src="js/rest.min.js"></script>
     <script src="js/youtube.min.js"></script>
+
+    <script src="js/scroll-gsap.min.js"></script>
   </body>
 </html>
