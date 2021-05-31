@@ -8,7 +8,7 @@
 .totem {
   position: relative;
 
-  .pt_rem(50);
+  .pt_rem(30);// на 20xp меньше конечного значения
   .pb_rem(33);
 
   background-color: #colors[bg];
@@ -25,7 +25,8 @@
   }
 
   @media only screen and (min-width: 768px) {
-    .pb_rem(30);
+    .pt_rem(95);
+    .pb_rem(10);// на 20xp меньше конечного значения
   }
 
   @media only screen and (min-width: 1024px) {
@@ -33,7 +34,7 @@
   }
 
   @media only screen and (min-width: 1280px) {
-    .pt_rem(70);
+    .pt_rem(105);// на 30xp меньше конечного значения
     .pb_rem(50);
   }
 
@@ -42,15 +43,13 @@
   }
 
   @media only screen and (min-width: 1920px) {
-    .pt_rem(100);
+    .pt_rem(145);// на 30xp меньше конечного значения
     .pb_rem(100);
   }
 }
 
 .totem__wrapper {
   .wrapper();
-
-  min-height: 100vh;
 
   .pb_rem(35);
 

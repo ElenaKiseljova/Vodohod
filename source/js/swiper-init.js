@@ -319,6 +319,12 @@ document.addEventListener('DOMContentLoaded', function () {
       window.swiperChange.emotionsSlideTo = function (index) {
         emotionsSwiper.slideTo(index);
       };
+
+      window.addEventListener('resize', function () {
+        emotionsSwiper.destroy();
+
+        emotionsSwiper = new Swiper(emotionsContainer, argsSwiperEmotions);
+      });
     }
   } catch (e) {
     console.log(e);

@@ -280,6 +280,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
 
     <!-- Swiper -->
 
@@ -287,9 +288,7 @@
 
     <!-- Theme's scripts -->
 
-    <script src="js/anchor.min.js"></script>
     <script src="js/remove-active-class-elements.min.js"></script>
-    <script src="js/promo.min.js"></script>
 
     <script src="js/menu.min.js"></script>
 
@@ -306,5 +305,7 @@
     <script src="js/youtube.min.js"></script>
 
     <script src="js/scroll-gsap.min.js"></script>
+
+    <script src="js/reloader.min.js"></script>
   </body>
 </html>

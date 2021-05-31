@@ -27,7 +27,7 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--promo">
-              <a href="#">
+              <a href="#rooms">
                 Каюты
               </a>
             </li>
@@ -259,7 +259,7 @@
 
     <div class="route" id="route">
       <div class="route__top">
-        <h2 class="h2 h2--route">
+        <h2 class="h2 h2--route title">
           Маршруты экспедиций
         </h2>
 
@@ -387,7 +387,7 @@
   <section class="decks" id="decks">
     <div class="decks__wrapper">
       <div class="decks__top">
-        <h2 class="h2 h2--decks">
+        <h2 class="h2 h2--decks title">
           План палуб
         </h2>
 
@@ -732,8 +732,10 @@
       <li class="rooms__item rooms__item--1">
         <div class="rooms__wrapper">
           <header class="rooms__header">
-            <h4 class="h4 h4--rooms">
-              Стандарт одноместный
+            <h4 class="h4 h4--rooms title">
+              Стандарт
+              <br>
+              одноместный
             </h4>
 
             <p class="h4 h4--rooms-area">
@@ -848,7 +850,7 @@
       <li class="rooms__item rooms__item--2">
         <div class="rooms__wrapper">
           <header class="rooms__header">
-            <h4 class="h4 h4--rooms">
+            <h4 class="h4 h4--rooms title">
               Делюкс
             </h4>
 
@@ -968,8 +970,10 @@
       <li class="rooms__item rooms__item--3">
         <div class="rooms__wrapper">
           <header class="rooms__header">
-            <h4 class="h4 h4--rooms">
-              Делюкс трехместный
+            <h4 class="h4 h4--rooms title">
+              Делюкс
+              <br>
+              трехместный
             </h4>
 
             <p class="h4 h4--rooms-area">
@@ -1092,10 +1096,10 @@
 
   <section class="emotions" id="emotions">
     <div class="emotions__wrapper">
-      <h2 class="h2 h2--emotions">
-        Мы позаботились о том,
-        чтобы вы получили максимум новых впечатлений
-        и положительных эмоций.
+      <h2 class="h2 h2--emotions title">
+        Мы позаботились о том, чтобы вы получили максимум
+        <br>
+        новых впечатлений и положительных эмоций.
       </h2>
 
       <svg class="emotions__subline emotions__subline--top" width="1820" height="10">
@@ -1103,57 +1107,57 @@
       </svg>
 
       <div class="emotions__left">
-        <div class="emotions__pin">
-          <div class="emotions__images">
-            <div class="emotions__slider swiper-container">
-              <ul class="emotions__list emotions__list--images swiper-wrapper">
-                <li class="emotions__item emotions__item--image swiper-slide">
-                  <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
-                    <source media="(min-width: 1920px)" srcset="img/emotions-1-1920.jpg" type="image/jpg">
-                    <source media="(min-width: 1280px)" srcset="img/emotions-1-1280.jpg" type="image/jpg">
-                    <source media="(min-width: 425px)" srcset="img/emotions-1-768.jpg" type="image/jpg">
+        <div class="emotions__images">
+          <div class="emotions__slider swiper-container">
+            <ul class="emotions__list emotions__list--images swiper-wrapper">
+              <li class="emotions__item emotions__item--image swiper-slide">
+                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                  <source media="(min-width: 1920px)" srcset="img/emotions-1-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/emotions-1-1280.jpg" type="image/jpg">
+                  <source media="(min-width: 425px)" srcset="img/emotions-1-768.jpg" type="image/jpg">
 
-                    <img itemprop="contentUrl" src="img/emotions-1-320.jpg" alt="emotions">
+                  <img itemprop="contentUrl" src="img/emotions-1-320.jpg" alt="emotions">
 
-                    <meta itemprop="name" content="emotions">
-                  </picture>
-                </li>
-                <li class="emotions__item emotions__item--image swiper-slide">
-                  <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
-                    <source media="(min-width: 1920px)" srcset="img/emotions-2-1920.jpg" type="image/jpg">
-                    <source media="(min-width: 1280px)" srcset="img/emotions-2-1280.jpg" type="image/jpg">
-                    <source media="(min-width: 425px)" srcset="img/emotions-2-768.jpg" type="image/jpg">
+                  <meta itemprop="name" content="emotions">
+                </picture>
+              </li>
+              <li class="emotions__item emotions__item--image swiper-slide">
+                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                  <source media="(min-width: 1920px)" srcset="img/emotions-2-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/emotions-2-1280.jpg" type="image/jpg">
+                  <source media="(min-width: 425px)" srcset="img/emotions-2-768.jpg" type="image/jpg">
 
-                    <img itemprop="contentUrl" src="img/emotions-2-320.jpg" alt="emotions">
+                  <img itemprop="contentUrl" src="img/emotions-2-320.jpg" alt="emotions">
 
-                    <meta itemprop="name" content="emotions">
-                  </picture>
-                </li>
-                <li class="emotions__item emotions__item--image swiper-slide">
-                  <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
-                    <source media="(min-width: 1920px)" srcset="img/emotions-3-1920.jpg" type="image/jpg">
-                    <source media="(min-width: 1280px)" srcset="img/emotions-3-1280.jpg" type="image/jpg">
-                    <source media="(min-width: 425px)" srcset="img/emotions-3-768.jpg" type="image/jpg">
+                  <meta itemprop="name" content="emotions">
+                </picture>
+              </li>
+              <li class="emotions__item emotions__item--image swiper-slide">
+                <picture class="emotions__image" itemscope itemtype="http://schema.org/ImageObject">
+                  <source media="(min-width: 1920px)" srcset="img/emotions-3-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/emotions-3-1280.jpg" type="image/jpg">
+                  <source media="(min-width: 425px)" srcset="img/emotions-3-768.jpg" type="image/jpg">
 
-                    <img itemprop="contentUrl" src="img/emotions-3-320.jpg" alt="emotions">
+                  <img itemprop="contentUrl" src="img/emotions-3-320.jpg" alt="emotions">
 
-                    <meta itemprop="name" content="emotions">
-                  </picture>
-                </li>
-              </ul>
-            </div>
-
-            <svg class="emotions__subline emotions__subline--images" width="1820" height="10">
-              <use xlink:href="#icon-line-emotions"></use>
-            </svg>
+                  <meta itemprop="name" content="emotions">
+                </picture>
+              </li>
+            </ul>
           </div>
+
+          <svg class="emotions__subline emotions__subline--images" width="1820" height="10">
+            <use xlink:href="#icon-line-emotions"></use>
+          </svg>
         </div>
       </div>
       <div class="emotions__right">
         <ul class="emotions__list emotions__list--text">
           <li class="emotions__item emotions__item--text">
-            <h4 class="h4 h4--emotions">
-              Лучшие краеведы Русского Севера
+            <h4 class="h4 h4--emotions title">
+              Лучшие краеведы
+              <br>
+              Русского Севера
             </h4>
 
             <p class="text text--emotions">
@@ -1177,8 +1181,10 @@
             </button>
           </li>
           <li class="emotions__item emotions__item--text">
-            <h4 class="h4 h4--emotions">
-              Вертолетный тур на плато Путорана
+            <h4 class="h4 h4--emotions title">
+              Вертолетный тур
+              <br>
+              на плато Путорана
             </h4>
 
             <p class="text text--emotions">
@@ -1200,8 +1206,10 @@
             </button>
           </li>
           <li class="emotions__item emotions__item--text">
-            <h4 class="h4 h4--emotions">
-              Экипировка для экспедиции
+            <h4 class="h4 h4--emotions title">
+              Экипировка
+              <br>
+              для экспедиции
             </h4>
 
             <p class="text text--emotions">
@@ -1234,8 +1242,10 @@
   <section class="rest" id="rest">
     <div class="rest__wrapper">
       <header class="rest__header">
-        <h2 class="h2 h2--rest">
-          Отдых с лучшим видом
+        <h2 class="h2 h2--rest title">
+          Отдых
+          <br>
+          с лучшим видом
         </h2>
 
         <div class="rest__tabs-wrapper">
@@ -1464,8 +1474,10 @@
   <section class="leisure" id="leisure">
     <div class="leisure__wrapper">
       <header class="leisure__header">
-        <h2 class="h2 h2--leisure">
-          Досуг на борту
+        <h2 class="h2 h2--leisure title">
+          Досуг
+          <br>
+          на борту
         </h2>
 
         <p class="text text--leisure">
@@ -1650,7 +1662,7 @@
   <section class="timetable" id="timetable">
     <div class="timetable__wrapper">
       <header class="timetable__header">
-        <h2 class="h4 h4--timetable">
+        <h2 class="h4 h4--timetable title">
           Расписание
         </h2>
         <p class="hints hints--timetable">
@@ -2162,8 +2174,12 @@
 
   <section class="reviews" id="reviews">
     <div class="reviews__wrapper">
-      <h2 class="h2 h2--reviews">
-        Яркие впечатления наших гостей
+      <h2 class="h2 h2--reviews title">
+        Яркие
+        <br>
+        впечатления
+        <br>
+        наших гостей
       </h2>
 
       <div class="reviews__slider swiper-container">
@@ -2387,7 +2403,7 @@
   <section class="subscribe" id="subscribe">
     <div class="subscribe__wrapper">
       <div class="subscribe__text">
-        <h3 class="h3 h3--subscribe">
+        <h3 class="h3 h3--subscribe title">
           Подписка на новости
         </h3>
 
