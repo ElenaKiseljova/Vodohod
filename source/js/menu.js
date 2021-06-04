@@ -6,18 +6,27 @@
 
     let menuButtons = document.querySelectorAll('button[class*="button--menu"]');
     let menuSection = document.querySelector('.menu');
+    let promoSection = document.querySelector('.promo');
     let menuRunesRight = menuSection.querySelector('.menu__runes-right');
     let menuRunesLeft = menuSection.querySelector('.menu__runes-left');
     let logoHeader = document.querySelector('.logo--header');
     let orderButtonWhiteText = document.querySelector('.button--wheel .button__text--white');
 
+    promoSection.style.minHeight = window.innerHeight + 'px';
+
     if (menuButtons && menuSection && ROOT_ELEMENT && logoHeader && orderButtonWhiteText) {
       window.addEventListener('load', function () {
         menuSection.classList.add('loaded');
 
+        menuSection.style.minHeight = window.innerHeight + 'px';
+
         if (menuSection.offsetHeight > window.innerHeight) {
           // Добавление скролла, если высота меню больше вьюпорта
           menuSection.classList.add('scroll');
+        }
+
+        if (promoSection.offsetHeight < window.innerHeight) {
+          promoSection.style.height = window.innerHeight;
         }
       });
 

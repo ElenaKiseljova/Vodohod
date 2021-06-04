@@ -531,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (leisureContainer) {
       var argsSwiperLeisure = {
         speed: 300,
-        loop: true,
+        //loop: true,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
@@ -543,13 +543,14 @@ document.addEventListener('DOMContentLoaded', function () {
           // when window width is >= 768px
           768: {
             slidesPerView: 1,
-            spaceBetween: 80,
+            spaceBetween: 80
           },
 
           // when window width is >= 1280px
           1280: {
             slidesPerView: 2,
             spaceBetween: 90,
+            allowTouchMove: false,
           },
         }
       };

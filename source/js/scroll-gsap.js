@@ -2,7 +2,7 @@
 
 (function () {
   // Регистрация плагинов
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger);
 
   var toggleActiveClass = function (element) {
     element.classList.toggle('active');
@@ -21,6 +21,7 @@
     var promoText = promoSection.querySelector('.text--promo');
 
     // Триггер изменения Промо-секции
+
     ScrollTrigger.create({
       trigger: '.promo',
       start: 'bottom bottom',
@@ -43,8 +44,8 @@
 
     // Триггер на сокрытие/показ хедера
     ScrollTrigger.create({
-      trigger: totemSection,
-      start: 'top top',
+      trigger: '.promo__content',
+      start: 'top 10%',
       end: 9999999,
       //markers: true,
       onToggle: self =>  {
@@ -55,35 +56,32 @@
     });
 
     // Поворот рунического круга
-    var rotateRight = gsap.timeline({
-      scrollTrigger: {
-        trigger: totemSection,
-        scrub: 0.2,
-        start: 'top top',
-        end: '+=10000',
-      }
-    })
-    .to('#right', {
+    gsap.to('#right', {
+      transformOrigin: 'center',
       rotation: 360,
       duration: 1,
       ease: 'none',
-      transformOrigin: 'center'
-    });
-
-    var rotateLeft = gsap.timeline({
       scrollTrigger: {
-        trigger: totemSection,
+        trigger: '.totem__image',
         scrub: 0.2,
-        start: 'top top',
+        start: 'top bottom',
         end: '+=10000',
       }
-    })
-    .to('#left', {
-      rotation: -360,
-      duration: 1,
-      ease: 'none',
-      transformOrigin: 'center'
     });
+
+    gsap.to('#left', {
+      transformOrigin: 'center',
+      rotation: -360,
+      duration: 2,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.totem__image',
+        scrub: 0.2,
+        start: 'top bottom',
+        end: '+=10000',
+      }
+    });
+
 
     // Смещение текста
 
@@ -242,7 +240,7 @@
 
   function initTitleWrapper(element) {
     let newLayoutTemplate = element.innerHTML.split('<br>').map(function(elementItem) {
-      return '<span class="title__row">' + elementItem + "</span>"
+      return '<span class="title__row">' + elementItem + '</span>'
     }).join(' ');
 
     element.innerHTML = newLayoutTemplate;
@@ -291,41 +289,55 @@
 
   gsap.to('.youtube__thumbnail img', {
     scale: 1.02,
-    y: '3%',
     scrollTrigger: {
-      trigger: '.youtube__thumbnail',
-      start: 'top top',
-      end: '+=100',
+      trigger: '.rest',
+      start: 'center top',
+      end: '+=1000',
       //markers: true,
       scrub: 1,
     }
   });
 
-  // Leisure
-
-  ScrollTrigger.create({
-    trigger: '.leisure',
-    start: 'top top',
-    end: '80% top',
-    //markers: true,
-    pin: true,
-    pinSpacing: false,
-    scrub: 1,
-  });
-
   let leisureSlider = document.querySelector('.leisure__slider');
 
-  if (leisureSlider) {
+  if (leisureSlider && window.innerWidth >= 1280) {
     gsap.to(leisureSlider, {
-      x: '0%',
+      x: '-50vw',
       duration: 3,
       scrollTrigger: {
         trigger: '.leisure',
         start: 'top bottom',
         scrub: 1,
+        ease: 'none',
+        //markers: true,
       }
     });
   }
+
+  // Cave
+
+  let cave = document.querySelector('.cave');
+
+  if (cave) {
+    let heightCave = cave.offsetHeight;
+
+    cave.style.transform = 'translate3d(0, -' + heightCave + 'px, 0)';
+
+    gsap.to('.cave', {
+      y: '0px',
+      duration: 3,
+      scrollTrigger: {
+        trigger: '.leisure',
+        start: 'center bottom',
+        end: 'center top',
+        scrub: 1,
+        ease: 'none',
+        //markers: true,
+      }
+    });
+  }
+
+
 
   // Decks
 
@@ -333,42 +345,34 @@
   let decksBottom = document.querySelector('.decks__bottom');
 
   if (decksContainer && decksBottom) {
+    let start = 'top bottom';
+    let end = 'top center';
+
+    if (window.innerWidth > 1280) {
+      start = 'top bottom';
+      end = 'bottom bottom';
+    }
+
     gsap.to(decksContainer, {
-      x: '0%',
+      y: '0',
       duration: 3,
       scrollTrigger: {
         trigger: '.decks',
-        start: 'top bottom',
-        end: 'bottom bottom',
+        start: start,
+        end: end,
         scrub: 1,
       }
     });
 
     gsap.to(decksBottom, {
-      x: '0%',
-      duration: 3,
+      y: '0',
+      duration: 5,
       scrollTrigger: {
         trigger: '.decks',
-        start: 'top bottom',
-        end: 'bottom bottom',
+        start: start,
+        end: end,
         scrub: 1,
       }
     });
   }
-
-  // Scroll To
-
-  document.querySelectorAll("a[href*='#']").forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      let anchorArray = btn.href.split('#');
-
-      gsap.to(window, {
-        duration: 1,
-        scrollTo : {
-          y : '#' + anchorArray[anchorArray.length - 1],
-          offsetY : 65
-        }
-      });
-    });
-  });
 })();

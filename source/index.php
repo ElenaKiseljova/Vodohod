@@ -1480,10 +1480,13 @@
           на борту
         </h2>
 
-        <p class="text text--leisure">
+        <p class="text text--leisure title">
           Для Вас работает SPA-зона с обширным набором услуг: фитнес зал,
+          <br>
           массажный кабинет, сибирский банный комплекс. В вечернее пребывание
+          <br>
           на борту мы хотели добавить что-то по-сибирски душевное, поэтому
+          <br>
           на шлюпочной палубе всех желающих ждет наш караоке клуб.
         </p>
       </header>
@@ -1549,19 +1552,20 @@
           </ul>
         </div>
       </div>
+      <div id="cave"></div>
     </div>
   </section>
 
-  <section class="cave" id="cave">
+  <section class="cave">
     <div class="cave__wrapper">
       <div class="cave__slider cave__slider--text swiper-container">
         <ul class="cave__list cave__list--text swiper-wrapper">
           <li class="cave__item cave__item--text swiper-slide">
-            <h3 class="h2 h2--cave">
+            <h3 class="h2 h2--cave title">
               Откройте самые невероятные места планеты
             </h3>
 
-            <p class="text-small text-small--cave">
+            <p class="text-small text-small--cave title-slide">
               Спуститесь в подземные ледяные пещеры, поднимитесь на плато Путорана,
               побывайте в местах, которых  нет на картах. Испытайте себя в экспедиции
               на уникальном маршруте в сердце Сибири.
@@ -1665,8 +1669,12 @@
         <h2 class="h4 h4--timetable title">
           Расписание
         </h2>
-        <p class="hints hints--timetable">
-          *Стоимость указана за одного человека в двухместном размещении
+        <p class="hints hints--timetable title">
+          *Стоимость указана за одного
+          <br>
+           человека в двухместном
+           <br>
+           размещении
         </p>
       </header>
       <div class="timetable__slider-wrapper">

@@ -280,7 +280,6 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
 
     <!-- Swiper -->
 
@@ -291,6 +290,7 @@
     <script src="js/remove-active-class-elements.min.js"></script>
 
     <script src="js/menu.min.js"></script>
+    <script src="js/animation-anchor.min.js"></script>
 
     <script src="js/form.min.js"></script>
     <script src="js/popup.min.js"></script>
