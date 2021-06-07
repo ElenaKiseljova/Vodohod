@@ -57,7 +57,7 @@
 
     // Поворот рунического круга
     gsap.to('#right', {
-      transformOrigin: 'center',
+      //transformOrigin: '50% 50%',
       rotation: 360,
       duration: 1,
       ease: 'none',
@@ -70,7 +70,7 @@
     });
 
     gsap.to('#left', {
-      transformOrigin: 'center',
+      //transformOrigin: '50% 50%',
       rotation: -360,
       duration: 2,
       ease: 'none',
@@ -287,16 +287,16 @@
 
   // Video
 
-  gsap.to('.youtube__thumbnail img', {
-    scale: 1.02,
-    scrollTrigger: {
-      trigger: '.rest',
-      start: 'center top',
-      end: '+=1000',
-      //markers: true,
-      scrub: 1,
-    }
-  });
+  // gsap.to('.youtube__thumbnail img', {
+  //   scale: 1.02,
+  //   scrollTrigger: {
+  //     trigger: '.rest',
+  //     start: 'center top',
+  //     end: '+=1000',
+  //     //markers: true,
+  //     scrub: 1,
+  //   }
+  // });
 
   let leisureSlider = document.querySelector('.leisure__slider');
 

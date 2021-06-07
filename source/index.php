@@ -99,7 +99,7 @@
     <div class="promo__bg">
       <!-- Картинка 'img/promo-1280.jpg' используется также для маски в Меню.
            При замене из админки картинки - имя файла и его расположение должно совпадать с версткой.
-           Либо заменить здесь текст 'img/promo-1280.jpg' и в файле sprite.svg на новый путь к картинке.
+           Либо заменить здесь текст 'img/promo-1280.jpg' и в файле header.php на новый путь к картинке.
       -->
       <picture class="promo__image" itemscope itemtype="http://schema.org/ImageObject">
         <source media="(min-width: 1360px)" srcset="img/promo-1920.jpg" type="image/jpg">
@@ -120,7 +120,7 @@
         <button class="button button--menu-bottom" type="button" name="menu">
           <span class="button__icon">
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
+              <!-- <path
                    fill-rule="evenodd"
                    clip-rule="evenodd"
                    d="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
@@ -146,7 +146,18 @@
                            fill="freeze"
                            calcMode="paced"
                            />
-              </path>
+              </path> -->
+
+              <path class="open-menu"
+                   fill-rule="evenodd"
+                   clip-rule="evenodd"
+                   d="M2 7.64715L7.64715 2H8.35304V2.70589L2.70589 8.35304H2V7.64715ZM2.70554 12.5888L12.5881 2.70628H13.2939V3.41217L3.41144 13.2947L2.70554 13.2947V12.5888ZM13.9999 8.35272L8.35272 13.9999H7.64683V13.294L13.294 7.64683H13.9999V8.35272Z"
+              />
+              <path class="close-menu"
+                   fill-rule="evenodd"
+                   clip-rule="evenodd"
+                   d="M13.2957 1.99993L8.00169 7.29337L2.70734 1.99902L2.00145 1.99902L2.00145 2.70492L7.29576 7.99922L2.00098 13.2935V13.9994L2.70687 13.9994L8.00116 8.70561L13.2946 13.9991H14.0005V13.2932L8.70709 7.99975L14.0015 2.70583V1.99993L13.2957 1.99993Z"
+              />
 
               <path class="angle angle--top" d="M7.29508 3.00098L6.00097 1.708L6.00097 1.00211L6.70686 1.00211L8.00098 2.29508L8.00098 3.00098L7.29508 3.00098Z" />
               <path class="angle angle--right" d="M13.002 7.29508L14.2949 6.00097L15.0008 6.00097L15.0008 6.70686L13.7078 8.00098L13.002 8.00098L13.002 7.29508Z" />
@@ -730,365 +741,371 @@
   <section class="rooms" id="rooms">
     <ul class="rooms__list">
       <li class="rooms__item rooms__item--1">
-        <div class="rooms__wrapper">
-          <header class="rooms__header">
-            <h4 class="h4 h4--rooms title">
-              Стандарт
-              <br>
-              одноместный
-            </h4>
+        <div class="rooms__item-container">
+          <div class="rooms__wrapper">
+            <header class="rooms__header">
+              <h4 class="h4 h4--rooms title">
+                Стандарт
+                <br>
+                одноместный
+              </h4>
 
-            <p class="h4 h4--rooms-area">
-              Площадь - от 8,1 м2 до 13,9 м2
-            </p>
-          </header>
+              <p class="h4 h4--rooms-area">
+                Площадь - от 8,1 м2 до 13,9 м2
+              </p>
+            </header>
 
-          <div class="rooms__content">
-            <p class="text-small text-small--rooms">
-              Насладитесь незабываемым путешествием в дизайнерских интерьерах. Плавно сменяющиеся пейзажи в окнах каюты гармонично дополнят и подчеркнут колоритную обстановку.
-            </p>
-            <ul class="rooms__services">
-              <li class="rooms__service">
-                Односпальная кровать
-              </li>
-              <li class="rooms__service">
-                Шкаф для одежды
-              </li>
-              <li class="rooms__service">
-                Холодильник (минибар)
-              </li>
-              <li class="rooms__service">
-                Телевизор
-              </li>
-              <li class="rooms__service">
-                Радио
-              </li>
-              <li class="rooms__service">
-                Кондиционер
-              </li>
-              <li class="rooms__service">
-                Санузел
-              </li>
-              <li class="rooms__service">
-                Фен
-              </li>
-              <li class="rooms__service">
-                Окно
-              </li>
-              <li class="rooms__service">
-                Розетка 220V
-              </li>
-            </ul>
+            <div class="rooms__content">
+              <p class="text-small text-small--rooms">
+                Насладитесь незабываемым путешествием в дизайнерских интерьерах. Плавно сменяющиеся пейзажи в окнах каюты гармонично дополнят и подчеркнут колоритную обстановку.
+              </p>
+              <ul class="rooms__services">
+                <li class="rooms__service rooms__service--1">
+                  Односпальная кровать
+                </li>
+                <li class="rooms__service rooms__service--2">
+                  Шкаф для одежды
+                </li>
+                <li class="rooms__service rooms__service--3">
+                  Холодильник (минибар)
+                </li>
+                <li class="rooms__service rooms__service--4">
+                  Телевизор
+                </li>
+                <li class="rooms__service rooms__service--5">
+                  Радио
+                </li>
+                <li class="rooms__service rooms__service--6">
+                  Кондиционер
+                </li>
+                <li class="rooms__service rooms__service--7">
+                  Санузел
+                </li>
+                <li class="rooms__service rooms__service--8">
+                  Фен
+                </li>
+                <li class="rooms__service rooms__service--9">
+                  Окно
+                </li>
+                <li class="rooms__service rooms__service--10">
+                  Розетка 220V
+                </li>
+              </ul>
 
-            <div class="rooms__bottom">
-              <div class="progress progress--rooms-1">
-                <span></span>
-              </div>
+              <div class="rooms__bottom">
+                <div class="progress progress--rooms-1">
+                  <span></span>
+                </div>
 
-              <div class="fraction fraction--rooms-1">
-                <span class="fraction__current fraction__current--rooms">
-                  005
-                </span>
-
-                <span class="fraction__all fraction__all--rooms">
-                  020
-                </span>
-              </div>
-
-              <div class="rooms__buttons">
-                <button class="button button--arrow-left-rooms prev prev--rooms-1" type="button" name="arrow">
-                  <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
-                  </svg>
-                </button>
-
-                <button class="button button--arrow-right-rooms next next--rooms-1" type="button" name="arrow">
-                  <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="rooms__select">
-                <a class="button button--select-rooms" href="#timetable">
-                  <span class="button__text">
-                    Выбрать круиз
+                <div class="fraction fraction--rooms-1">
+                  <span class="fraction__current fraction__current--rooms">
+                    005
                   </span>
-                  <span class="button__border"></span>
-                </a>
+
+                  <span class="fraction__all fraction__all--rooms">
+                    020
+                  </span>
+                </div>
+
+                <div class="rooms__buttons">
+                  <button class="button button--arrow-left-rooms prev prev--rooms-1" type="button" name="arrow">
+                    <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+                    </svg>
+                  </button>
+
+                  <button class="button button--arrow-right-rooms next next--rooms-1" type="button" name="arrow">
+                    <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="rooms__select">
+                  <a class="button button--select-rooms" href="#timetable">
+                    <span class="button__text">
+                      Выбрать круиз
+                    </span>
+                    <span class="button__border"></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="rooms__slider rooms__slider--1 swiper-container">
-          <ul class="rooms__slider-list swiper-wrapper">
-            <?php
-              for ($i=0; $i < 19; $i++) {
-                ?>
-                  <li class="rooms__slider-item swiper-slide">
-                    <picture class="rooms__image" itemscope itemtype="http://schema.org/ImageObject">
-                      <source media="(min-width: 1920px)" srcset="img/rooms-1-1920.jpg" type="image/jpg">
-                      <source media="(min-width: 1280px)" srcset="img/rooms-1-1280.jpg" type="image/jpg">
-                      <source media="(min-width: 425px)" srcset="img/rooms-1-768.jpg" type="image/jpg">
+          <div class="rooms__slider rooms__slider--1 swiper-container">
+            <ul class="rooms__slider-list swiper-wrapper">
+              <?php
+                for ($i=0; $i < 19; $i++) {
+                  ?>
+                    <li class="rooms__slider-item swiper-slide">
+                      <picture class="rooms__image" itemscope itemtype="http://schema.org/ImageObject">
+                        <source media="(min-width: 1920px)" srcset="img/rooms-1-1920.jpg" type="image/jpg">
+                        <source media="(min-width: 1280px)" srcset="img/rooms-1-1280.jpg" type="image/jpg">
+                        <source media="(min-width: 425px)" srcset="img/rooms-1-768.jpg" type="image/jpg">
 
-                      <img itemprop="contentUrl" src="img/rooms-1-320.jpg" alt="rooms">
+                        <img itemprop="contentUrl" src="img/rooms-1-320.jpg" alt="rooms">
 
-                      <meta itemprop="name" content="rooms">
-                    </picture>
-                  </li>
-                <?php
-              }
-            ?>
-          </ul>
+                        <meta itemprop="name" content="rooms">
+                      </picture>
+                    </li>
+                  <?php
+                }
+              ?>
+            </ul>
 
-          <div class="rooms__mask"></div>
+            <div class="rooms__mask"></div>
+          </div>
         </div>
       </li>
       <li class="rooms__item rooms__item--2">
-        <div class="rooms__wrapper">
-          <header class="rooms__header">
-            <h4 class="h4 h4--rooms title">
-              Делюкс
-            </h4>
+        <div class="rooms__item-container">
+          <div class="rooms__wrapper">
+            <header class="rooms__header">
+              <h4 class="h4 h4--rooms title">
+                Делюкс
+              </h4>
 
-            <p class="h4 h4--rooms-area">
-              Площадь - от 12,5 м2 до 18,9 м2
-            </p>
-          </header>
+              <p class="h4 h4--rooms-area">
+                Площадь - от 12,5 м2 до 18,9 м2
+              </p>
+            </header>
 
-          <div class="rooms__content">
-            <p class="text-small text-small--rooms">
-              Насладитесь незабываемым путешествием в дизайнерских интерьерах.
-              Плавно сменяющиеся пейзажи в окнах каюты гармонично дополнят и подчеркнут колоритную обстановку.
-            </p>
-            <ul class="rooms__services">
-              <li class="rooms__service">
-                Двуспальная кровать
-              </li>
-              <li class="rooms__service">
-                Шкаф для одежды
-              </li>
-              <li class="rooms__service">
-                Холодильник (минибар)
-              </li>
-              <li class="rooms__service">
-                Телевизор
-              </li>
-              <li class="rooms__service">
-                Радио
-              </li>
-              <li class="rooms__service">
-                Кондиционер
-              </li>
-              <li class="rooms__service">
-                Санузел
-              </li>
-              <li class="rooms__service">
-                Фен
-              </li>
-              <li class="rooms__service">
-                Телефон
-              </li>
-              <li class="rooms__service">
-                Два окна
-              </li>
-              <li class="rooms__service">
-                Розетка 220V
-              </li>
-            </ul>
+            <div class="rooms__content">
+              <p class="text-small text-small--rooms">
+                Насладитесь незабываемым путешествием в дизайнерских интерьерах.
+                Плавно сменяющиеся пейзажи в окнах каюты гармонично дополнят и подчеркнут колоритную обстановку.
+              </p>
+              <ul class="rooms__services">
+                <li class="rooms__service rooms__service--1">
+                  Двуспальная кровать
+                </li>
+                <li class="rooms__service rooms__service--2">
+                  Шкаф для одежды
+                </li>
+                <li class="rooms__service rooms__service--3">
+                  Холодильник (минибар)
+                </li>
+                <li class="rooms__service rooms__service--4">
+                  Телевизор
+                </li>
+                <li class="rooms__service rooms__service--5">
+                  Радио
+                </li>
+                <li class="rooms__service rooms__service--6">
+                  Кондиционер
+                </li>
+                <li class="rooms__service rooms__service--7">
+                  Санузел
+                </li>
+                <li class="rooms__service rooms__service--8">
+                  Фен
+                </li>
+                <li class="rooms__service rooms__service--9">
+                  Телефон
+                </li>
+                <li class="rooms__service rooms__service--10">
+                  Два окна
+                </li>
+                <li class="rooms__service rooms__service--11">
+                  Розетка 220V
+                </li>
+              </ul>
 
-            <div class="rooms__bottom">
-              <div class="progress progress--rooms-2">
-                <span></span>
-              </div>
+              <div class="rooms__bottom">
+                <div class="progress progress--rooms-2">
+                  <span></span>
+                </div>
 
-              <div class="fraction fraction--rooms-2">
-                <span class="fraction__current fraction__current--rooms">
-                  005
-                </span>
-
-                <span class="fraction__all fraction__all--rooms">
-                  020
-                </span>
-              </div>
-
-              <div class="rooms__buttons">
-                <button class="button button--arrow-left-rooms prev prev--rooms-2" type="button" name="arrow">
-                  <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
-                  </svg>
-                </button>
-
-                <button class="button button--arrow-right-rooms next next--rooms-2" type="button" name="arrow">
-                  <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="rooms__select">
-                <a class="button button--select-rooms" href="#timetable">
-                  <span class="button__text">
-                    Выбрать круиз
+                <div class="fraction fraction--rooms-2">
+                  <span class="fraction__current fraction__current--rooms">
+                    005
                   </span>
-                  <span class="button__border"></span>
-                </a>
+
+                  <span class="fraction__all fraction__all--rooms">
+                    020
+                  </span>
+                </div>
+
+                <div class="rooms__buttons">
+                  <button class="button button--arrow-left-rooms prev prev--rooms-2" type="button" name="arrow">
+                    <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+                    </svg>
+                  </button>
+
+                  <button class="button button--arrow-right-rooms next next--rooms-2" type="button" name="arrow">
+                    <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="rooms__select">
+                  <a class="button button--select-rooms" href="#timetable">
+                    <span class="button__text">
+                      Выбрать круиз
+                    </span>
+                    <span class="button__border"></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="rooms__slider rooms__slider--1 swiper-container">
-          <ul class="rooms__slider-list swiper-wrapper">
-            <?php
-              for ($i=0; $i < 15; $i++) {
-                ?>
-                  <li class="rooms__slider-item swiper-slide">
-                    <picture class="rooms__image" itemscope itemtype="http://schema.org/ImageObject">
-                      <source media="(min-width: 1920px)" srcset="img/rooms-2-1920.jpg" type="image/jpg">
-                      <source media="(min-width: 1280px)" srcset="img/rooms-2-1280.jpg" type="image/jpg">
-                      <source media="(min-width: 425px)" srcset="img/rooms-2-768.jpg" type="image/jpg">
+          <div class="rooms__slider rooms__slider--1 swiper-container">
+            <ul class="rooms__slider-list swiper-wrapper">
+              <?php
+                for ($i=0; $i < 15; $i++) {
+                  ?>
+                    <li class="rooms__slider-item swiper-slide">
+                      <picture class="rooms__image" itemscope itemtype="http://schema.org/ImageObject">
+                        <source media="(min-width: 1920px)" srcset="img/rooms-2-1920.jpg" type="image/jpg">
+                        <source media="(min-width: 1280px)" srcset="img/rooms-2-1280.jpg" type="image/jpg">
+                        <source media="(min-width: 425px)" srcset="img/rooms-2-768.jpg" type="image/jpg">
 
-                      <img itemprop="contentUrl" src="img/rooms-2-320.jpg" alt="rooms">
+                        <img itemprop="contentUrl" src="img/rooms-2-320.jpg" alt="rooms">
 
-                      <meta itemprop="name" content="rooms">
-                    </picture>
-                  </li>
-                <?php
-              }
-            ?>
-          </ul>
+                        <meta itemprop="name" content="rooms">
+                      </picture>
+                    </li>
+                  <?php
+                }
+              ?>
+            </ul>
 
-          <div class="rooms__mask"></div>
+            <div class="rooms__mask"></div>
+          </div>
         </div>
       </li>
       <li class="rooms__item rooms__item--3">
-        <div class="rooms__wrapper">
-          <header class="rooms__header">
-            <h4 class="h4 h4--rooms title">
-              Делюкс
-              <br>
-              трехместный
-            </h4>
+        <div class="rooms__item-container">
+          <div class="rooms__wrapper">
+            <header class="rooms__header">
+              <h4 class="h4 h4--rooms title">
+                Делюкс
+                <br>
+                трехместный
+              </h4>
 
-            <p class="h4 h4--rooms-area">
-              Площадь - 17,7 м2
-            </p>
-          </header>
+              <p class="h4 h4--rooms-area">
+                Площадь - 17,7 м2
+              </p>
+            </header>
 
-          <div class="rooms__content">
-            <p class="text-small text-small--rooms">
-              Насладитесь незабываемым путешествием в дизайнерских интерьерах. Плавно сменяющиеся пейзажи в окнах каюты гармонично дополнят и подчеркнут колоритную обстановку.
-            </p>
-            <ul class="rooms__services">
-              <li class="rooms__service">
-                Двуспальная кровать
-              </li>
-              <li class="rooms__service">
-                Шкаф для одежды
-              </li>
-              <li class="rooms__service">
-                Холодильник (минибар)
-              </li>
-              <li class="rooms__service">
-                Телевизор
-              </li>
-              <li class="rooms__service">
-                Радио
-              </li>
-              <li class="rooms__service">
-                Кондиционер
-              </li>
-              <li class="rooms__service">
-                Санузел
-              </li>
-              <li class="rooms__service">
-                Фен
-              </li>
-              <li class="rooms__service">
-                Телефон
-              </li>
-              <li class="rooms__service">
-                Два окна
-              </li>
-              <li class="rooms__service">
-                Розетка 220V
-              </li>
-              <li class="rooms__service">
-                Диван
-              </li>
-            </ul>
+            <div class="rooms__content">
+              <p class="text-small text-small--rooms">
+                Насладитесь незабываемым путешествием в дизайнерских интерьерах. Плавно сменяющиеся пейзажи в окнах каюты гармонично дополнят и подчеркнут колоритную обстановку.
+              </p>
+              <ul class="rooms__services">
+                <li class="rooms__service rooms__service--1">
+                  Двуспальная кровать
+                </li>
+                <li class="rooms__service rooms__service--2">
+                  Шкаф для одежды
+                </li>
+                <li class="rooms__service rooms__service--3">
+                  Холодильник (минибар)
+                </li>
+                <li class="rooms__service rooms__service--4">
+                  Телевизор
+                </li>
+                <li class="rooms__service rooms__service--5">
+                  Радио
+                </li>
+                <li class="rooms__service rooms__service--6">
+                  Кондиционер
+                </li>
+                <li class="rooms__service rooms__service--7">
+                  Санузел
+                </li>
+                <li class="rooms__service rooms__service--8">
+                  Фен
+                </li>
+                <li class="rooms__service rooms__service--9">
+                  Телефон
+                </li>
+                <li class="rooms__service rooms__service--10">
+                  Два окна
+                </li>
+                <li class="rooms__service rooms__service--11">
+                  Розетка 220V
+                </li>
+                <li class="rooms__service rooms__service--12">
+                  Диван
+                </li>
+              </ul>
 
-            <div class="rooms__bottom">
-              <div class="progress progress--rooms-3">
-                <span></span>
-              </div>
+              <div class="rooms__bottom">
+                <div class="progress progress--rooms-3">
+                  <span></span>
+                </div>
 
-              <div class="fraction fraction--rooms-3">
-                <span class="fraction__current fraction__current--rooms">
-                  005
-                </span>
-
-                <span class="fraction__all fraction__all--rooms">
-                  020
-                </span>
-              </div>
-
-              <div class="rooms__buttons">
-                <button class="button button--arrow-left-rooms prev prev--rooms-3" type="button" name="arrow">
-                  <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
-                  </svg>
-                </button>
-
-                <button class="button button--arrow-right-rooms next next--rooms-3" type="button" name="arrow">
-                  <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="rooms__select">
-                <a class="button button--select-rooms" href="#timetable">
-                  <span class="button__text">
-                    Выбрать круиз
+                <div class="fraction fraction--rooms-3">
+                  <span class="fraction__current fraction__current--rooms">
+                    005
                   </span>
-                  <span class="button__border"></span>
-                </a>
+
+                  <span class="fraction__all fraction__all--rooms">
+                    020
+                  </span>
+                </div>
+
+                <div class="rooms__buttons">
+                  <button class="button button--arrow-left-rooms prev prev--rooms-3" type="button" name="arrow">
+                    <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+                    </svg>
+                  </button>
+
+                  <button class="button button--arrow-right-rooms next next--rooms-3" type="button" name="arrow">
+                    <svg class="button__icon button__icon--white" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="rooms__select">
+                  <a class="button button--select-rooms" href="#timetable">
+                    <span class="button__text">
+                      Выбрать круиз
+                    </span>
+                    <span class="button__border"></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="rooms__slider rooms__slider--1 swiper-container">
-          <ul class="rooms__slider-list swiper-wrapper">
-            <?php
-              for ($i=0; $i < 20; $i++) {
-                ?>
-                  <li class="rooms__slider-item swiper-slide">
-                    <picture class="rooms__image" itemscope itemtype="http://schema.org/ImageObject">
-                      <source media="(min-width: 1920px)" srcset="img/rooms-3-1920.jpg" type="image/jpg">
-                      <source media="(min-width: 1280px)" srcset="img/rooms-3-1280.jpg" type="image/jpg">
-                      <source media="(min-width: 425px)" srcset="img/rooms-3-768.jpg" type="image/jpg">
+          <div class="rooms__slider rooms__slider--1 swiper-container">
+            <ul class="rooms__slider-list swiper-wrapper">
+              <?php
+                for ($i=0; $i < 20; $i++) {
+                  ?>
+                    <li class="rooms__slider-item swiper-slide">
+                      <picture class="rooms__image" itemscope itemtype="http://schema.org/ImageObject">
+                        <source media="(min-width: 1920px)" srcset="img/rooms-3-1920.jpg" type="image/jpg">
+                        <source media="(min-width: 1280px)" srcset="img/rooms-3-1280.jpg" type="image/jpg">
+                        <source media="(min-width: 425px)" srcset="img/rooms-3-768.jpg" type="image/jpg">
 
-                      <img itemprop="contentUrl" src="img/rooms-3-320.jpg" alt="rooms">
+                        <img itemprop="contentUrl" src="img/rooms-3-320.jpg" alt="rooms">
 
-                      <meta itemprop="name" content="rooms">
-                    </picture>
-                  </li>
-                <?php
-              }
-            ?>
-          </ul>
+                        <meta itemprop="name" content="rooms">
+                      </picture>
+                    </li>
+                  <?php
+                }
+              ?>
+            </ul>
 
-          <div class="rooms__mask"></div>
+            <div class="rooms__mask"></div>
+          </div>
         </div>
       </li>
     </ul>
@@ -1561,11 +1578,11 @@
       <div class="cave__slider cave__slider--text swiper-container">
         <ul class="cave__list cave__list--text swiper-wrapper">
           <li class="cave__item cave__item--text swiper-slide">
-            <h3 class="h2 h2--cave title">
+            <h3 class="h2 h2--cave">
               Откройте самые невероятные места планеты
             </h3>
 
-            <p class="text-small text-small--cave title-slide">
+            <p class="text-small text-small--cave">
               Спуститесь в подземные ледяные пещеры, поднимитесь на плато Путорана,
               побывайте в местах, которых  нет на картах. Испытайте себя в экспедиции
               на уникальном маршруте в сердце Сибири.

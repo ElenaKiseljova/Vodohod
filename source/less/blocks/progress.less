@@ -67,6 +67,12 @@
   &--rooms-1,
   &--rooms-2,
   &--rooms-3 {
+    opacity: 0;
+
+    transform: translate3d(-100%, 0, 0);
+
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in-out;
+
     .pt_rem(1.5);
     .pb_rem(1.5);
 

@@ -36,12 +36,13 @@
           menuButtonItem.classList.toggle('active');
 
           let menuButtonText =  menuButtonItem.querySelector('.button__text');
-          let openMenuAnimate = menuButtonItem.querySelector('animate[id*="openMenuAnimate"]');
-          let closeMenuAnimate = menuButtonItem.querySelector('animate[id*="closeMenuAnimate"]');
+          //let openMenuAnimate = menuButtonItem.querySelector('animate[id*="openMenuAnimate"]');
+          //let closeMenuAnimate = menuButtonItem.querySelector('animate[id*="closeMenuAnimate"]');
 
-          if (openMenuAnimate && closeMenuAnimate && menuButtonText) {
+          //openMenuAnimate && closeMenuAnimate &&
+          if (menuButtonText) {
             if (menuButtonItem.classList.contains('active')) {
-              openMenuAnimate.beginElement();
+              //openMenuAnimate.beginElement();
 
               menuButtonText.textContent = 'Закрыть меню';
 
@@ -49,7 +50,7 @@
                 ROOT_ELEMENT.classList.add('active');
               }
             } else if (!menuButtonItem.classList.contains('active')) {
-              closeMenuAnimate.beginElement();
+              //closeMenuAnimate.beginElement();
 
               menuButtonText.textContent = 'Меню';
 

@@ -4,6 +4,14 @@
   var rooms = document.querySelectorAll('.rooms__item');
 
   if (rooms) {
+    let lazyShowElements = function (elements) {
+      elements.forEach((element, i) => {
+        let newLayoutTemplate = '<span>' + element.textContent + '</span>';
+
+        element.innerHTML = newLayoutTemplate;
+      });
+    };
+
     let addActiveSlide = function (room) {
       room.classList.add('active');
 
@@ -49,6 +57,10 @@
       };
 
       room.addEventListener('mouseenter', onMouseEnter);
+
+      let roomsListItems = room.querySelectorAll('.rooms__service');
+
+      lazyShowElements(roomsListItems);
     });
 
   }
