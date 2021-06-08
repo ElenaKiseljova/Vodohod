@@ -198,13 +198,13 @@
 
             </mask>
             <g mask="url(#maskMenu)">
-              <rect x="-280" width="1280" height="720" fill="url(#patternMenu)"/>
+              <rect width="720" height="720" fill="url(#pattern0)"/>
             </g>
             <defs>
-              <pattern id="patternMenu" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use xlink:href="#image0" transform="scale(0.000250892 0.00044603)"/>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0" transform="scale(0.00138889)"/>
               </pattern>
-              <image id="image0" width="3986" height="2242" xlink:href="img/promo-1280.jpg"/>
+              <image id="image0" width="720" height="720" xlink:href="img/runes-mask.jpg"/>
             </defs>
           </svg>
         </div>

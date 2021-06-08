@@ -304,14 +304,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (emotionsContainer) {
       var argsSwiperEmotions = {
-        speed: 700,
         slidesPerView: 1,
         allowTouchMove: false,
         resizeObserver: true,
         effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
       };
 
       let emotionsSwiper = new Swiper(emotionsContainer, argsSwiperEmotions);

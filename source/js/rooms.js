@@ -1,9 +1,17 @@
 'use strict';
 
 (function () {
-  var rooms = document.querySelectorAll('.rooms__item');
+  var roomsList = document.querySelector('.rooms__list');
 
-  if (rooms) {
+  if (roomsList) {
+    var flagTimeout = false;
+
+    roomsList.addEventListener('mouseleave', function () {
+      flagTimeout = false;
+    });
+
+    var rooms = roomsList.querySelectorAll('.rooms__item');
+
     let lazyShowElements = function (elements) {
       elements.forEach((element, i) => {
         let newLayoutTemplate = '<span>' + element.textContent + '</span>';
@@ -30,10 +38,17 @@
 
     rooms.forEach((room, i) => {
       let onMouseEnter = function () {
-        setTimeout(function () {
-          addActiveSlide(room);
-        }, 800);
+        if (flagTimeout) {
+          setTimeout(function () {
+            addActiveSlide(room);
+          }, 700);
+        }
 
+        if (!flagTimeout) {
+          addActiveSlide(room);
+
+          flagTimeout = true;
+        }
 
         room.removeEventListener('mouseenter', onMouseEnter);
         room.addEventListener('mouseleave', onMouseLeave);
@@ -50,7 +65,7 @@
 
         setTimeout(function () {
           removeActiveSlide(room);
-        }, 800);
+        }, 700);
 
         room.removeEventListener('mouseleave', onMouseLeave);
         room.addEventListener('mouseenter', onMouseEnter);

@@ -100,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (elementToScroll) {
             itemAnchor.addEventListener('click', (evt) => {
+              evt.preventDefault();
+
               if (exceptElementIds.indexOf(elementScrollId) === -1) {
                 startAnimation(elementToScroll, draftY);
               } else {

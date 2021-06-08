@@ -112,6 +112,13 @@
 
   z-index: 1;
 
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
   height: 32.5vw;
 
   overflow: hidden;
@@ -121,13 +128,19 @@
 
     transition: height 0.5s linear;
 
+    .rooms__header {
+      top: 0;
+
+      transform: translateY(0%);
+    }
+
     &.mouseenter {
       .text-small--rooms {
         opacity: 1;
 
         transform: translate3d(0, 0, 0);
 
-        transition: transform 0.3s 1s ease-in, opacity 0.3s 1s ease-in;
+        transition: transform 0.2s 0.5s ease-in, opacity 0.2s 0.5s ease-in;
       }
 
       .rooms__buttons {
@@ -160,26 +173,26 @@
 
           transform: translate3d(0%, 0, 0);
 
-          transition: opacity 0.4s 0.3s ease, transform 0.4s 0.3s ease;
+          transition: opacity 0.4s 0.2s ease, transform 0.4s 0.2s ease;
         }
       }
 
       .button--select-rooms {
         transform: scale(1);
 
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease-in;
 
         .button__text {
           opacity: 1;
 
-          transition: opacity 0.2s 0.5s ease-in;
+          transition: opacity 0.2s 0.3s ease-in;
         }
       }
 
       .h4--rooms-area {
         opacity: 1;
 
-        transition: opacity 0.5s 0.5s ease-in;
+        transition: opacity 0.3s 0.3s ease-in;
       }
 
       .rooms__mask {
@@ -201,54 +214,54 @@
 
         &--1,
         &--7 {
-          transition: transform 0.2s 0.6s ease-in, opacity 0.2s 0.6s ease-in;
+          transition: transform 0.1s 0.6s ease-in, opacity 0.1s 0.6s ease-in;
 
           span {
-            transition: opacity 0.4s 0.6s ease-in, transform 0.4s 0.6s ease-in;
+            transition: opacity 0.3s 0.6s ease-in, transform 0.3s 0.6s ease-in;
           }
         }
 
         &--2,
         &--8 {
-          transition: transform 0.2s 0.5s ease-in, opacity 0.2s 0.5s ease-in;
+          transition: transform 0.1s 0.5s ease-in, opacity 0.1s 0.5s ease-in;
           span {
-            transition: opacity 0.4s 0.5s ease-in, transform 0.4s 0.5s ease-in;
+            transition: opacity 0.3s 0.5s ease-in, transform 0.3s 0.5s ease-in;
           }
         }
 
         &--3,
         &--9 {
-          transition: transform 0.2s 0.4s ease-in, opacity 0.2s 0.4s ease-in;
+          transition: transform 0.1s 0.4s ease-in, opacity 0.1s 0.4s ease-in;
 
           span {
-            transition: opacity 0.4s 0.4s ease-in, transform 0.4s 0.4s ease-in;
+            transition: opacity 0.3s 0.4s ease-in, transform 0.3s 0.4s ease-in;
           }
         }
 
         &--4,
         &--10 {
-          transition: transform 0.2s 0.3s ease-in, opacity 0.2s 0.3s ease-in;
+          transition: transform 0.1s 0.3s ease-in, opacity 0.1s 0.3s ease-in;
 
           span {
-            transition: opacity 0.4s 0.3s ease-in, transform 0.4s 0.3s ease-in;
+            transition: opacity 0.3s 0.3s ease-in, transform 0.3s 0.3s ease-in;
           }
         }
 
         &--5,
         &--11 {
-          transition: transform 0.2s 0.2s ease-in, opacity 0.2s 0.2s ease-in;
+          transition: transform 0.1s 0.2s ease-in, opacity 0.1s 0.2s ease-in;
 
           span {
-            transition: opacity 0.4s 0.2s ease-in, transform 0.4s 0.2s ease-in;
+            transition: opacity 0.3s 0.2s ease-in, transform 0.3s 0.2s ease-in;
           }
         }
 
         &--6,
         &--12 {
-          transition: transform 0.2s 0.1s ease-in, opacity 0.2s 0.1s ease-in;
+          transition: transform 0.1s 0.1s ease-in, opacity 0.1s 0.1s ease-in;
 
           span {
-            transition: opacity 0.4s 0.1s ease-in, transform 0.4s 0.1s ease-in;
+            transition: opacity 0.3s 0.1s ease-in, transform 0.3s 0.1s ease-in;
           }
         }
       }
@@ -282,40 +295,40 @@
           &--1,
           &--5,
           &--9 {
-            transition: transform 0.2s 0.3s ease-in, opacity 0.2s 0.3s ease-in;
+            transition: transform 0.1s 0.3s ease-in, opacity 0.1s 0.3s ease-in;
 
             span {
-              transition: opacity 0.4s 0.7s ease-in, transform 0.4s 0.7s ease-in;
+              transition: opacity 0.3s 0.4s ease-in, transform 0.3s 0.4s ease-in;
             }
           }
 
           &--2,
           &--6,
           &--10 {
-            transition: transform 0.2s 0.2s ease-in, opacity 0.2s 0.2s ease-in;
+            transition: transform 0.1s 0.2s ease-in, opacity 0.1s 0.2s ease-in;
 
             span {
-              transition: opacity 0.4s 0.5s ease-in, transform 0.4s 0.5s ease-in;
+              transition: opacity 0.3s 0.3s ease-in, transform 0.3s 0.3s ease-in;
             }
           }
 
           &--3,
           &--7,
           &--11 {
-            transition: transform 0.2s 0.1s ease-in, opacity 0.2s 0.1s ease-in;
+            transition: transform 0.1s 0.1s ease-in, opacity 0.1s 0.1s ease-in;
 
             span {
-              transition: opacity 0.4s 0.3s ease-in, transform 0.4s 0.3s ease-in;
+              transition: opacity 0.3s 0.2s ease-in, transform 0.3s 0.2s ease-in;
             }
           }
 
           &--4,
           &--8,
           &--12 {
-            transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+            transition: transform 0.1s 0.1s ease-in, opacity 0.1s 0.1s ease-in;
 
             span {
-              transition: opacity 0.4s 0.1s ease-in, transform 0.4s 0.1s ease-in;
+              transition: opacity 0.3s 0.1s ease-in, transform 0.3s 0.1s ease-in;
             }
           }
         }
@@ -325,6 +338,8 @@
 
   @media (min-width: 1100px) {
     flex-grow: 1;
+
+    align-items: flex-start;
 
     width: 22.035vw;
     height: 532px;
@@ -358,12 +373,14 @@
 .rooms__header {
   position: absolute;
 
-  top: 0;
+  top: 50%;
   left: 0;
 
   z-index: 3;
 
   .mt_rem(20);
+
+  transform: translateY(-50%);
 
   @media (min-width: 768px) {
     display: flex;
@@ -372,6 +389,12 @@
     align-items: flex-start;
 
     .mt_rem(30);
+  }
+
+  @media (min-width: 1100px) {
+    top: 0;
+
+    transform: none;
   }
 }
 
@@ -444,55 +467,55 @@
 
   opacity: 0;
 
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 10px, 0);
 
   transition: transform 0.2s 0.9s ease-in, opacity 0.2s 0.7s ease-in;
 
   span {
     opacity: 0;
 
-    transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
   }
 
   &--1,
   &--7 {
     span {
-      transition: opacity 0.4s 0.1s ease-in, transform 0.4s 0.1s ease-in;
+      transition: opacity 0.3s 0.1s ease-in, transform 0.3s 0.1s ease-in;
     }
   }
 
   &--2,
   &--8 {
     span {
-      transition: opacity 0.4s 0.2s ease-in, transform 0.4s 0.2s ease-in;
+      transition: opacity 0.3s 0.2s ease-in, transform 0.3s 0.2s ease-in;
     }
   }
 
   &--3,
   &--9 {
     span {
-      transition: opacity 0.4s 0.3s ease-in, transform 0.4s 0.3s ease-in;
+      transition: opacity 0.3s 0.3s ease-in, transform 0.3s 0.3s ease-in;
     }
   }
 
   &--4,
   &--10 {
     span {
-      transition: opacity 0.4s 0.4s ease-in, transform 0.4s 0.4s ease-in;
+      transition: opacity 0.3s 0.4s ease-in, transform 0.3s 0.4s ease-in;
     }
   }
 
   &--5,
   &--11 {
     span {
-      transition: opacity 0.4s 0.5s ease-in, transform 0.4s 0.5s ease-in;
+      transition: opacity 0.3s 0.5s ease-in, transform 0.3s 0.5s ease-in;
     }
   }
 
   &--6,
   &--12 {
     span {
-      transition: opacity 0.4s 0.6s ease-in, transform 0.4s 0.6s ease-in;
+      transition: opacity 0.3s 0.6s ease-in, transform 0.3s 0.6s ease-in;
     }
   }
 
@@ -527,7 +550,7 @@
     &--5,
     &--9 {
       span {
-        transition: opacity 0.4s 0.1s ease-in, transform 0.4s 0.1s ease-in;
+        transition: opacity 0.3s 0.1s ease-in, transform 0.3s 0.1s ease-in;
       }
     }
 
@@ -535,7 +558,7 @@
     &--6,
     &--10 {
       span {
-        transition: opacity 0.4s 0.3s ease-in, transform 0.4s 0.3s ease-in;
+        transition: opacity 0.3s 0.2s ease-in, transform 0.3s 0.2s ease-in;
       }
     }
 
@@ -543,7 +566,7 @@
     &--7,
     &--11 {
       span {
-        transition: opacity 0.4s 0.5s ease-in, transform 0.4s 0.5s ease-in;
+        transition: opacity 0.3s 0.3s ease-in, transform 0.3s 0.3s ease-in;
       }
     }
 
@@ -551,7 +574,7 @@
     &--8,
     &--12 {
       span {
-        transition: opacity 0.4s 0.7s ease-in, transform 0.4s 0.7s ease-in;
+        transition: opacity 0.3s 0.4s ease-in, transform 0.4s 0.4s ease-in;
       }
     }
   }

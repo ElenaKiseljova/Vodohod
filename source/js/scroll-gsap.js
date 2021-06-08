@@ -57,7 +57,7 @@
 
     // Поворот рунического круга
     gsap.to('#right', {
-      //transformOrigin: '50% 50%',
+      transformOrigin: '50% 50%',
       rotation: 360,
       duration: 1,
       ease: 'none',
@@ -70,7 +70,7 @@
     });
 
     gsap.to('#left', {
-      //transformOrigin: '50% 50%',
+      transformOrigin: '50% 50%',
       rotation: -360,
       duration: 2,
       ease: 'none',
@@ -302,11 +302,11 @@
 
   if (leisureSlider && window.innerWidth >= 1280) {
     gsap.to(leisureSlider, {
-      x: '-50vw',
+      x: '-51vw',
       duration: 3,
       scrollTrigger: {
         trigger: '.leisure',
-        start: 'top bottom',
+        start: 'top 40%',
         scrub: 1,
         ease: 'none',
         //markers: true,
@@ -346,32 +346,32 @@
 
   if (decksContainer && decksBottom) {
     let start = 'top bottom';
-    let end = 'top center';
 
     if (window.innerWidth > 1280) {
       start = 'top bottom';
-      end = 'bottom bottom';
     }
 
     gsap.to(decksContainer, {
-      y: '0',
-      duration: 3,
-      scrollTrigger: {
-        trigger: '.decks',
-        start: start,
-        end: end,
-        scrub: 1,
-      }
-    });
-
-    gsap.to(decksBottom, {
-      y: '0',
+      y: '20px',
       duration: 5,
       scrollTrigger: {
         trigger: '.decks',
         start: start,
-        end: end,
+        end: 'bottom top',
         scrub: 1,
+        //markers: true
+      }
+    });
+
+    gsap.to(decksBottom, {
+      y: '20px',
+      duration: 10,
+      scrollTrigger: {
+        trigger: '.decks',
+        start: start,
+        end: 'bottom center',
+        scrub: 2,
+        //markers: true
       }
     });
   }
