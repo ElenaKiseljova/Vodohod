@@ -42,10 +42,8 @@
       };
 
       let onTabListClick = function (evt) {
-        if (evt.target.classList.contains(tabsClass)) {
-          toggleTabList();
-          //console.log('click');
-        }
+        toggleTabList();
+        //console.log('click');
       };
 
       if (window.innerWidth < 768) {

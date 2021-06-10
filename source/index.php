@@ -1698,17 +1698,17 @@
         <div class="timetable__slider timetable__slider--months swiper-container">
           <ul class="timetable__list timetable__list--months swiper-wrapper">
             <li class="timetable__item timetable__item--months swiper-slide">
-              <h5 class="timetable__title">
+              <h5 class="timetable__title title">
                 Май 2021
               </h5>
             </li>
             <li class="timetable__item timetable__item--months swiper-slide">
-              <h5 class="timetable__title">
+              <h5 class="timetable__title title">
                 Июнь 2021
               </h5>
             </li>
             <li class="timetable__item timetable__item--months swiper-slide">
-              <h5 class="timetable__title">
+              <h5 class="timetable__title title">
                 Сентябрь 2021
               </h5>
             </li>

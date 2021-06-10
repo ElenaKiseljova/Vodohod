@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function () {
         emotionsSwiper.slideTo(index);
       };
 
-      window.addEventListener('resize', function () {
+      window.addEventListener('orientationchange', function () {
         emotionsSwiper.destroy();
 
         emotionsSwiper = new Swiper(emotionsContainer, argsSwiperEmotions);

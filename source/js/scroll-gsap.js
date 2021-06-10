@@ -22,6 +22,44 @@
 
     // Триггер изменения Промо-секции
 
+    gsap.to(promoImage, {
+      scale: 1.2,
+      duration: 3,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.totem',
+        scrub: 1,
+        start: 'top bottom',
+        end: 'top top',
+      }
+    });
+
+    gsap.to(promoText, {
+      y: '-150px',
+      opacity: 0,
+      duration: 3,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.totem',
+        scrub: 0.3,
+        start: 'top bottom',
+        end: 'top top',
+      }
+    });
+
+    gsap.to(promoContent, {
+      y: '-100px',
+      opacity: 0,
+      duration: 6,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.totem',
+        scrub: 0.3,
+        start: 'top bottom',
+        end: 'top top',
+      }
+    });
+
     ScrollTrigger.create({
       trigger: '.promo',
       start: 'bottom bottom',
@@ -29,7 +67,7 @@
       //markers: true,
       pin: true,
       pinSpacing: false,
-      onUpdate: self => {
+      /*onUpdate: self => {
         promoImage.style.transform = 'scale(' + ((parseFloat(self.progress.toFixed(3))/3) + 1) + ')';
         promoText.style.opacity = 1 - (self.progress.toFixed(3) * 2);
         promoText.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
@@ -39,19 +77,40 @@
         // "progress:", self.progress.toFixed(3),
         // "direction:", self.direction,
         // "velocity", self.getVelocity());
-      }
+      }*/
     });
 
     // Триггер на сокрытие/показ хедера
     ScrollTrigger.create({
-      trigger: '.promo__content',
-      start: 'top 10%',
+      trigger: '.totem',
+      start: 'top top',
       end: 9999999,
       //markers: true,
       onToggle: self =>  {
         toggleActiveClass(headerTop);
         toggleActiveClass(headerBottom);
         //console.log("toggled, isActive:", self.isActive)
+      }
+    });
+
+    // Поворот Заказать
+    gsap.to('.button--wheel .button__icon--white', {
+      transformOrigin: '50% 50%',
+      rotation: 360,
+      duration: 5,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: 1,
+      }
+    });
+
+    gsap.to('.button--wheel-bottom .button__icon--white', {
+      transformOrigin: '50% 50%',
+      rotation: 360,
+      duration: 5,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: 1,
       }
     });
 
@@ -180,6 +239,7 @@
   let emotions = document.querySelector('.emotions');
 
   if (emotions) {
+    let emotionsLeft = emotions.querySelector('.emotions__left');
     let emotionsImages = emotions.querySelector('.emotions__images');
 
     const markers = gsap.utils.toArray(".emotions__item--text");
@@ -203,10 +263,10 @@
 
     if (window.innerWidth >= 1280) {
       ScrollTrigger.create({
-        trigger: '.emotions__left',
+        trigger: emotionsLeft,
         start: 'top top',
         end: 'bottom bottom',
-        pin: '.emotions__images',
+        pin: emotionsImages,
         pinSpacing: false,
         scrub: 1,
         //markers: true,
@@ -215,11 +275,13 @@
 
     if ((window.innerWidth < 1280) && window.innerWidth > 768) {
       ScrollTrigger.create({
-        trigger: '.emotions',
+        trigger: emotions,
         start: '15% top',
         end: 'bottom 70%',
         //markers: true,
         pin: emotionsImages,
+        pinSpacing: false,
+        scrub: 1,
       });
     }
 
@@ -230,6 +292,8 @@
         end: 'bottom 40%',
         //markers: true,
         pin: emotionsImages,
+        pinSpacing: false,
+        scrub: 1,
       });
     }
   }
@@ -302,7 +366,7 @@
 
   if (leisureSlider && window.innerWidth >= 1280) {
     gsap.to(leisureSlider, {
-      x: '-51vw',
+      x: '-57vw',
       duration: 3,
       scrollTrigger: {
         trigger: '.leisure',
@@ -315,7 +379,7 @@
   }
 
   // Cave
-
+  /*
   let cave = document.querySelector('.cave');
 
   if (cave) {
@@ -335,7 +399,7 @@
         //markers: true,
       }
     });
-  }
+  }*/
 
 
 
@@ -345,18 +409,12 @@
   let decksBottom = document.querySelector('.decks__bottom');
 
   if (decksContainer && decksBottom) {
-    let start = 'top bottom';
-
-    if (window.innerWidth > 1280) {
-      start = 'top bottom';
-    }
-
     gsap.to(decksContainer, {
-      y: '20px',
+      y: '30px',
       duration: 5,
       scrollTrigger: {
         trigger: '.decks',
-        start: start,
+        start:  'top bottom',
         end: 'bottom top',
         scrub: 1,
         //markers: true
@@ -364,13 +422,13 @@
     });
 
     gsap.to(decksBottom, {
-      y: '20px',
+      y: '30px',
       duration: 10,
       scrollTrigger: {
         trigger: '.decks',
-        start: start,
-        end: 'bottom center',
-        scrub: 2,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 3,
         //markers: true
       }
     });

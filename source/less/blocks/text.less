@@ -27,21 +27,30 @@
   }
 
   &--promo {
-    .pb_rem(30);
+    //.pb_rem(30);
+    padding-bottom: 30px;
 
     margin-left: auto;
     margin-right: auto;
 
     text-align: center;
 
+    font-size: 13px;
+    line-height: 20px;
+
     color: #colors[white_100];
 
     @media (orientation: portrait) and (max-height: 567px) {
-      .pb_rem(15);
+      //.pb_rem(15);
+      padding-bottom: 15px;
     }
 
     @media only screen and (min-width: 768px) {
       max-width: 85%;
+
+      font-size: 15px;
+      line-height: 26px;
+      //.rem(15, 26);
     }
 
     @media only screen and (min-width: 1280px) {
@@ -50,6 +59,8 @@
 
     @media only screen and (min-width: 1920px) {
       max-width: 46.88%;
+
+      .rem(18, 36);
     }
   }
 

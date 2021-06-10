@@ -31,7 +31,7 @@
         });
       }
 
-      window.addEventListener('resize', function () {
+      window.addEventListener('orientationchange', function () {
         // Изменяет высоту видео под пропорцию 16 на 9
         changeHeightVideo(youtube);
       });

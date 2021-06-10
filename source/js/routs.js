@@ -181,7 +181,7 @@
             let templateRoutDescription = (description) => {
               return `
                   <li class="route__item route__item--description swiper-slide">
-                    <h5 class="route__title">
+                    <h5 class="route__title title">
                       ${description.title}
                     </h5>
 

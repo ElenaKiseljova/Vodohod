@@ -1,7 +1,8 @@
 'use strict';
 
 (function () {
-  window.addEventListener('orientationChange', function () {
+  window.addEventListener('orientationchange', function () {
+    console.log('orientationchange');
     document.location.reload();
   })
 })();

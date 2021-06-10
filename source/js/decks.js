@@ -78,7 +78,7 @@
     }
   }
 
-  window.addEventListener('resize', function () {
+  window.addEventListener('orientationchange', function () {
     if (decksButtons) {
       window.tabListChangeHeight(decksTabList, 'decks__tabs');
     }

@@ -79,7 +79,7 @@
 
     replaceContent();
 
-    window.addEventListener('resize', function () {
+    window.addEventListener('orientationchange', function () {
       if (restTabList) {
         window.tabListChangeHeight(restTabList, 'rest__tabs');
       }
