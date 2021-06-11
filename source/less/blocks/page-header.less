@@ -14,7 +14,27 @@
     &.active {
       opacity: 0;
 
+      transition: none;
+
       pointer-events: none;
+
+      &.open {
+        opacity: 1;
+
+        pointer-events: all;
+      }
+    }
+
+    &.open {
+      transition: none;
+
+      background-image: url('../img/menu-bg-320.jpg');
+    }
+
+    @media (min-width: 1280px) {
+      &.open {
+        background: none;
+      }
     }
   }
 
@@ -35,6 +55,14 @@
       pointer-events: all;
 
       transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+
+      &.open {
+        opacity: 0;
+
+        transition: none;
+
+        pointer-events: none;
+      }
     }
   }
 }

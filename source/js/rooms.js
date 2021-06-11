@@ -1,82 +1,84 @@
 'use strict';
 
-(function () {
-  var roomsList = document.querySelector('.rooms__list');
+document.addEventListener('DOMContentLoaded', function () {
+  (function () {
+    var roomsList = document.querySelector('.rooms__list');
 
-  if (roomsList) {
-    var flagTimeout = false;
+    if (roomsList) {
+      var flagTimeout = false;
 
-    roomsList.addEventListener('mouseleave', function () {
-      flagTimeout = false;
-    });
-
-    var rooms = roomsList.querySelectorAll('.rooms__item');
-
-    let lazyShowElements = function (elements) {
-      elements.forEach((element, i) => {
-        let newLayoutTemplate = '<span>' + element.textContent + '</span>';
-
-        element.innerHTML = newLayoutTemplate;
+      roomsList.addEventListener('mouseleave', function () {
+        flagTimeout = false;
       });
-    };
 
-    let addActiveSlide = function (room) {
-      room.classList.add('active');
+      var rooms = roomsList.querySelectorAll('.rooms__item');
 
-      if (room.classList.contains('mouseleave')) {
-        // Класс для смены opacity
-        room.classList.remove('mouseleave');
-      }
+      let lazyShowElements = function (elements) {
+        elements.forEach((element, i) => {
+          let newLayoutTemplate = '<span>' + element.textContent + '</span>';
 
-      // Класс для смены opacity
-      room.classList.add('mouseenter');
-    };
-
-    let removeActiveSlide = function (room) {
-      room.classList.remove('active');
-    };
-
-    rooms.forEach((room, i) => {
-      let onMouseEnter = function () {
-        if (flagTimeout) {
-          setTimeout(function () {
-            addActiveSlide(room);
-          }, 700);
-        }
-
-        if (!flagTimeout) {
-          addActiveSlide(room);
-
-          flagTimeout = true;
-        }
-
-        room.removeEventListener('mouseenter', onMouseEnter);
-        room.addEventListener('mouseleave', onMouseLeave);
+          element.innerHTML = newLayoutTemplate;
+        });
       };
 
-      let onMouseLeave = function () {
-        if (room.classList.contains('mouseenter')) {
+      let addActiveSlide = function (room) {
+        room.classList.add('active');
+
+        if (room.classList.contains('mouseleave')) {
           // Класс для смены opacity
-          room.classList.remove('mouseenter');
+          room.classList.remove('mouseleave');
         }
 
         // Класс для смены opacity
-        room.classList.add('mouseleave');
-
-        setTimeout(function () {
-          removeActiveSlide(room);
-        }, 700);
-
-        room.removeEventListener('mouseleave', onMouseLeave);
-        room.addEventListener('mouseenter', onMouseEnter);
+        room.classList.add('mouseenter');
       };
 
-      room.addEventListener('mouseenter', onMouseEnter);
+      let removeActiveSlide = function (room) {
+        room.classList.remove('active');
+      };
 
-      let roomsListItems = room.querySelectorAll('.rooms__service');
+      rooms.forEach((room, i) => {
+        let onMouseEnter = function () {
+          if (flagTimeout) {
+            setTimeout(function () {
+              addActiveSlide(room);
+            }, 700);
+          }
 
-      lazyShowElements(roomsListItems);
-    });
+          if (!flagTimeout) {
+            addActiveSlide(room);
 
-  }
-})();
+            flagTimeout = true;
+          }
+
+          room.removeEventListener('mouseenter', onMouseEnter);
+          room.addEventListener('mouseleave', onMouseLeave);
+        };
+
+        let onMouseLeave = function () {
+          if (room.classList.contains('mouseenter')) {
+            // Класс для смены opacity
+            room.classList.remove('mouseenter');
+          }
+
+          // Класс для смены opacity
+          room.classList.add('mouseleave');
+
+          setTimeout(function () {
+            removeActiveSlide(room);
+          }, 700);
+
+          room.removeEventListener('mouseleave', onMouseLeave);
+          room.addEventListener('mouseenter', onMouseEnter);
+        };
+
+        room.addEventListener('mouseenter', onMouseEnter);
+
+        let roomsListItems = room.querySelectorAll('.rooms__service');
+
+        lazyShowElements(roomsListItems);
+      });
+
+    }
+  })();
+});

@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
         fadeEffect: {
           crossFade: true
         },
-        // navigation: {
-        //   nextEl: '.next--nodes',
-        //   prevEl: '.prev--nodes'
-        // },
+        navigation: {
+          nextEl: '.next--nodes',
+          prevEl: '.prev--nodes'
+        },
         //init: false,
         resizeObserver: true,
       };
@@ -90,10 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         //init: false,
-        navigation: {
-          nextEl: '.next--nodes',
-          prevEl: '.prev--nodes'
-        },
         resizeObserver: true,
 
         // Responsive breakpoints

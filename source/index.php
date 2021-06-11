@@ -442,29 +442,29 @@
 
               <!-- Ссылки на помещения -->
               <div class="decks__row decks__row--main-1">
-                <button class="decks__room" data-room="1" type="button" name="decks-button">
+                <a class="decks__room" data-room="1" href="#panorama">
                   Сибирский паб
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--main-2">
-                <button class="decks__room" data-room="2" type="button" name="decks-button">
+                <a class="decks__room" data-room="2" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--main-3">
-                <button class="decks__room" data-room="3" type="button" name="decks-button">
+                <a class="decks__room" data-room="3" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--main-4">
-                <button class="decks__room" data-room="4" type="button" name="decks-button">
+                <a class="decks__room" data-room="4" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--main-5">
-                <button class="decks__room" data-room="5" type="button" name="decks-button">
+                <a class="decks__room" data-room="5" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
             </li>
             <li class="decks__item" data-type="middle">
@@ -475,84 +475,84 @@
               </div>
               <!-- Ссылки на помещения -->
               <div class="decks__row decks__row--middle-1">
-                <button class="decks__room" data-room="6" type="button" name="decks-button">
+                <a class="decks__room" data-room="6" href="#panorama">
                   конференц-зал
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-2">
-                <button class="decks__room" data-room="7" type="button" name="decks-button">
+                <a class="decks__room" data-room="7" href="#panorama">
                   одноместный
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-3">
-                <button class="decks__room" data-room="8" type="button" name="decks-button">
+                <a class="decks__room" data-room="8" href="#panorama">
                   одноместный
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-4">
-                <button class="decks__room" data-room="9" type="button" name="decks-button">
+                <a class="decks__room" data-room="9" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-5">
-                <button class="decks__room" data-room="10" type="button" name="decks-button">
+                <a class="decks__room" data-room="10" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-6">
-                <button class="decks__room" data-room="11" type="button" name="decks-button">
+                <a class="decks__room" data-room="11" href="#panorama">
                   одноместный
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-7">
-                <button class="decks__room" data-room="12" type="button" name="decks-button">
+                <a class="decks__room" data-room="12" href="#panorama">
                   одноместный
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-8">
-                <button class="decks__room" data-room="13" type="button" name="decks-button">
+                <a class="decks__room" data-room="13" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-9">
-                <button class="decks__room" data-room="14" type="button" name="decks-button">
+                <a class="decks__room" data-room="14" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-10">
-                <button class="decks__room" data-room="15" type="button" name="decks-button">
+                <a class="decks__room" data-room="15" href="#panorama">
                   3-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-11">
-                <button class="decks__room" data-room="16" type="button" name="decks-button">
+                <a class="decks__room" data-room="16" href="#panorama">
                   3-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-12">
-                <button class="decks__room" data-room="17" type="button" name="decks-button">
+                <a class="decks__room" data-room="17" href="#panorama">
                   одноместный
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-13">
-                <button class="decks__room" data-room="18" type="button" name="decks-button">
+                <a class="decks__room" data-room="18" href="#panorama">
                   одноместный
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-14">
-                <button class="decks__room" data-room="19" type="button" name="decks-button">
+                <a class="decks__room" data-room="19" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-15">
-                <button class="decks__room" data-room="20" type="button" name="decks-button">
+                <a class="decks__room" data-room="20" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--middle-16">
-                <button class="decks__room" data-room="21" type="button" name="decks-button">
+                <a class="decks__room" data-room="21" href="#panorama">
                   Ресторан Улов дня
-                </button>
+                </a>
               </div>
             </li>
             <li class="decks__item" data-type="boat">
@@ -564,34 +564,34 @@
 
               <!-- Ссылки на помещения -->
               <div class="decks__row decks__row--boat-1">
-                <button class="decks__room" data-room="22" type="button" name="decks-button">
+                <a class="decks__room" data-room="22" href="#panorama">
                   Винотека
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--boat-2">
-                <button class="decks__room" data-room="23" type="button" name="decks-button">
+                <a class="decks__room" data-room="23" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--boat-3">
-                <button class="decks__room" data-room="24" type="button" name="decks-button">
+                <a class="decks__room" data-room="24" href="#panorama">
                   2-местные делюкс
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--boat-4">
-                <button class="decks__room" data-room="25" type="button" name="decks-button">
+                <a class="decks__room" data-room="25" href="#panorama">
                   Караоке бар
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--boat-5">
-                <button class="decks__room" data-room="26" type="button" name="decks-button">
+                <a class="decks__room" data-room="26" href="#panorama">
                   Ресторан Енисей
-                </button>
+                </a>
               </div>
               <div class="decks__row decks__row--boat-6">
-                <button class="decks__room" data-room="27" type="button" name="decks-button">
+                <a class="decks__room" data-room="27" href="#panorama">
                   Ресторан Улов дня
-                </button>
+                </a>
               </div>
             </li>
             <li class="decks__item" data-type="sun">
@@ -603,15 +603,15 @@
 
               <!-- Ссылки на помещения -->
               <div class="decks__row decks__row--sun-1">
-                <button class="decks__room" data-room="28" type="button" name="decks-button">
+                <a class="decks__room" data-room="28" href="#panorama">
                   Спа-центр
-                </button>
+                </a>
               </div>
             </li>
           </ul>
         </div>
       </div>
-      <div class="decks__bottom">
+      <div class="decks__bottom" id="panorama">
         <div class="scene">
           <h3 class="h3 h3--scene">
             <!-- decks.js -->

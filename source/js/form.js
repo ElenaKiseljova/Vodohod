@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let buttonSubmit = formCheck.querySelector('button[type="submit"]');
 
       if (formCheck) {
+        let inputEventListenerFlag = false;
+
         let validateForm = function () {
           // Validate flag
           let notValid = false;
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (allInputs) {
             allInputs.forEach((item, i) => {
               if (item.type !== 'radio' && item.type !== 'checkbox' && item.type !== 'submit') {
+                item.autocomplete = 'off';
+
                 if (!item.validity.valid) {
                   notValid = true;
 
@@ -24,39 +28,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Попап формы
                     if (item.closest('.form__row')) {
                       item.closest('.form__row').classList.add('invalid');
+                      item.closest('.form__row').classList.remove('valid');
                     }
 
                     // Подписка
                     if (item.closest('.subscribe__field')) {
                       item.closest('.subscribe__field').classList.add('invalid');
+                      item.closest('.subscribe__field').classList.remove('valid');
+                    }
+                  }
+                } else {
+                  if (item.closest('.invalid')) {
+                    // Попап формы
+                    if (item.closest('.form__row')) {
+                      item.closest('.form__row').classList.remove('invalid');
+                      item.closest('.form__row').classList.add('valid');
+                    }
+
+                    // Подписка
+                    if (item.closest('.subscribe__field')) {
+                      item.closest('.subscribe__field').classList.remove('invalid');
+                      item.closest('.subscribe__field').classList.add('valid');
                     }
                   }
                 }
 
-                item.autocomplete = 'off';
-
-                item.addEventListener('input', () => {
-                  // if (!item.validity.valid) {
-                  //   notValid = true;
-                  //
-                  //   if (!item.closest('.invalid')) {
-                  //     item.closest('.form__row').classList.add('invalid');
-                  //   }
-                  // } else
-                  if (item.validity.valid) {
-                    if (item.closest('.invalid')) {
-                      // Попап формы
-                      if (item.closest('.form__row')) {
-                        item.closest('.form__row').classList.remove('invalid');
-                      }
-
-                      // Подписка
-                      if (item.closest('.subscribe__field')) {
-                        item.closest('.subscribe__field').classList.remove('invalid');
-                      }
-                    }
-                  }
-                });
+                if (inputEventListenerFlag === false) {
+                  item.addEventListener('input', () => {
+                    validateForm();
+                  });
+                }
               }
             });
           }
@@ -69,37 +70,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Попап формы
                 if (item.closest('.form__row')) {
                   item.closest('.form__row').classList.add('invalid');
+                  item.closest('.form__row').classList.remove('valid');
                 }
 
                 // Подписка
                 if (item.closest('.subscribe__field')) {
                   item.closest('.subscribe__field').classList.add('invalid');
+                  item.closest('.subscribe__field').classList.remove('valid');
+                }
+              } else {
+                if (item.closest('.invalid')) {
+                  // Попап формы
+                  if (item.closest('.form__row')) {
+                    item.closest('.form__row').classList.remove('invalid');
+                    item.closest('.form__row').classList.add('valid');
+                  }
+
+                  // Подписка
+                  if (item.closest('.subscribe__field')) {
+                    item.closest('.subscribe__field').classList.remove('invalid');
+                    item.closest('.subscribe__field').classList.add('valid');
+                  }
                 }
               }
 
-              item.addEventListener('input', () => {
-                // if (!item.validity.valid) {
-                //   notValid = true;
-                //
-                //   if (!item.closest('.invalid')) {
-                //     item.closest('.form__row').classList.add('invalid');
-                //   }
-                // } else
-
-                if (item.validity.valid) {
-                  if (item.closest('.invalid')) {
-                    // Попап формы
-                    if (item.closest('.form__row')) {
-                      item.closest('.form__row').classList.remove('invalid');
-                    }
-
-                    // Подписка
-                    if (item.closest('.subscribe__field')) {
-                      item.closest('.subscribe__field').classList.remove('invalid');
-                    }
-                  }
-                }
-              });
+              if (inputEventListenerFlag === false) {
+                item.addEventListener('input', () => {
+                  validateForm();
+                });
+              }
             });
           }
 
@@ -112,12 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
               buttonSubmit.disabled = true;
             }
           }
+
+          inputEventListenerFlag = true;
         };
 
         formCheck.addEventListener('click', function (evt) {
-          if (!evt.target.closest('.subscribe__field') && !evt.target.closest('.form__row')) {
+          //if (!evt.target.closest('.subscribe__field') && !evt.target.closest('.form__row')) {
             validateForm();
-          }
+          //}
         });
       }
     };

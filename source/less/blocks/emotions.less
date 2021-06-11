@@ -68,16 +68,12 @@
 }
 
 .emotions__left {
-  position: relative;
-
-  z-index: 3;
-
-  display: flex;
-
-  justify-content: flex-start;
-  align-items: stretch;
-
-  overflow: hidden;
+  // display: flex;
+  //
+  // justify-content: flex-start;
+  // align-items: stretch;
+  //
+  // overflow: hidden;
 
   @media only screen and (min-width: 1024px), (max-height: 320px) {
     position: relative;
@@ -109,7 +105,7 @@
 .emotions__images {
   position: relative;
 
-  z-index: 3;
+  z-index: 4;
 
   display: flex;
 
@@ -138,10 +134,6 @@
 }
 
 .emotions__right {
-  position: relative;
-
-  z-index: 2;
-
   @media only screen and (min-width: 768px) {
     width: 66.81%;
   }
@@ -158,6 +150,10 @@
 }
 
 .emotions__more {
+  position: relative;
+
+  z-index: 2;
+
   .button_default();
 
   display: flex;

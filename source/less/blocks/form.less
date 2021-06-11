@@ -61,6 +61,20 @@
     }
   }
 
+  &.valid {
+    .form__field {
+      color: #colors[black_text];
+
+      & + .form__label {
+        .rem(10, 12);
+
+        .pt_rem(13);
+
+        transition: font-size 0.3s ease, padding-top 0.3s ease;
+      }
+    }
+  }
+
   & + .form__error + .form__checkbox {
     .mt_rem(9);
   }
@@ -124,8 +138,7 @@
 
   color: transparent;
 
-  &:focus,
-  &:valid {
+  &:focus {
     color: #colors[black_text];
 
     & + .form__label {
@@ -169,8 +182,7 @@
     .pl_rem(30);
     .pr_rem(30);
 
-    &:focus,
-    &:valid {
+    &:focus {
       & + .form__label {
         .rem(12, 14);
 
@@ -185,8 +197,7 @@
     .pt_rem(37.5);
     .pb_rem(14.5);
 
-    &:focus,
-    &:valid {
+    &:focus {
       & + .form__label {
         .rem(14, 17);
 
