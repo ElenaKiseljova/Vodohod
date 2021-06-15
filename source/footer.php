@@ -144,7 +144,7 @@
 
         <form class="form form--popup" id="order-popup" action="" method="post">
           <div class="form__row">
-            <input class="form__field form__field--popup" id="name-2" type="text" name="name-2" required pattern="[a-zA-Zа-яА-Я ]{2,}">
+            <input class="form__field form__field--popup" id="name-2" type="text" name="name-2" pattern="[a-zA-Zа-яА-Я ]{2,}">
 
             <label class="form__label" for="name-2">Как к вам обращаться?</label>
             <span class="form__field-border form__field-border--popup"></span>
@@ -152,7 +152,7 @@
           <span class="form__error form__error--popup">Введен недопустимый символ</span>
 
           <div class="form__row">
-            <input class="form__field form__field--popup" id="phone-2" type="tel" name="phone-2" required pattern="[0-9-+() ]{9,}">
+            <input class="form__field form__field--popup" id="phone-2" type="tel" name="phone-2" pattern="[0-9-+() ]{9,}">
 
             <label class="form__label" for="phone-2">Контактный телефон</label>
             <span class="form__field-border form__field-border--popup"></span>
@@ -160,7 +160,7 @@
           <span class="form__error form__error--popup">Введен недопустимый символ</span>
 
           <div class="form__row">
-            <input class="form__field form__field--popup" id="email-2" type="email" name="email-2" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
+            <input class="form__field form__field--popup" id="email-2" type="email" name="email-2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
 
             <label class="form__label" for="email-2">Ваш email</label>
             <span class="form__field-border form__field-border--popup"></span>
@@ -168,7 +168,7 @@
           <span class="form__error form__error--popup">Введен недопустимый символ</span>
 
           <div class="form__row form__row--message">
-            <textarea class="form__field form__field--message" id="message-2" name="message-2" required></textarea>
+            <textarea class="form__field form__field--message" id="message-2" name="message-2"></textarea>
 
             <label class="form__label" for="message-2">Здесь вы можете задать интересующие вас вопросы</label>
             <span class="form__field-border form__field-border--popup"></span>
@@ -221,7 +221,7 @@
 
         <form class="form form--popup" id="download-popup" action="" method="post">
           <div class="form__row form__row--popup">
-            <input class="form__field form__field--popup" id="name-3" type="text" name="name-3" required pattern="[a-zA-Zа-яА-Я ]{2,}">
+            <input class="form__field form__field--popup" id="name-3" type="text" name="name-3" pattern="[a-zA-Zа-яА-Я ]{2,}">
 
             <label class="form__label" for="name-3">Как к вам обращаться?</label>
             <span class="form__field-border form__field-border--popup"></span>
@@ -229,7 +229,7 @@
           <span class="form__error form__error--popup">Введен недопустимый символ</span>
 
           <div class="form__row form__row--popup">
-            <input class="form__field form__field--popup" id="email-3" type="email" name="email-3" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
+            <input class="form__field form__field--popup" id="email-3" type="email" name="email-3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
 
             <label class="form__label" for="email-3">Ваш email</label>
             <span class="form__field-border form__field-border--popup"></span>

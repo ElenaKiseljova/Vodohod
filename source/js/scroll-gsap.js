@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     // Регистрация плагинов
     gsap.registerPlugin(ScrollTrigger);
 
@@ -429,5 +429,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  })();
-});
+  });
+})();

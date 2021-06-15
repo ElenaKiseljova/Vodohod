@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     try {
       let changeHeightVideo = function (element) {
         let COEFFICIENT_HEIGHT_16_9 = 1.77777777778;
@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
       console.log(e);
     }
-  })();
-});
+  });
+})();

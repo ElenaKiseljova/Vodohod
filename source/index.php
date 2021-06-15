@@ -2439,7 +2439,7 @@
         </div>
       </div>
 
-      <form class="subscribe__form" action="index.html" method="post" id="subscribe">
+      <form class="subscribe__form" action="index.html" method="post" id="subscribe-form">
         <div class="subscribe__field">
           <input class="subscribe__input" value="" type="email" id="email-subscribe" name="email-subscribe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" required>
           <label class="subscribe__label" for="email-subscribe">

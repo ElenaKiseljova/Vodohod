@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     try {
       // Wrapper
       let restWrapper = document.querySelector('.rest__wrapper');
@@ -95,5 +95,5 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
       console.log(e);
     }
-  })();
-});
+  });
+})();

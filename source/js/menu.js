@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     try {
       let ROOT_ELEMENT = document.documentElement;
 
@@ -102,5 +102,5 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
       console.log(e);
     }
-  })();
-});
+  });
+})();

@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     try {
       // Маршруты (для теста заданы названия просто так)
       let routsNames = [
@@ -254,11 +254,11 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
       console.log(e);
     }
+  });
 
-    window.addEventListener('load', function () {
-      // Инициализация слайдеров из файла swiper-init.js
-      window.swiperChange.routNamesInit();
-      window.swiperChange.routDescriptionNodesInit();
-    });
-  })();
-});
+  window.addEventListener('load', function () {
+    // Инициализация слайдеров из файла swiper-init.js
+    window.swiperChange.routNamesInit();
+    window.swiperChange.routDescriptionNodesInit();
+  });
+})();

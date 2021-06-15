@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var roomsList = document.querySelector('.rooms__list');
 
     if (roomsList) {
@@ -80,5 +80,5 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
     }
-  })();
-});
+  });
+})();

@@ -1,8 +1,8 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     // Импортируемая ф-ция из ф. show-more.js
     window.showMore(300, '.text--emotions', '.emotions__more');
-  })();
-});
+  });
+})();

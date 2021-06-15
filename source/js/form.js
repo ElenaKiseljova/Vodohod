@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
           if (allInputs) {
             allInputs.forEach((item, i) => {
               if (item.type !== 'radio' && item.type !== 'checkbox' && item.type !== 'submit') {
+                if ((item.type === 'tel' || item.type === 'email' || item.type === 'text') && item.required === false) {
+                  item.required = true;
+                }
+
                 item.autocomplete = 'off';
 
                 if (!item.validity.valid) {
@@ -133,9 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // subscribe
 
-    form('#subscribe');
-
+    form('#subscribe-form');
   } catch (e) {
     console.log(e);
   }
-})
+});

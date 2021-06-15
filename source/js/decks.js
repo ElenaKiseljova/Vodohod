@@ -1,7 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var decksTabList = document.querySelector('.decks__tabs');
 
     if (decksTabList) {
@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
     }
+  });
 
-    window.addEventListener('orientationchange', function () {
-      if (decksButtons) {
-        window.tabListChangeHeight(decksTabList, 'decks__tabs');
-      }
-    });
-  })();
-});
+  window.addEventListener('orientationchange', function () {
+    if (decksButtons) {
+      window.tabListChangeHeight(decksTabList, 'decks__tabs');
+    }
+  });
+})();
