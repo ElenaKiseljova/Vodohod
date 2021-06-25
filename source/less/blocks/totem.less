@@ -146,12 +146,22 @@
 
   transform: translateY(-50%);
 
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   height: auto;
 
   #right,
   #left {
-    transform-origin: center;
+    width: 100%;
+    height: auto;
+  }
+
+  #left {
+    position: absolute;
   }
 }
 

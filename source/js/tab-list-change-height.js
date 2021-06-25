@@ -28,6 +28,7 @@
         if (tabList.classList.contains('active')) {
 
           tabList.classList.remove('active');
+          tabList.parentNode.classList.remove('active');
 
           tabList.style = '';
 
@@ -35,6 +36,8 @@
         } else if (!tabList.classList.contains('active')) {
 
           tabList.classList.add('active');
+          tabList.parentNode.classList.add('active');
+
           tabList.style.height = defaultHeightTabList + 'px';
 
           document.addEventListener('click', onTabListToggle);

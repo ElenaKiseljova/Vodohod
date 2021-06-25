@@ -64,6 +64,35 @@
 
   height: 22px;
 
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    z-index: 4;
+
+    width: 12px;
+    height: 8px;
+
+    background-image: url('../img/rest-toggle.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transform: rotate(0deg);
+
+    pointer-events: none;
+  }
+
+  &.active {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
   @media only screen and (min-width: 768px) {
     height: auto;
   }
@@ -91,9 +120,9 @@
   padding: 0;
   margin: 0;
 
-  padding-left: calc(50vw - 50%);
+  padding-left: calc(50vw - 50% + 22px);
   .pt_rem(10);
-  .pr_rem(27);
+  .pr_rem(12);
   .pb_rem(10);
 
   margin-left: calc(50% - 50vw);
@@ -104,30 +133,6 @@
   background-color: transparent;
 
   overflow: hidden;
-
-  &::after {
-    content: '';
-
-    position: absolute;
-
-    top: 0;
-    right: 0;
-
-    z-index: 1;
-
-    width: 12px;
-    height: 8px;
-
-    .mt_rem(17);
-    .mr_rem(10);
-
-    background-image: url('../img/rest-toggle.svg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    transform: rotate(0deg);
-  }
 
   &.changed {
     height: 100%;
@@ -144,10 +149,6 @@
       background-color: #colors[white_100];
 
       transition: height 0.3s ease-in;
-
-      &::after {
-        transform: rotate(180deg);
-      }
     }
   }
 

@@ -232,14 +232,14 @@
       </div>
 
       <div class="totem__center">
-        <svg class="totem__runes" width="301" height="301" viewBox="0 0 634 633" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g id="right">
+        <div class="totem__runes">
+          <svg id="right" width="634" height="633" viewBox="0 0 634 633" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite-runes.svg#runes-white-right" />
-          </g>
-          <g id="left">
+          </svg>
+          <svg id="left" width="456" height="455" viewBox="0 0 634 633" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite-runes.svg#runes-white-left" />
-          </g>
-        </svg>
+          </svg>
+        </div>
 
         <picture class="totem__image" itemscope itemtype="http://schema.org/ImageObject">
           <source media="(min-width: 1024px)" srcset="img/mask-1920.png" type="image/png">
@@ -466,6 +466,11 @@
                   2-местные делюкс
                 </a>
               </div>
+              <div class="decks__row decks__row--main-6">
+                <a class="decks__room" data-room="31" href="#panorama">
+                  Ресепшин палубы
+                </a>
+              </div>
             </li>
             <li class="decks__item" data-type="middle">
               <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
@@ -501,7 +506,7 @@
               </div>
               <div class="decks__row decks__row--middle-6">
                 <a class="decks__room" data-room="11" href="#panorama">
-                  одноместный
+                  Атриум палубы
                 </a>
               </div>
               <div class="decks__row decks__row--middle-7">
@@ -551,7 +556,7 @@
               </div>
               <div class="decks__row decks__row--middle-16">
                 <a class="decks__room" data-room="21" href="#panorama">
-                  Ресторан Улов дня
+                  Раздевалка
                 </a>
               </div>
             </li>
@@ -593,6 +598,16 @@
                   Ресторан Улов дня
                 </a>
               </div>
+              <div class="decks__row decks__row--boat-7">
+                <a class="decks__room" data-room="28" href="#panorama">
+                  Атриум палубы
+                </a>
+              </div>
+              <div class="decks__row decks__row--boat-8">
+                <a class="decks__room" data-room="29" href="#panorama">
+                  зал Ресторана
+                </a>
+              </div>
             </li>
             <li class="decks__item" data-type="sun">
               <div class="decks__image" itemscope itemtype="http://schema.org/ImageObject">
@@ -603,8 +618,48 @@
 
               <!-- Ссылки на помещения -->
               <div class="decks__row decks__row--sun-1">
-                <a class="decks__room" data-room="28" href="#panorama">
-                  Спа-центр
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Холл Спа-центра
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-2">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Wellness-зона
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-3">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Сауна
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-4">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Хамам
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-5">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Массажный кабинет
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-6">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Соляная комната
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-7">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Фитнес и йога
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-8">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Солнечная палуба
+                </a>
+              </div>
+              <div class="decks__row decks__row--sun-9">
+                <a class="decks__room" data-room="30" href="#panorama">
+                  Смотровая площадка
                 </a>
               </div>
             </li>

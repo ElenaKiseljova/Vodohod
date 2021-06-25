@@ -20,6 +20,7 @@
       var promoImage = promoSection.querySelector('.promo__image');
       var promoContent = promoSection.querySelector('.promo__content');
       var promoText = promoSection.querySelector('.text--promo');
+      var promoAngle = promoSection.querySelector('.promo__angle');
 
       // Триггер изменения Промо-секции
 
@@ -52,6 +53,18 @@
         y: '-100px',
         opacity: 0,
         duration: 6,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.totem',
+          scrub: 0.3,
+          start: 'top bottom',
+          end: 'top top',
+        }
+      });
+
+      gsap.to(promoAngle, {
+        x: '100%',
+        duration: 5,
         ease: 'none',
         scrollTrigger: {
           trigger: '.totem',
@@ -367,7 +380,7 @@
         scrollTrigger: {
           trigger: '.leisure',
           start: 'top 40%',
-          scrub: 5,
+          scrub: 2,
           ease: 'none',
           //markers: true,
         }
@@ -376,28 +389,35 @@
 
     // Cave
 
-    let cave = document.querySelector('.cave');
+    // let cave = document.querySelector('.cave');
+    //
+    // if (cave) {
+    //   let heightCave = cave.offsetHeight;
+    //
+    //   cave.style.transform = 'translate3d(0, -' + heightCave + 'px, 0)';
+    //
+    //   gsap.to('.cave', {
+    //     y: '0px',
+    //     duration: 2,
+    //     scrollTrigger: {
+    //       trigger: '.leisure',
+    //       start: 'center bottom',
+    //       end: 'center top',
+    //       scrub: 5,
+    //       ease: 'none',
+    //       //markers: true,
+    //     }
+    //   });
+    // }
 
-    if (cave) {
-      let heightCave = cave.offsetHeight;
-
-      cave.style.transform = 'translate3d(0, -' + heightCave + 'px, 0)';
-
-      gsap.to('.cave', {
-        y: '0px',
-        duration: 2,
-        scrollTrigger: {
-          trigger: '.leisure',
-          start: 'center bottom',
-          end: 'center top',
-          scrub: 5,
-          ease: 'none',
-          //markers: true,
-        }
-      });
-    }
-
-
+    ScrollTrigger.create({
+      trigger: '.cave',
+      start: 'top bottom',
+      end: 'bottom top',
+      //markers: true,
+      pin: '.leisure',
+      pinSpacing: false,
+    });
 
     // Decks
 
@@ -412,7 +432,7 @@
           trigger: '.decks',
           start:  'top bottom',
           end: 'bottom top',
-          scrub: 1,
+          scrub: 0.5,
           //markers: true
         }
       });
@@ -424,7 +444,7 @@
           trigger: '.decks',
           start: 'top bottom',
           end: 'bottom top',
-          scrub: 3,
+          scrub: 0.5,
           //markers: true
         }
       });

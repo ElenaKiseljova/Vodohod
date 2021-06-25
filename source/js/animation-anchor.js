@@ -102,10 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
             itemAnchor.addEventListener('click', (evt) => {
               evt.preventDefault();
 
-              if (exceptElementIds.indexOf(elementScrollId) === -1) {
-                startAnimation(elementToScroll, draftY);
-              } else {
-                startAnimation(elementToScroll, draftYForExcerpt);
+              if (elementScrollId !== 'panorama') {
+                if (exceptElementIds.indexOf(elementScrollId) === -1) {
+                  startAnimation(elementToScroll, draftY);
+                } else {
+                  startAnimation(elementToScroll, draftYForExcerpt);
+                }
+              } else if (window.innerWidth < 1280 && elementScrollId === 'panorama') {
+                if (exceptElementIds.indexOf(elementScrollId) === -1) {
+                  startAnimation(elementToScroll, draftY);
+                } else {
+                  startAnimation(elementToScroll, draftYForExcerpt);
+                }
               }
             });
           }
@@ -120,11 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if ((window.innerWidth < 1920) && window.innerWidth >= 768) {
-      window.animationAnchor(7, null, ['totem', 'route'], heightHeader);
+      window.animationAnchor(7, null, ['totem', 'route', 'panorama'], heightHeader);
     }
 
     if (window.innerWidth >= 1920) {
-      window.animationAnchor(7, -100, ['totem', 'route'], heightHeader);
+      window.animationAnchor(7, -100, ['totem', 'route', 'panorama'], heightHeader);
     }
   } catch (e) {
     console.log(e);
