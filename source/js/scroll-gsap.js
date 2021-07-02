@@ -288,7 +288,7 @@
         });
       }
 
-      if ((window.innerWidth <= 768) && (window.innerHeight > 320)) {
+      if ((window.innerWidth < 1024) && (window.innerHeight > 320)) {
         let emotionsLeftHeight =  emotionsLeft.offsetHeight;
         let emotionsRightHeight =  emotionsRight.offsetHeight;
 
