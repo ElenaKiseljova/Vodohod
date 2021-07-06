@@ -2,7 +2,7 @@
   include("header.php");
 ?>
 
-<main class="page-main">
+<main class="page-main" id='top'>
   <section class="promo" id="promo">
     <div class="promo__wrapper">
       <div class="text text--promo">
@@ -311,57 +311,85 @@
         </div>
 
         <div class="route__right">
-          <svg width="517" height="722" viewBox="0 0 517 722" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g class="route__toggle route__toggle--dudinka">
-              <use xlink:href="img/sprite-map.svg#dudinka" />
-            </g>
-            <g class="route__toggle route__toggle--tyjaha">
-              <use xlink:href="img/sprite-map.svg#tyjaha" />
-            </g>
-            <g class="route__toggle route__toggle--igarka">
-              <use xlink:href="img/sprite-map.svg#igarka" />
-            </g>
-            <g class="route__toggle route__toggle--ermakovo">
-              <use xlink:href="img/sprite-map.svg#ermakovo" />
-            </g>
-            <g class="route__toggle route__toggle--turuhansk">
-              <use xlink:href="img/sprite-map.svg#turuhansk" />
-            </g>
-            <g class="route__toggle route__toggle--kangotovo">
-              <use xlink:href="img/sprite-map.svg#kangotovo" />
-            </g>
-            <g class="route__toggle route__toggle--alinskoe">
-              <use xlink:href="img/sprite-map.svg#alinskoe" />
-            </g>
-            <g class="route__toggle route__toggle--bahta">
-              <use xlink:href="img/sprite-map.svg#bahta" />
-            </g>
-            <g class="route__toggle route__toggle--vorogovo">
-              <use xlink:href="img/sprite-map.svg#vorogovo" />
-            </g>
-            <g class="route__toggle route__toggle--jarcevo">
-              <use xlink:href="img/sprite-map.svg#jarcevo" />
-            </g>
-            <g class="route__toggle route__toggle--enisejsk">
-              <use xlink:href="img/sprite-map.svg#enisejsk" />
-            </g>
-            <g class="route__toggle route__toggle--galanino">
-              <use xlink:href="img/sprite-map.svg#galanino" />
-            </g>
-            <g class="route__toggle route__toggle--barabanovo">
-              <use xlink:href="img/sprite-map.svg#barabanovo" />
-            </g>
-            <g class="route__toggle route__toggle--krasnojarsk">
-              <use xlink:href="img/sprite-map.svg#krasnojarsk" />
-            </g>
-            <g class="route__toggle route__toggle--putorana">
-              <use xlink:href="img/sprite-map.svg#plato-putorana" />
-            </g>
+          <div class="route__map">
+            <img src="../img/map.svg" width="517" height="722" alt="Карта">
 
-            <g class="route__map">
-              <use xlink:href="img/sprite-map.svg#map" />
-            </g>
-          </svg>
+            <button class="route__toggle route__toggle--0" type="button" name="rout">
+              <svg width="80" height="12">
+                <use xlink:href="img/sprite-map.svg#dudinka"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--1" type="button" name="rout">
+              <svg width="57" height="10">
+                <use xlink:href="img/sprite-map.svg#tyjaha"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--2" type="button" name="rout">
+              <svg width="64" height="10">
+                <use xlink:href="img/sprite-map.svg#igarka"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--3" type="button" name="rout">
+              <svg width="93" height="11">
+                <use xlink:href="img/sprite-map.svg#ermakovo"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--4" type="button" name="rout">
+              <svg width="100" height="11">
+                <use xlink:href="img/sprite-map.svg#turuhansk"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--5" type="button" name="rout">
+              <svg width="103" height="11">
+                <use xlink:href="img/sprite-map.svg#kangotovo"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--6" type="button" name="rout">
+              <svg width="150" height="26">
+                <use xlink:href="img/sprite-map.svg#staroobryadci"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--7" type="button" name="rout">
+              <svg width="52" height="10">
+                <use xlink:href="img/sprite-map.svg#bahta"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--8" type="button" name="rout">
+              <svg width="95" height="11">
+                <use xlink:href="img/sprite-map.svg#vorogovo"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--9" type="button" name="rout">
+              <svg width="67" height="12">
+                <use xlink:href="img/sprite-map.svg#jarcevo"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--10" type="button" name="rout">
+              <svg width="91" height="13">
+                <use xlink:href="img/sprite-map.svg#enisejsk"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--11" type="button" name="rout">
+              <svg width="92" height="11">
+                <use xlink:href="img/sprite-map.svg#galanino"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--12" type="button" name="rout">
+              <svg width="115" height="11">
+                <use xlink:href="img/sprite-map.svg#barabanovo"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--13" type="button" name="rout">
+              <svg width="115" height="11">
+                <use xlink:href="img/sprite-map.svg#krasnojarsk"></use>
+              </svg>
+            </button>
+            <button class="route__toggle route__toggle--14" type="button" name="rout">
+              <svg width="155" height="11">
+                <use xlink:href="img/sprite-map.svg#plato-putorana"></use>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div class="route__bottom">
@@ -391,6 +419,75 @@
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="through">
+    <div class="through__wrapper">
+      <div class="through__content">
+        <h2 class="h2 h2--through title">
+          Сквозь сибирскую
+          <br>
+          тайгу с комфортом!
+        </h2>
+
+        <ul class="through__list">
+          <li class="through__item">
+            <h4 class="h4 h4--through">
+              94
+            </h4>
+            <p class="hints hints--through">
+              посадочных места
+            </p>
+          </li>
+          <li class="through__item">
+            <h4 class="h4 h4--through">
+              22 км/ч
+            </h4>
+            <p class="hints hints--through">
+              максимальная скорость
+            </p>
+          </li>
+          <li class="through__item">
+            <h4 class="h4 h4--through">
+              110.1 × 14.5 м
+            </h4>
+            <p class="hints hints--through">
+              размер теплохода
+            </p>
+          </li>
+          <li class="through__item">
+            <h4 class="h4 h4--through">
+              2.3 м
+            </h4>
+            <p class="hints hints--through">
+              осадка теплохода
+            </p>
+          </li>
+        </ul>
+
+        <div class="text text--through">
+          <p>
+            Наши гости смогут ощутить особый клубный дух, так как
+            на теплоходе расположено всего 46 кают. В основу дизайна интерьеров и декора теплохода легли этнические мотивы малых народностей Севера.
+          </p>
+          <p>
+            В начале 2020 года завершилась амбициозная модернизация теплохода до уровня 5 звезд по международным стандартам.
+            В результате переоборудования на шлюпочной палубе разместился большой ресторанно развлекательный комплекс,
+            на солнечной палубе — зона SPA c тренажерным залом.
+          </p>
+        </div>
+      </div>
+      <div class="through__image" itemscope itemtype="http://schema.org/ImageObject">
+        <picture>
+          <source media="(min-width: 1920px)" srcset="img/through-1920.png" type="image/jpg">
+          <source media="(min-width: 425px)" srcset="img/through-768.png" type="image/jpg">
+
+          <img itemprop="contentUrl" src="img/through-320.png" alt="картинка">
+        </picture>
+
+        <meta itemprop="name" content="картинка">
       </div>
     </div>
   </section>
@@ -1311,6 +1408,76 @@
     </div>
   </section>
 
+  <section class="flavour">
+    <div class="flavour__wrapper">
+      <div class="flavour__left">
+        <h2 class="h2 h2--flavour title">
+          Настоящий вкус
+          <br>
+          Сибири
+        </h2>
+
+        <div class="flavour__slider swiper-container">
+          <ul class="flavour__list swiper-wrapper">
+            <li class="flavour__item swiper-slide">
+              <div class="flavour__image" itemscope itemtype="http://schema.org/ImageObject">
+                <picture>
+                  <source media="(min-width: 1920px)" srcset="img/flavour-1-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/flavour-1-1280.jpg" type="image/jpg">
+
+                  <img itemprop="contentUrl" src="img/flavour-1-320.jpg" alt="картинка">
+                </picture>
+
+                <meta itemprop="name" content="картинка">
+              </div>
+            </li>
+            <li class="flavour__item swiper-slide">
+              <div class="flavour__image" itemscope itemtype="http://schema.org/ImageObject">
+                <picture>
+                  <source media="(min-width: 1920px)" srcset="img/flavour-2-1920.jpg" type="image/jpg">
+                  <source media="(min-width: 1280px)" srcset="img/flavour-2-1280.jpg" type="image/jpg">
+
+                  <img itemprop="contentUrl" src="img/flavour-2-320.jpg" alt="картинка">
+                </picture>
+
+                <meta itemprop="name" content="картинка">
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flavour__buttons">
+          <button class="button button--arrow-left-flavour prev prev--flavour" type="button" name="arrow">
+            <svg class="button__icon button__icon--brown" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-l" fill-rule="evenodd" clip-rule="evenodd" d="M1.40206 5.99998L7 0.667756L6.29897 0L-9.93071e-08 5.99998L6.29897 12L7 11.3322L1.40206 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3677 5.99992L7 4.4451L6.29897 3.77734L3.96563 5.99992L6.29897 8.2225L7 7.55474L5.3677 5.99992Z" />
+            </svg>
+          </button>
+
+          <button class="button button--arrow-right-flavour next next--flavour" type="button" name="arrow">
+            <svg class="button__icon button__icon--brown" width="15" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="big-ar-r" fill-rule="evenodd" clip-rule="evenodd" d="M5.59794 5.99998L0 0.667756L0.701032 0L7 5.99998L0.701032 12L0 11.3322L5.59794 5.99998Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6323 5.99992L0 4.4451L0.701032 3.77734L3.03437 5.99992L0.701032 8.2225L0 7.55474L1.6323 5.99992Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="flavour__content">
+        <div class="text text--flavour">
+          <p>
+            Без национальной кухни невозможно полностью понять историю, прочувствовать особенности традиций, быта и культуры. Для реализации настоящего сибирского опыта мы выбрали надёжного гастрономического партнёра - Bellini group - холдинг с безупречной репутацией и с 15-летним опытом работы в Красноярском крае.
+          </p>
+          <p>
+            Специальное меню для теплохода «Максим Горький» разработал шеф-повар красноярского ресторана сибирской кухни «Хозяин тайги» Алексей Ровинец в коллаборации с приглашённым шефом Михаилом Хмелининым.
+          </p>
+          <p>
+            В качестве эксклюзивного дополнения гостям теплохода будет предложен гастрономический рыбный ресторан «Улов дня». Почувствуйте вкус Сибири в Енисейской экспедиции на теплоходе «Максим Горький»!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="rest" id="rest">
     <div class="rest__wrapper">
       <header class="rest__header">
@@ -1754,17 +1921,17 @@
           <ul class="timetable__list timetable__list--months swiper-wrapper">
             <li class="timetable__item timetable__item--months swiper-slide">
               <h5 class="timetable__title title">
-                Май 2021
+                Май
               </h5>
             </li>
             <li class="timetable__item timetable__item--months swiper-slide">
               <h5 class="timetable__title title">
-                Июнь 2021
+                Июнь
               </h5>
             </li>
             <li class="timetable__item timetable__item--months swiper-slide">
               <h5 class="timetable__title title">
-                Сентябрь 2021
+                Сентябрь
               </h5>
             </li>
           </ul>

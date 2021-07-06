@@ -118,7 +118,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
           if (index && routsDescriptionSwiper) {
             mapToggle.addEventListener('click', function () {
-              if (sliderSwiper.loop === false) {
+              // Функция стирания всех маркеров подсветки
+              window.removeActiveClassElements(mapToggles, false, 'checked');
+              // Класс для подсветки кликнутого нода
+              mapToggle.classList.add('checked');
+
+              // Проверяем в цикле ли слайдер
+              if (sliderSwiper.loop === undefined) {
                 sliderSwiper.slideTo(index);
 
                 if (sliderThumbSwiper != null) {
@@ -148,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
           routsNameSwiper.on('slideChange', function () {
             let index;
 
-            if (routsNameSwiper.loop === false) {
+            if (routsNameSwiper.loop === undefined) {
               index = routsNameSwiper.activeIndex;
             } else {
               index = routsNameSwiper.realIndex;
@@ -176,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
           routsNodesSwiper.on('slideChange', function () {
             let index;
 
-            if (routsNodesSwiper.loop === false) {
+            if (routsNodesSwiper.loop === undefined) {
               index = routsNodesSwiper.activeIndex;
 
               routsDescriptionSwiper.slideTo(index);
@@ -190,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
           routsDescriptionSwiper.on('slideChange', function () {
             let index;
 
-            if (routsDescriptionSwiper.loop === false) {
+            if (routsDescriptionSwiper.loop === undefined) {
               index = routsDescriptionSwiper.activeIndex;
 
               routsNodesSwiper.slideTo(index);
@@ -322,6 +328,41 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(e);
   }
 
+  // Вкус
+
+  try {
+    let flavourContainer = document.querySelector('.flavour__slider.swiper-container');
+
+    if (flavourContainer) {
+      var argsSwiperflavour = {
+        speed: 300,
+        loop: true,
+        //freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        resizeObserver: true,
+        navigation: {
+          nextEl: '.next--flavour',
+          prevEl: '.prev--flavour'
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 600px
+          600: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+        }
+      };
+
+      var flavourSwiper = new Swiper(flavourContainer, argsSwiperflavour);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
   // Отдых
 
   try {
@@ -393,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 300,
         slidesPerView: 1,
         slideToClickedSlide: true,
-        spaceBetween: 30,
+        //spaceBetween: 30,
         resizeObserver: true,
       };
 
@@ -418,6 +459,9 @@ document.addEventListener('DOMContentLoaded', function () {
       timetableMonthsSwiper.on('slideChange', function () {
         timetableTimetableSwiper.slideTo(timetableMonthsSwiper.activeIndex);
       });
+
+      // Переключаю на следующий слайд при загрузке страницы
+      timetableMonthsSwiper.slideNext();
     }
   } catch (e) {
     console.log(e);

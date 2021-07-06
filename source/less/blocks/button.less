@@ -253,8 +253,11 @@
   &--arrow-right-big,
   &--arrow-left-rest,
   &--arrow-right-rest,
+  &--arrow-right-flavour,
+  &--arrow-left-flavour,
   &--arrow-left-rooms,
-  &--arrow-right-rooms {
+  &--arrow-right-rooms,
+  &--totop {
     .button__icon {
       &--white {
         fill: #colors[white_100];
@@ -314,8 +317,11 @@
   &--arrow-right,
   &--arrow-left-rest,
   &--arrow-right-rest,
+  &--arrow-right-flavour,
+  &--arrow-left-flavour,
   &--arrow-left-rooms,
-  &--arrow-right-rooms {
+  &--arrow-right-rooms,
+  &--totop {
     width: 15.63vw;
     height: 15.63vw;
 
@@ -378,6 +384,8 @@
   &--arrow-right-big,
   &--arrow-left-rest,
   &--arrow-right-rest,
+  &--arrow-right-flavour,
+  &--arrow-left-flavour,
   &--arrow-left-rooms,
   &--arrow-right-rooms {
     &:disabled,
@@ -425,6 +433,17 @@
       height: 3.13vw;
     }
   }
+
+  &--arrow-right-flavour,
+  &--arrow-left-flavour {
+    @media only screen and (min-width: 1280px) {
+      max-width: 60px;
+      max-height: 60px;
+
+      width: 4.69vw;
+      height: 4.69vw;
+    }
+  }
 }
 
 // Социальные
@@ -437,8 +456,11 @@
   &--arrow-right-big,
   &--arrow-left-rest,
   &--arrow-right-rest,
+  &--arrow-right-flavour,
+  &--arrow-left-flavour,
   &--arrow-left-rooms,
-  &--arrow-right-rooms {
+  &--arrow-right-rooms,
+  &--totop {
     position: relative;
 
     display: flex;
@@ -506,7 +528,10 @@
   &--arrow-left-big,
   &--arrow-right-big,
   &--arrow-left-rest,
-  &--arrow-right-rest {
+  &--arrow-right-rest,
+  &--arrow-right-flavour,
+  &--arrow-left-flavour,
+  &--totop {
     border: 1px solid #colors[lines_bold];
 
     &::before {
@@ -585,6 +610,44 @@
 
     &::before {
       border: 1px solid #colors[white_20];
+    }
+  }
+
+  &--totop {
+    .mt_rem(15);
+
+    background-color: #colors[accent];
+    border-color: #colors[accent];
+
+    transform: rotate3d(0, 0, 1, 90deg);
+
+    &::before {
+      width: 83.33%;
+      height: 83.33%;
+
+      border-color: #colors[accent_light];
+
+      transition: width 0.3s, height 0.3s;
+    }
+
+    @media only screen and (min-width: 768px) {
+      position: absolute;
+
+      bottom: 0;
+      right: 0;
+
+      z-index: 2;
+
+      margin: 0;
+      .mb_rem(14);
+    }
+
+    @media only screen and (min-width: 1280px) {
+      .mb_rem(12);
+    }
+
+    @media only screen and (min-width: 1920px) {
+      .mb_rem(8);
     }
   }
 }

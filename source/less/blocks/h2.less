@@ -140,4 +140,33 @@
       transform: rotate(0);
     }
   }
+
+  &--through {
+    .mb_rem(10);
+
+    color: #colors[black_text];
+
+    @media only screen and (min-width: 768px) {
+      .mb_rem(30);
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: calc(100% + 33px);
+
+      margin-right: -33px;
+      .mb_rem(40);
+    }
+  }
+
+  &--flavour {
+    .mb_rem(10);
+
+    @media only screen and (min-width: 768px) {
+      .mb_rem(30);
+    }
+
+    @media only screen and (min-width: 1920px) {
+      .mb_rem(50);
+    }
+  }
 }

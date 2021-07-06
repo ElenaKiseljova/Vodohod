@@ -15,10 +15,6 @@
     .pt_rem(109);
   }
 
-  @media (min-width: 768px) {
-    .pt_rem(109);
-  }
-
   @media (min-width: 1280px) {
     .pt_rem(100);
   }
@@ -45,10 +41,15 @@
 .timetable__slider-wrapper {
   display: flex;
 
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
-  .w100();
+  width: 130%;
+
+  padding: 0;
+
+  margin-right: -15%;
+  margin-left: -15%;
 
   @media (min-width: 768px) {
     width: 69.03%;
@@ -72,18 +73,18 @@
   margin: 0;
 
   &--months {
-    width: 75%; //57% - сентябрь не влезет
+    width: 33.33%;
 
     &.swiper-container {
       overflow: visible;
     }
 
     @media (min-width: 768px) {
-      width: 70%;//45.27%
+      width: 224px;
     }
 
-    @media (min-width: 1920px) {
-      width: 82%;
+    @media (min-width: 1280px) {
+      width: 33.33%;
     }
   }
 
@@ -111,7 +112,7 @@
   }
 
   &--months {
-    color: #colors[lines_normal];
+    color: #colors[gray_text];
   }
 
   &--inner {

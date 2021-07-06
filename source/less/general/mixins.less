@@ -119,3 +119,19 @@
     outline: none;
   }
 }
+
+/* Nodes map position */
+
+.node_left(@left_px, @width_map : 517) {
+  left: ( @left_px / @width_map ) * 100%;
+}
+
+.node_top(@top_px, @height_map : 722) {
+  top: ( @top_px / @height_map ) * 100%;
+}
+
+/* Nodes max-width */
+
+.node_max_width(@width_px, @width_map : 517) {
+  max-width: ( @width_px / @width_map ) * 100%;
+}
