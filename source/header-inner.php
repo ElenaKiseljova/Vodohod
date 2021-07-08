@@ -34,7 +34,7 @@
   </head>
   <body>
     <!-- Прозрачный хедер -->
-    <header class="page-header page-header--top">
+    <header class="page-header page-header--top active">
       <div class="page-header__wrapper page-header__wrapper--top">
         <div class="page-header__left page-header__left--top">
           <button class="button button--menu" type="button" name="menu">
@@ -136,7 +136,7 @@
     </header>
 
     <!-- Белый хедер -->
-    <div class="page-header page-header--bottom">
+    <div class="page-header page-header--bottom active">
       <div class="page-header__wrapper page-header__wrapper--bottom">
         <div class="page-header__left page-header__left--bottom">
           <button class="button button--menu-bottom" type="button" name="menu">
@@ -253,32 +253,32 @@
 
           <ul class="navigation__list navigation__list--menu-left">
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#totem">
+              <a href="/#totem">
                 Экспедиция
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#route">
+              <a href="/#route">
                 Маршруты
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#decks">
+              <a href="/#decks">
                 Теплоход
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#rooms">
+              <a href="/#rooms">
                 Каюты
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#emotions">
+              <a href="/#emotions">
                 Что входит в круиз
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#rest">
+              <a href="/#rest">
                 Бары и рестораны
               </a>
             </li>
@@ -312,27 +312,27 @@
         <nav class="navigation navigation--menu-right" role="navigation">
           <ul class="navigation__list navigation__list--menu-right">
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#video">
+              <a href="/#video">
                 Видео о круизе
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#leisure">
+              <a href="/#leisure">
                 Досуг на борту
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#cave">
+              <a href="/#cave">
                 Впечатления
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#timetable">
+              <a href="/#timetable">
                 Расписание
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-right">
-              <a href="#reviews">
+              <a href="/#reviews">
                 Отзывы гостей
               </a>
             </li>

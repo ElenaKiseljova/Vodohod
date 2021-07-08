@@ -36,6 +36,10 @@
     align-items: flex-start;
     align-content: flex-start;
   }
+
+  @media (min-width: 1280px) {
+    justify-content: flex-start;
+  }
 }
 
 .timetable__slider-wrapper {
@@ -51,20 +55,27 @@
   margin-right: -15%;
   margin-left: -15%;
 
-  @media (min-width: 768px) {
-    width: 69.03%;
+  // @media (min-width: 768px) {
+  //   width: 69.03%;
+  //
+  //   margin-right: calc(50% - 50vw);
+  //
+  //   overflow: hidden;
+  // }
 
+  @media (min-width: 1280px) {
+    width: calc(82.5% + (50vw - 50%));
+
+    margin-left: 0;
     margin-right: calc(50% - 50vw);
 
     overflow: hidden;
   }
 
-  @media (min-width: 1280px) {
-    width: calc(73.98% + (50vw - 50%));
-  }
-
   @media (min-width: 1920px) {
     width: calc(83.13% + (50vw - 50%));
+
+    margin-left: auto;
   }
 }
 
@@ -73,14 +84,15 @@
   margin: 0;
 
   &--months {
-    width: 33.33%;
+    width: 50px;
+    //width: 33.33%;
 
     &.swiper-container {
       overflow: visible;
     }
 
     @media (min-width: 768px) {
-      width: 224px;
+      //width: 224px;
     }
 
     @media (min-width: 1280px) {
@@ -89,8 +101,12 @@
   }
 
   &--timetable {
-    @media (min-width: 768px) {
+    @media (min-width: 1280px) {
       .mt_rem(30);
+    }
+
+    @media (min-width: 1920px) {
+      .mt_rem(50);
     }
   }
 }
@@ -112,7 +128,42 @@
   }
 
   &--months {
+    width: auto;
+
     color: #colors[gray_text];
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      .timetable__title {
+        color: #colors[accent];
+
+        transition: color 0.3s;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      display: flex;
+
+      &.swiper-slide-active {
+        justify-content: center;
+
+        text-align: center;
+
+        & ~ .swiper-slide {
+          justify-content: flex-end;
+
+          text-align: right;
+        }
+      }
+
+      &.swiper-slide-prev {
+        justify-content: flex-start;
+
+        text-align: left;
+      }
+    }
   }
 
   &--inner {
@@ -149,9 +200,9 @@
 .timetable__header {
   .w100();
 
-  @media (min-width: 768px) {
-    width: 25%;
-  }
+  // @media (min-width: 768px) {
+  //   width: 25%;
+  // }
 
   @media (min-width: 1280px) {
     width: 16.95%;
@@ -180,13 +231,26 @@
 
   text-align: left;
 
-  cursor: grab;
+  //pointer-events: none;
+
+  transition: color 0.3s;
 
   @media (min-width: 768px) {
+    .pt_rem(20);
+    .pb_rem(20);
+
+    .rem(48, 67);
+  }
+
+  @media (min-width: 1280px) {
     .pt_rem(0);
     .pb_rem(0);
 
-    .rem(48, 48);//67
+    .rem(70, 98);
+  }
+
+  @media (min-width: 1920px) {
+    .rem(100, 140);
   }
 }
 

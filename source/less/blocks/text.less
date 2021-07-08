@@ -191,4 +191,21 @@
       .mt_rem(20);
     }
   }
+
+  &--inner {
+    .title-1 + p,
+    .title-2 + p,
+    .title-3 + p,
+    .title-4 + p,
+    h1 + p,
+    h2 + p,
+    h3 + p,
+    h4 + p {
+      .mt_rem(25);
+    }
+
+    p + p {
+      .mt_rem(17);
+    }
+  }
 }

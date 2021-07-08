@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     let form = (id) => {
       let formCheck = document.querySelector(id);
-      let buttonSubmit = formCheck.querySelector('button[type="submit"]');
 
       if (formCheck) {
+        let buttonSubmit = formCheck.querySelector('button[type="submit"]');
+
         let inputEventListenerFlag = false;
 
         let validateForm = function () {

@@ -20,6 +20,35 @@
   &:focus {
     outline: none;
   }
+
+  &--route {
+    .button__icon {
+      transform: translate3d(0, 0, 0);
+
+      transition: transform 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      .button__icon {
+        transition: transform 0.3s;
+
+        &--prev {
+          transform: translate3d(-3px, 0, 0);
+        }
+
+        &--next {
+          transform: translate3d(3px, 0, 0);
+        }
+      }
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+
+      opacity: 0.2;
+    }
+  }
 }
 
 // Плей

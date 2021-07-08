@@ -112,6 +112,11 @@
   }
 
   &--through {
-    color: #colors[accent]
+    color: #colors[accent];
+    letter-spacing: normal;
+
+    @media (min-width: 768px) {
+      letter-spacing: 0.05em;
+    }
   }
 }

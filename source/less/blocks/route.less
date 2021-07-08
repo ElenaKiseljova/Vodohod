@@ -84,6 +84,8 @@
 
   @media (min-width: 1280px) {
     .mt_rem(100);
+
+    overflow: hidden;
   }
 
   @media (min-width: 1920px) {
@@ -181,8 +183,6 @@
 
   border-bottom: 1px solid #colors[white_50];
 
-  overflow: hidden;
-
   &::before {
     content: '';
 
@@ -198,6 +198,14 @@
   }
 
   @media only screen and (min-width: 768px) {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+
     width: 100%;
 
     margin-right: 0;
@@ -207,6 +215,42 @@
   @media only screen and (min-width: 1920px) {
     margin-right: 50.05%;
     margin-bottom: 0;
+  }
+}
+
+.route__slider-container {
+  flex-grow: 1;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  width: auto;
+
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+}
+
+.route__buttons {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 54px;
+
+    .pb_rem(24);
+    .mr_rem(30);
+  }
+
+  @media (min-width: 1920px) {
+    .pb_rem(37);
   }
 }
 
@@ -764,8 +808,6 @@
 .route__left {
   @media only screen and (min-width: 1280px) {
     width: 51.53%;
-
-    overflow: hidden;
   }
 
   @media only screen and (min-width: 1920px) {

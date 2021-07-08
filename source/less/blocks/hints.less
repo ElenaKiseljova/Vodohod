@@ -21,6 +21,18 @@
 
   &--timetable {
     color: #colors[gray_text];
+
+    @media only screen and (min-width: 768px) {
+      span {
+        display: inline;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+      span {
+        display: block;
+      }
+    }
   }
 
   &--scene,

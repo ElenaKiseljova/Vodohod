@@ -5,16 +5,23 @@
     try {
       let ROOT_ELEMENT = document.documentElement;
 
+      // Меню
       let menuButtons = document.querySelectorAll('button[class*="button--menu"]');
       let menuSection = document.querySelector('.menu');
-      let promoSection = document.querySelector('.promo');
+      //Руны
       let menuRunesRight = menuSection.querySelector('.menu__runes-right');
       let menuRunesLeft = menuSection.querySelector('.menu__runes-left');
+      // Лого
       let logoHeader = document.querySelector('.logo--header');
+      // Вращающееся колесо
       let orderButtonWhiteText = document.querySelector('.button--wheel .button__text--white');
 
       // Устанавливаю минимальную высоту блока фиксированной (для уменьшения скачков первого экрана при исчезновении меню браузера в мобильных)
-      promoSection.style.minHeight = window.innerHeight + 'px';
+      let promoSection = document.querySelector('.promo');
+
+      if (promoSection) {
+        promoSection.style.minHeight = document.documentElement.clientHeight + 'px';
+      }
 
       // Состояния шапки для открыто/закрыто/скролл
       let headerTop = document.querySelector('.page-header--top');
@@ -22,17 +29,21 @@
 
       if (menuButtons && menuSection && ROOT_ELEMENT && logoHeader && orderButtonWhiteText && headerTop && headerBottom) {
         window.addEventListener('load', function () {
+          //console.log('loaded');
           menuSection.classList.add('loaded');
 
-          menuSection.style.minHeight = window.innerHeight + 'px';
+          menuSection.style.minHeight = document.documentElement.clientHeight + 'px';
 
-          if (menuSection.offsetHeight > window.innerHeight) {
+          if (menuSection.offsetHeight > document.documentElement.clientHeight) {
             // Добавление скролла, если высота меню больше вьюпорта
             menuSection.classList.add('scroll');
           }
 
-          if (promoSection.offsetHeight < window.innerHeight) {
-            promoSection.style.height = window.innerHeight;
+          // Добавляю скрол, если высота меньше
+          if (promoSection) {
+            if (promoSection.offsetHeight < document.documentElement.clientHeight) {
+              promoSection.style.height = document.documentElement.clientHeight;
+            }
           }
         });
 
@@ -67,7 +78,7 @@
             }
           });
 
-          if ((window.innerWidth >= 768) && menuRunesRight && menuRunesLeft) {
+          if ((document.documentElement.clientWidth >= 768) && menuRunesRight && menuRunesLeft) {
             menuRunesRight.classList.toggle('rotate-right');
             menuRunesLeft.classList.toggle('rotate-left');
           }

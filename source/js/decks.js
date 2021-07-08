@@ -64,6 +64,11 @@
 
           textElement.textContent = 'Посмотреть каюты';
         } else {
+          // Заглушка, а на бою элемент с id 3d-container
+          var sceneImage = element3D.querySelector('.scene__image--test');
+
+          sceneImage.style.height = sceneImage.offsetHeight + 'px';
+
           button.classList.add('active');
           element3D.classList.add('active');
           galleryRooms.classList.add('active');

@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
         //init: false,
         //mousewheel: true,
         resizeObserver: true,
+        navigation: {
+          nextEl: '.next--route',
+          prevEl: '.prev--route'
+        },
 
         // Responsive breakpoints
         breakpoints: {
@@ -117,7 +121,8 @@ document.addEventListener('DOMContentLoaded', function () {
           let index = mapToggle.getAttribute('data-map');
 
           if (index && routsDescriptionSwiper) {
-            mapToggle.addEventListener('click', function () {
+            mapToggle.addEventListener('click', function (evt) {
+              //console.log('click');
               // Функция стирания всех маркеров подсветки
               window.removeActiveClassElements(mapToggles, false, 'checked');
               // Класс для подсветки кликнутого нода
@@ -160,6 +165,13 @@ document.addEventListener('DOMContentLoaded', function () {
               index = routsNameSwiper.realIndex;
             }
 
+            // Отключение кнопки на последнем клике
+            if (routsNameSwiper.slides.length === (index + 1)) {
+              routsNameSwiper.navigation.nextEl.classList.add('swiper-button-disabled');
+            } else if (routsNameSwiper.navigation.nextEl.classList.contains('swiper-button-disabled')) {
+              routsNameSwiper.navigation.nextEl.classList.remove('swiper-button-disabled');
+            }
+
             window.routs.createSliderDescriptionElement(index);
             window.routs.createSliderNodesElement(index);
 
@@ -185,11 +197,18 @@ document.addEventListener('DOMContentLoaded', function () {
             if (routsNodesSwiper.loop === undefined) {
               index = routsNodesSwiper.activeIndex;
 
-              routsDescriptionSwiper.slideTo(index);
+              //routsDescriptionSwiper.slideTo(index);
             } else {
               index = routsNodesSwiper.realIndex;
 
-              routsDescriptionSwiper.slideToLoop(index);
+              //routsDescriptionSwiper.slideToLoop(index);
+            }
+
+            // Пункт на карте
+            let mapToggle = document.querySelector(`[data-map="${index}"]`);
+
+            if (mapToggle) {
+              mapToggle.click();
             }
           });
 
@@ -223,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Галерея из 3D
-
+  /*
   try {
     let sceneContainer = document.querySelector('.scene__slider.swiper-container');
 
@@ -251,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (e) {
     console.log(e);
   }
-
+  */
   // Типы кают
 
   try {
@@ -432,10 +451,23 @@ document.addEventListener('DOMContentLoaded', function () {
     if (timetableMonthsContainer && timetableTimetableContainer) {
       var argsSwiperTimetableMonths = {
         speed: 300,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         slideToClickedSlide: true,
-        //spaceBetween: 30,
+        centeredSlides: true,
+        spaceBetween: 48,
         resizeObserver: true,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 768px
+          768: {
+            spaceBetween: 126,
+          },
+          // when window width is >= 1280px
+          1280: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+        }
       };
 
       let timetableMonthsSwiper = new Swiper(timetableMonthsContainer, argsSwiperTimetableMonths);
@@ -443,7 +475,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var argsSwiperTimetable = {
         speed: 300,
         slidesPerView: 1,
-        slideToClickedSlide: true,
+        //slideToClickedSlide: true,
+        autoHeight: true,
         resizeObserver: true,
         effect: 'fade',
         fadeEffect: {
