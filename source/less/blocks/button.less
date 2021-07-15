@@ -21,6 +21,34 @@
     outline: none;
   }
 
+  &--cookie {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 11;
+
+    .button__icon {
+      svg {
+        transform: scale(1);
+
+        transition: transform 0.3s;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .button__icon {
+        svg {
+          transform: scale(1.1);
+
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+
   &--route {
     .button__icon {
       transform: translate3d(0, 0, 0);
@@ -1184,6 +1212,8 @@
       max-height: 40px;
 
       border: 1px solid #colors[lines_bold];
+
+      background-color: #colors[white_100];
 
       &::before {
         border: 1px solid #colors[lines_normal];

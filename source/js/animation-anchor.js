@@ -2,6 +2,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   try {
+    let deviceWidth = window.innerWidth && document.documentElement.clientWidth ?
+                      Math.min(window.innerWidth, document.documentElement.clientWidth) :
+                      window.innerWidth ||
+                      document.documentElement.clientWidth ||
+                      document.getElementsByTagName('body')[0].clientWidth;
+
     window.animationAnchor = function (animationSpeed, draftY = null, exceptElementIds = [], draftYForExcerpt = null) {
       let startAnimation = function (elementToScroll, draft) {
         let start = Date.now(); // запомнить время начала
@@ -108,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                   startAnimation(elementToScroll, draftYForExcerpt);
                 }
-              } else if (window.innerWidth < 1280 && elementScrollId === 'panorama') {
+              } else if (deviceWidth < 1280 && elementScrollId === 'panorama') {
                 if (exceptElementIds.indexOf(elementScrollId) === -1) {
                   startAnimation(elementToScroll, draftY);
                 } else {
@@ -123,16 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let heightHeader = document.querySelector('.page-header--bottom').offsetHeight;
 
-    if (window.innerWidth < 768) {
-      window.animationAnchor(7, heightHeader);
+    if (deviceWidth < 768) {
+      window.animationAnchor(12, heightHeader);
     }
 
-    if ((window.innerWidth < 1920) && window.innerWidth >= 768) {
-      window.animationAnchor(7, null, ['totem', 'route', 'panorama'], heightHeader);
+    if ((deviceWidth < 1920) && deviceWidth >= 768) {
+      window.animationAnchor(12, null, ['totem', 'route', 'panorama'], heightHeader);
     }
 
-    if (window.innerWidth >= 1920) {
-      window.animationAnchor(7, -100, ['totem', 'route', 'panorama'], heightHeader);
+    if (deviceWidth >= 1920) {
+      window.animationAnchor(12, -100, ['totem', 'route', 'panorama'], heightHeader);
     }
   } catch (e) {
     console.log(e);

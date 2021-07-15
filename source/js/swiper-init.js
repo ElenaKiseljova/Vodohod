@@ -453,6 +453,7 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 300,
         slidesPerView: 'auto',
         slideToClickedSlide: true,
+        loop: true,
         centeredSlides: true,
         spaceBetween: 48,
         resizeObserver: true,
@@ -476,25 +477,32 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 300,
         slidesPerView: 1,
         //slideToClickedSlide: true,
+        loop: true,
         autoHeight: true,
         resizeObserver: true,
         effect: 'fade',
         fadeEffect: {
           crossFade: true
         },
-        thumbs: {
-          swiper: timetableMonthsSwiper,
-        }
+        // thumbs: {
+        //   swiper: timetableMonthsSwiper,
+        // }
       };
 
       let timetableTimetableSwiper = new Swiper(timetableTimetableContainer, argsSwiperTimetable);
 
       timetableMonthsSwiper.on('slideChange', function () {
         timetableTimetableSwiper.slideTo(timetableMonthsSwiper.activeIndex);
+        console.log(timetableMonthsSwiper.activeIndex);
+      });
+
+      timetableTimetableSwiper.on('slideChange', function () {
+        timetableMonthsSwiper.slideTo(timetableTimetableSwiper.activeIndex);
+        console.log(timetableTimetableSwiper.activeIndex);
       });
 
       // Переключаю на следующий слайд при загрузке страницы
-      timetableMonthsSwiper.slideNext();
+      // timetableMonthsSwiper.slideNext();
     }
   } catch (e) {
     console.log(e);

@@ -271,6 +271,51 @@
       </div>
     </section>
 
+    <section class="cookie">
+      <button class="button button--cookie" type="button" name="close">
+        <span class="visually-hidden">Закрыть</span>
+        <span class="button__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2947 0.999934L7.00071 6.29337L1.70637 0.999023L1.00047 0.999023L1.00047 1.70492L6.29478 6.99922L1 12.2935V12.9994L1.70589 12.9994L7.00019 7.70561L12.2936 12.9991H12.9995V12.2932L7.70612 6.99975L13.0006 1.70583V0.999934L12.2947 0.999934Z" fill="#A78D65"/>
+            <path d="M6.29606 2.00098L5.00195 0.708001L5.00195 0.00210693L5.70784 0.00210731L7.00195 1.29508L7.00195 2.00098L6.29606 2.00098Z" fill="#DCCCB5"/>
+            <path d="M12.002 6.29508L13.2949 5.00097L14.0008 5.00097L14.0008 5.70686L12.7078 7.00098L12.002 7.00098L12.002 6.29508Z" fill="#DCCCB5"/>
+            <path d="M2.00195 7.70589L0.708977 9.00001L0.00308325 9.00001L0.00308379 8.29411L1.29606 7L2.00195 7L2.00195 7.70589Z" fill="#DCCCB5"/>
+            <path d="M7.00195 1.29314L8.29493 -0.000975846L9.00082 -0.000976582L9.00082 0.704918L7.70785 1.99903L7.00195 1.99903L7.00195 1.29314Z" fill="#DCCCB5"/>
+            <path d="M12.7078 7.00098L14.002 8.29395L14.002 8.99985L13.2961 8.99985L12.002 7.70687L12.002 7.00098L12.7078 7.00098Z" fill="#DCCCB5"/>
+            <path d="M1.29606 7L0.00194625 5.70702L0.00194555 5.00113L0.70784 5.00113L2.00195 6.29411L2.00195 7L1.29606 7Z" fill="#DCCCB5"/>
+            <path d="M5.00195 13.2931L6.29493 11.999L7.00082 11.999L7.00082 12.7049L5.70785 13.999L5.00195 13.999L5.00195 13.2931Z" fill="#DCCCB5"/>
+            <path d="M8.29606 13.999L7.00195 12.706L7.00195 12.0002L7.70784 12.0002L9.00195 13.2931L9.00195 13.999L8.29606 13.999Z" fill="#DCCCB5"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="cookie__wrapper">
+        <h4 class="h5 h5--cookie">
+          Мы используем файлы cookie
+        </h4>
+
+        <div class="text-small text-small--cookie">
+          <p>
+            Некоторые функции могут не работать, если не установлены cookies. Чтобы узнать больше об использовании cookies на нашем сайте, перейдите <a href="#">на информационную страницу Cookies</a>
+          </p>
+        </div>
+
+        <form class="form form--cookie" action="" method="post">
+          <input type="hidden" name="cookie" value="true">
+
+          <button class="cookie__button button button--order" type="submit" name="cookie">
+            <span class="button__text">
+              согласен
+            </span>
+
+            <svg width="314" height="60">
+              <use xlink:href="#icon-order"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
     <!-- Затемнение всплывающих окон -->
     <div class="popup__overlay"></div>
 

@@ -120,4 +120,24 @@
 
     transition: transform 0.2s ease-in, opacity 0.2s ease-in;
   }
+
+  &--cookie {
+    .mb_rem(10);
+
+    p {
+      .w100();
+    }
+
+    p + p {
+      .mt_rem(5);
+    }
+
+    a {
+      color: #colors[accent_light];
+    }
+
+    @media (min-width: 1920px) {
+      .mb_rem(20);
+    }
+  }
 }

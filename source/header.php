@@ -263,8 +263,13 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#decks">
+              <a href="#through">
                 Теплоход
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--menu-left">
+              <a href="#decks">
+                План палуб
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
@@ -274,12 +279,12 @@
             </li>
             <li class="navigation__item navigation__item--menu-left">
               <a href="#emotions">
-                Что входит в круиз
+                Новые эмоции
               </a>
             </li>
             <li class="navigation__item navigation__item--menu-left">
-              <a href="#rest">
-                Бары и рестораны
+              <a href="#flavour">
+                Вкус Сибири
               </a>
             </li>
           </ul>
@@ -311,6 +316,11 @@
 
         <nav class="navigation navigation--menu-right" role="navigation">
           <ul class="navigation__list navigation__list--menu-right">
+            <li class="navigation__item navigation__item--menu-right">
+              <a href="#rest">
+                Бары и рестораны
+              </a>
+            </li>
             <li class="navigation__item navigation__item--menu-right">
               <a href="#video">
                 Видео о круизе

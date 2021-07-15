@@ -116,6 +116,17 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch (e) {
     console.log(e);
   }
+
+  // Cookie
+  var cookie = document.querySelector('.cookie');
+
+  if (cookie) {
+    var cookieButoonClose = cookie.querySelector('.button--cookie');
+
+    cookieButoonClose.addEventListener('click',  function () {
+      cookie.classList.add('accepted');
+    });
+  }
 });
 
 window.addEventListener('load', function () {

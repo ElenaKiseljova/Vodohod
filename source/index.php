@@ -22,7 +22,7 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--promo">
-              <a href="#decks">
+              <a href="#through">
                 теплоход
               </a>
             </li>
@@ -339,7 +339,7 @@
     </div>
   </section>
 
-  <section class="through">
+  <section class="through" id="through">
     <div class="through__wrapper">
       <div class="through__content">
         <h2 class="h2 h2--through title">
@@ -1329,7 +1329,7 @@
     </div>
   </section>
 
-  <section class="flavour">
+  <section class="flavour" id="flavour">
     <div class="flavour__wrapper">
       <div class="flavour__left">
         <h2 class="h2 h2--flavour title">
