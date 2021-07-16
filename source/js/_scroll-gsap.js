@@ -75,37 +75,37 @@
       });
 
       ScrollTrigger.create({
-                             trigger: '.promo',
-                             start: 'bottom bottom',
-                             end: 'bottom top',
-                             //markers: true,
-                             pin: true,
-                             pinSpacing: false,
-                             /*onUpdate: self => {
-                              promoImage.style.transform = 'scale(' + ((parseFloat(self.progress.toFixed(3))/3) + 1) + ')';
-                              promoText.style.opacity = 1 - (self.progress.toFixed(3) * 2);
-                              promoText.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
-                              promoContent.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
+        trigger: '.promo',
+        start: 'bottom bottom',
+        end: 'bottom top',
+        //markers: true,
+        pin: true,
+        pinSpacing: false,
+        /*onUpdate: self => {
+          promoImage.style.transform = 'scale(' + ((parseFloat(self.progress.toFixed(3))/3) + 1) + ')';
+          promoText.style.opacity = 1 - (self.progress.toFixed(3) * 2);
+          promoText.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
+          promoContent.style.transform = 'translateY(-' + (self.progress.toFixed(3) * 100) + '%)';
 
-                              //console.log(
-                              // "progress:", self.progress.toFixed(3),
-                              // "direction:", self.direction,
-                              // "velocity", self.getVelocity());
-                              }*/
-                           });
+          //console.log(
+          // "progress:", self.progress.toFixed(3),
+          // "direction:", self.direction,
+          // "velocity", self.getVelocity());
+        }*/
+      });
 
       // Триггер на сокрытие/показ хедера
       ScrollTrigger.create({
-                             trigger: '.totem',
-                             start: 'top top',
-                             end: 9999999,
-                             //markers: true,
-                             onToggle: self =>  {
-                               toggleActiveClass(headerTop);
-                               toggleActiveClass(headerBottom);
-                               //console.log("toggled, isActive:", self.isActive)
-                             }
-                           });
+        trigger: '.totem',
+        start: 'top top',
+        end: 9999999,
+        //markers: true,
+        onToggle: self =>  {
+          toggleActiveClass(headerTop);
+          toggleActiveClass(headerBottom);
+          //console.log("toggled, isActive:", self.isActive)
+        }
+      });
 
       // Поворот Заказать
       gsap.to('.button--wheel .button__icon--white', {
@@ -164,7 +164,7 @@
 
       if (totemTitle && totemQuote && totemText) {
         // Анимация для планшета/телефона
-        if (document.documentElement.clientWidth < 1280) {
+        if (window.innerWidth < 1280) {
           gsap.to(totemTitle, {
             y: 20,
             duration: 0.5,
@@ -207,7 +207,7 @@
         }
 
         // Анимация для десктопа
-        if (document.documentElement.clientWidth >= 1280) {
+        if (window.innerWidth >= 1280) {
           gsap.to(totemTitle, {
             y: 30,
             duration: 2,
@@ -261,36 +261,34 @@
 
       window.addEventListener('load', function () {
         markers.forEach(function(marker, index) {
-          ScrollTrigger.create({
-                                 trigger: marker,
-                                 start: 'top center',
-                                 end: 'bottom center',
-                                 //markers: true,
-                                 onEnter: function() {
-                                   window.swiperChange.emotionsSlideTo(index);
-                                 },
-                                 onEnterBack: function() {
-                                   window.swiperChange.emotionsSlideTo(index);
-                                 }
-                               });
+         ScrollTrigger.create({
+           trigger: marker,
+           start: 'top center',
+           end: 'bottom center',
+           //markers: true,
+           onEnter: function() {
+             window.swiperChange.emotionsSlideTo(index);
+           },
+           onEnterBack: function() {
+             window.swiperChange.emotionsSlideTo(index);
+           }
+         });
         });
       });
 
-      if ((document.documentElement.clientWidth >= 1024) || ((document.documentElement.clientWidth < 1024) && (document.documentElement.clientHeight <= 320))) {
+      if ((window.innerWidth >= 1024) || ((window.innerWidth < 1024) && (window.innerHeight <= 320))) {
         ScrollTrigger.create({
-                               trigger: emotionsLeft,
-                               // start: 'top top',
-                               // end: 'bottom bottom',
-                               start: 'top top',
-                               end: 'bottom top',
-                               //markers: true,
-                               pin: emotionsImages,
-                               pinSpacing: false,
-                               scrub: 1,
-                             });
+          trigger: emotionsLeft,
+          start: 'top top',
+          end: 'bottom bottom',
+          //markers: true,
+          pin: emotionsImages,
+          pinSpacing: false,
+          scrub: 1,
+        });
       }
 
-      if ((document.documentElement.clientWidth < 1024) && (document.documentElement.clientHeight > 320)) {
+      if ((window.innerWidth < 1024) && (window.innerHeight > 320)) {
         let emotionsLeftHeight =  emotionsLeft.offsetHeight;
         let emotionsRightHeight =  emotionsRight.offsetHeight;
 
@@ -298,15 +296,14 @@
         emotionsRight.style.marginTop = '-' + emotionsRightHeight + 'px';
 
         ScrollTrigger.create({
-                               trigger: emotionsLeft,
-                               start: 'top 67px',
-                               // end: 'bottom 55%',
-                               end: 'bottom top',
-                               pin: emotionsImages,
-                               pinSpacing: false,
-                               scrub: 1,
-                               //markers: true,
-                             });
+          trigger: emotionsLeft,
+          start: 'top 67px',
+          end: 'bottom 55%',
+          pin: emotionsImages,
+          pinSpacing: false,
+          scrub: 1,
+          //markers: true,
+        });
       }
     }
 
@@ -373,18 +370,16 @@
         scrub: 1,
       }
     });
-    //
+
     let leisureSlider = document.querySelector('.leisure__slider');
 
-    if (leisureSlider && document.documentElement.clientWidth >= 1280) {
-      //console.log(document.documentElement.clientWidth, window.innerWidth);
+    if (leisureSlider && window.innerWidth >= 1280) {
       gsap.to(leisureSlider, {
         x: '-57vw',
-        duration: 5,
+        duration: 3,
         scrollTrigger: {
           trigger: '.leisure',
-          start: 'top 50%',
-          end: 'bottom -40%',
+          start: 'top 40%',
           scrub: 2,
           ease: 'none',
           //markers: true,
@@ -392,15 +387,37 @@
       });
     }
 
+    // Cave
 
-    // ScrollTrigger.create({
-    //                        trigger: '.cave',
-    //                        start: 'top bottom',
-    //                        end: 'bottom top',
-    //                        //markers: true,
-    //                        pin: '.leisure',
-    //                        pinSpacing: false,
-    //                      });
+    // let cave = document.querySelector('.cave');
+    //
+    // if (cave) {
+    //   let heightCave = cave.offsetHeight;
+    //
+    //   cave.style.transform = 'translate3d(0, -' + heightCave + 'px, 0)';
+    //
+    //   gsap.to('.cave', {
+    //     y: '0px',
+    //     duration: 2,
+    //     scrollTrigger: {
+    //       trigger: '.leisure',
+    //       start: 'center bottom',
+    //       end: 'center top',
+    //       scrub: 5,
+    //       ease: 'none',
+    //       //markers: true,
+    //     }
+    //   });
+    // }
+
+    ScrollTrigger.create({
+      trigger: '.cave',
+      start: 'top bottom',
+      end: 'bottom top',
+      //markers: true,
+      pin: '.leisure',
+      pinSpacing: false,
+    });
 
     // Decks
 

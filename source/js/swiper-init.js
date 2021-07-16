@@ -76,6 +76,13 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         //init: false,
         resizeObserver: true,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 1280px
+          1280: {
+            allowTouchMove: false,
+          },
+        }
       };
     }
 
@@ -453,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 300,
         slidesPerView: 'auto',
         slideToClickedSlide: true,
-        loop: true,
+        //loop: true,
         centeredSlides: true,
         spaceBetween: 48,
         resizeObserver: true,
@@ -477,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 300,
         slidesPerView: 1,
         //slideToClickedSlide: true,
-        loop: true,
+        //loop: true,
         autoHeight: true,
         resizeObserver: true,
         effect: 'fade',
@@ -493,12 +500,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       timetableMonthsSwiper.on('slideChange', function () {
         timetableTimetableSwiper.slideTo(timetableMonthsSwiper.activeIndex);
-        console.log(timetableMonthsSwiper.activeIndex);
+        // console.log(timetableMonthsSwiper.activeIndex);
       });
 
       timetableTimetableSwiper.on('slideChange', function () {
         timetableMonthsSwiper.slideTo(timetableTimetableSwiper.activeIndex);
-        console.log(timetableTimetableSwiper.activeIndex);
+        // console.log(timetableTimetableSwiper.activeIndex);
       });
 
       // Переключаю на следующий слайд при загрузке страницы

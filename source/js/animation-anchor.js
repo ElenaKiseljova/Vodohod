@@ -21,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Текущее положение скролла
         let documentScrollHeight = window.scrollY;
 
+        if (topScroll === documentScrollHeight) {
+          //console.log(topScroll, documentScrollHeight);
+
+          return;
+        }
+
         // Финальная точка. Для сравнения с текущей и контроля таймера
         let finalPositionScroll;
 
