@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
   try {
     // Виды экспедиций
     let routsNameSlider = document.querySelector('.route__slider--routs.swiper-container');
-
     if (routsNameSlider) {
       var argsSwiperroutsNameSlider = {
         speed: 300,
@@ -30,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //watchSlidesVisibility: true,
         //watchSlidesProgress: true,
         slidesPerView: 'auto',
+        centeredSlides: true,
         slideToClickedSlide: true,
         //init: false,
         //mousewheel: true,
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     let routsDescriptionSlider = document.querySelector('.route__slider--description.swiper-container');
-
     if (routsDescriptionSlider) {
       var argsSwiperRoutsDescriptionSlider = {
         speed: 300,
@@ -69,10 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
         effect: 'fade',
         fadeEffect: {
           crossFade: true
-        },
-        navigation: {
-          nextEl: '.next--nodes',
-          prevEl: '.prev--nodes'
         },
         //init: false,
         resizeObserver: true,
@@ -87,15 +82,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Города (табы)
-
     var routsNodesSlider = document.querySelector('.route__slider--nodes.swiper-container');
-
     if (routsNodesSlider) {
       var argsSwiperRoutsNodesSlider = {
         speed: 300,
         //loop: true,
         spaceBetween: 60,
         freeMode: true,
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.next--nodes',
+          prevEl: '.prev--nodes'
+        },
         //watchSlidesVisibility: true,
         //watchSlidesProgress: true,
         slidesPerView: 'auto',
@@ -118,41 +116,52 @@ document.addEventListener('DOMContentLoaded', function () {
       };
     }
 
-    // Функция для активации пунктов карты
-    var activatingMapNodes = function (sliderSwiper, sliderThumbSwiper = null) {
-      // Пункты на карте
-      let mapToggles = document.querySelectorAll('.route__toggle.active');
-
+    var checkMapToggle = function (mapToggle, mapToggles = false) {
       if (mapToggles) {
-        mapToggles.forEach((mapToggle, i) => {
-          let index = mapToggle.getAttribute('data-map');
-
-          if (index && routsDescriptionSwiper) {
-            mapToggle.addEventListener('click', function (evt) {
-              //console.log('click');
-              // Функция стирания всех маркеров подсветки
-              window.removeActiveClassElements(mapToggles, false, 'checked');
-              // Класс для подсветки кликнутого нода
-              mapToggle.classList.add('checked');
-
-              // Проверяем в цикле ли слайдер
-              if (sliderSwiper.loop === undefined) {
-                sliderSwiper.slideTo(index);
-
-                if (sliderThumbSwiper != null) {
-                  sliderThumbSwiper.slideTo(index);
-                }
-              } else {
-                sliderSwiper.slideToLoop(index);
-
-                if (sliderThumbSwiper != null) {
-                  sliderThumbSwiper.slideToLoop(index);
-                }
-              }
-            });
-          }
-        });
+        // Функция стирания всех маркеров подсветки
+        window.removeActiveClassElements(mapToggles, false, 'checked');
       }
+
+      // Класс для подсветки кликнутого нода
+      mapToggle.classList.add('checked');
+    };
+
+    // Функция для активации пунктов карты
+    var activatingMapNodes = function (sliderSwiper, currentSlide = false) {
+      let mapContainer = document.querySelector('.route__map');
+      let mapToggles = mapContainer.querySelectorAll('.route__toggle');
+
+      let newMapToggles = '';
+      mapToggles.forEach((mapToggle, i) => {
+        newMapToggles += mapToggle.outerHTML;
+        mapToggle.remove();
+      });
+      mapContainer.insertAdjacentHTML('beforeend', newMapToggles);
+
+      // Пункты на карте (активные)
+      let mapTogglesActive = mapContainer.querySelectorAll('.route__toggle.active');
+      mapTogglesActive.forEach((mapToggle, i) => {
+        let index = mapToggle.getAttribute('data-map');
+
+        if (index && routsDescriptionSwiper) {
+          console.log(currentSlide, index);
+          if (currentSlide && currentSlide === index) {
+            checkMapToggle(mapToggle);
+          }
+          mapToggle.addEventListener('click', function (evt) {
+            console.log('click');
+
+            checkMapToggle(mapToggle, mapTogglesActive);
+
+            // Проверяем в цикле ли слайдер
+            if (sliderSwiper.loop === undefined) {
+              sliderSwiper.slideTo(index);
+            } else {
+              sliderSwiper.slideToLoop(index);
+            }
+          });
+        }
+      });
     };
 
     // Объект экспорта в файлы routs.js
@@ -198,43 +207,43 @@ document.addEventListener('DOMContentLoaded', function () {
           // Слайдер Описаний
           routsDescriptionSwiper = new Swiper(routsDescriptionSlider, argsSwiperRoutsDescriptionSlider);
 
+          routsNodesSwiper.controller.control = routsDescriptionSwiper;
+          routsDescriptionSwiper.controller.control = routsNodesSwiper;
+
           routsNodesSwiper.on('slideChange', function () {
             let index;
 
             if (routsNodesSwiper.loop === undefined) {
               index = routsNodesSwiper.activeIndex;
-
-              //routsDescriptionSwiper.slideTo(index);
             } else {
               index = routsNodesSwiper.realIndex;
-
-              //routsDescriptionSwiper.slideToLoop(index);
             }
 
+            // Пункты на карте (активные)
+            let mapTogglesActive = document.querySelectorAll('.route__toggle.active');
             // Пункт на карте
             let mapToggle = document.querySelector(`[data-map="${index}"]`);
-
-            if (mapToggle) {
-              mapToggle.click();
+            if (mapToggle && mapTogglesActive) {
+              checkMapToggle(mapToggle, mapTogglesActive);
             }
           });
-
-          routsDescriptionSwiper.on('slideChange', function () {
-            let index;
-
-            if (routsDescriptionSwiper.loop === undefined) {
-              index = routsDescriptionSwiper.activeIndex;
-
-              routsNodesSwiper.slideTo(index);
-            } else {
-              index = routsDescriptionSwiper.realIndex;
-
-              routsNodesSwiper.slideToLoop(index);
-            }
-          });
+          //
+          // routsDescriptionSwiper.on('slideChange', function () {
+          //   let index;
+          //
+          //   if (routsDescriptionSwiper.loop === undefined) {
+          //     index = routsDescriptionSwiper.activeIndex;
+          //
+          //     routsNodesSwiper.slideTo(index);
+          //   } else {
+          //     index = routsDescriptionSwiper.realIndex;
+          //
+          //     routsNodesSwiper.slideToLoop(index);
+          //   }
+          // });
 
           // Активация пунктов карты и пунктов Узлового слайдера
-          activatingMapNodes(routsDescriptionSwiper, routsNodesSwiper);
+          activatingMapNodes(routsNodesSwiper, '0');
         }
       },
       routDescriptionNodesDestroy: function () {
