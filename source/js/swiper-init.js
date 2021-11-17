@@ -144,12 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let index = mapToggle.getAttribute('data-map');
 
         if (index && routsDescriptionSwiper) {
-          console.log(currentSlide, index);
           if (currentSlide && currentSlide === index) {
             checkMapToggle(mapToggle);
           }
           mapToggle.addEventListener('click', function (evt) {
-            console.log('click');
+            // console.log('click');
 
             checkMapToggle(mapToggle, mapTogglesActive);
 

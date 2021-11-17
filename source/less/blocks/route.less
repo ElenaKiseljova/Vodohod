@@ -255,9 +255,19 @@
 }
 
 .route__slider-wraper {
-  display: none;
+  position: fixed;
+
+  z-index: 0;
+
+  width: 100%;
+
+  opacity: 0;
+
+  pointer-events: none;
 
   @media (min-width: 768px) {
+    position: static;
+
     display: flex;
 
     justify-content: center;
@@ -270,7 +280,11 @@
     padding: 0;
     margin: 0;
 
+    opacity: 1;
+
     overflow: hidden;
+
+    pointer-events: all;
   }
 
   @media only screen and (min-width: 1280px) {
@@ -317,13 +331,15 @@
   }
 
   &--nodes {
-    display: none;
+    width: 100%;
+    pointer-events: none;
 
     @media only screen and (min-width: 768px) {
       display: block;
 
       width: 50px;
-      //width: 20%;
+
+      pointer-events: all;
 
       &.swiper-container {
         overflow: visible;
