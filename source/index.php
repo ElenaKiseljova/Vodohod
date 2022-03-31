@@ -338,7 +338,9 @@
       </div>
     </div>
   </section>
-
+  <svg  width="78" height="24">
+    <use xlink:href="img/sprite.svg#icon-work-2" />
+  </svg>
   <section class="through" id="through">
     <div class="through__wrapper">
       <div class="through__content">
